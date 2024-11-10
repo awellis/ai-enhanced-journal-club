@@ -1,17 +1,10 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
+    "objectID": "slides/index.html#slide-1",
+    "href": "slides/index.html#slide-1",
     "title": "AI-Enhanced Journal Club",
-    "section": "",
-    "text": "Using AI in research\n\n    View slides in full screen"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
+    "section": "Slide 1",
+    "text": "Slide 1"
   },
   {
     "objectID": "slides/index.html#slide-2",
@@ -68,12 +61,5 @@
     "title": "AI-Enhanced Journal Club",
     "section": "Slide 9",
     "text": "Slide 9\n\n\n\n\nBerner Fachhochschule | Bern University of Applied Sciences\n\n\n\n\nCui, Zheyuan (Kevin), Mert Demirer, Sonia Jaffe, Leon Musolff, Sida Peng, and Tobias Salz. 2024. “The Effects of Generative AI on High Skilled Work: Evidence from Three Field Experiments with Software Developers.” SSRN Scholarly Paper. Rochester, NY. September 3, 2024. https://doi.org/10.2139/ssrn.4945566."
-  },
-  {
-    "objectID": "slides/index.html#slide-1",
-    "href": "slides/index.html#slide-1",
-    "title": "AI-Enhanced Journal Club",
-    "section": "Slide 1",
-    "text": "Slide 1"
   }
 ]
