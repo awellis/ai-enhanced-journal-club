@@ -1,0 +1,35 @@
+project:
+  type: website
+  preview:
+    port: 8800
+    browser: false
+  output-dir: docs
+  # render:
+    # - pages/*.ipynb
+    # - pages/*.qmd
+    # - slides/*.qmd
+
+website:
+  title: "AI-Enhanced Journal Club"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+      - slides/index.qmd
+
+format:
+  html:
+    theme:
+      light: simplex
+    toc: true
+    link-external-icon: true
+    link-external-newwindow: true
+    anchor-sections: true
+    smooth-scroll: true
+    # linkcolor: rebeccapurple
+comments:
+  hypothesis: 
+    theme: clean
+
+
