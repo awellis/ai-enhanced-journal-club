@@ -4,13 +4,15 @@ project:
     port: 8800
     browser: false
   output-dir: docs
-  # render:
+  render:
     # - pages/*.ipynb
     # - pages/*.qmd
-    # - slides/*.qmd
+    - slides/*.qmd
 
 website:
-  title: "AI-Enhanced Journal Club"
+  title: "AI-Enhanced Journal Club //"
+  site-url: https://virtuelleakademie.github.io/promptly-educated
+  repo-url: https://github.com/virtuelleakademie/promptly-educated
   navbar:
     left:
       - href: index.qmd
