@@ -19,5 +19,5 @@
 
 # MacOS
 .DS_Store
-
+*.code-workspace
 
