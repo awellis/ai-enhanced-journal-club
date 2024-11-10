@@ -1,0 +1,20 @@
+---
+title: "AI-Enhanced Journal Club"
+---
+
+# Using AI in research
+
+<!-- [{{< bi link >}} [bfh.ch/de/weiterbildung/kurse/ki-in-der-lehre-intermediate/](https://www.bfh.ch/de/weiterbildung/kurse/ki-in-der-lehre-intermediate/) -->
+
+
+{{< revealjs file="../slides/index.html" height="500px" class="ratio ratio-16x9" >}}
+
+
+# Using AI in research
+
+{{< revealjs file="../slides/index.html" height="500px" class="ratio ratio-16x9" >}}
+
+
+# Using AI in research
+
+{{< revealjs file="../slides/index.html" height="500px" class="ratio ratio-16x9" >}}
