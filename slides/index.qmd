@@ -1,0 +1,89 @@
+---
+title: "AI-Enhanced Journal Club"
+author: "Andrew Ellis"
+date: "13 November, 2024"
+date-format: "DD MMMM, YYYY"
+bibliography: ../bibliography.bib
+nocite: |
+  @cuiEffectsGenerativeAI2024a
+format: 
+    revealjs:
+        theme: [simple, ../styles/custom-reveal.scss]
+      #   theme: default
+        title-slide-attributes:
+          # data-background-image: ../assets/background-purple.png
+          # data-background-size: contain
+          data-background-opacity: "1"
+        
+        # headetmr-logo: ../assets/bfh-logo.png
+        # header: Berner Fachhochschule | Bern University of Applied Sciences
+        # footer: <a href="../index.html">back to website {{< bi box-arrow-up-left >}} </a>
+        footer: Berner Fachhochschule | Bern University of Applied Sciences
+        logo: ../assets/bfh-logo.png
+        navigation-mode: linear
+        progress: true
+        scrollable: false
+        slide-number: true
+        slide-level: 2
+        show-slide-number: all
+        hash: true
+        controls: auto
+        # controls-layout: bottom-right
+        controls-tutorial: true
+        preview-links: auto
+        chalkboard: true
+        from: markdown+emoji
+        code-fold: true
+        code-summary: "Show code"
+        code-tools: true
+        menu: 
+          sticky: true
+          keyboard: true
+          autoOpen: true
+          width: normal
+          numbers: true
+          markers: true
+        callout-appearance: default
+        # callout-icon: false
+        smaller: true
+revealjs-plugins:
+  - attribution
+filters:
+  - timer
+#   - reveal-header
+---
+
+## Slide 1
+
+::::{.columns}
+:::{.column}
+:::
+
+:::{.column}
+
+<br><br><br>
+
+:::{.timer #UNIQUE-ID-1 seconds=600 starton=interaction}
+:::
+:::
+::::
+
+
+
+## Slide 2
+
+:::{.timer #UNIQUE-ID-2 seconds=100 starton=interaction}
+:::
+## Slide 3
+
+## Slide 4
+
+## Slide 5
+
+## Slide 6
+
+## Slide 7
+
+## Slide 8
+
+## Slide 9
