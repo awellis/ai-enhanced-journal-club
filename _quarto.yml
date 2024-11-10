@@ -5,6 +5,7 @@ project:
     browser: false
   output-dir: docs
   render:
+    - index.qmd
     # - pages/*.ipynb
     # - pages/*.qmd
     - slides/*.qmd
