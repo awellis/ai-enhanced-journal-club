@@ -2,6 +2,10 @@
 title: "AI-Enhanced Journal Club"
 ---
 
+# Link
+
+{{< qrcode https://awellis.github.io/ai-enhanced-journal-club/ width=100 height=100 colorDark='#000000' >}}
+
 # Using AI in research
 
 <!-- [{{< bi link >}} [bfh.ch/de/weiterbildung/kurse/ki-in-der-lehre-intermediate/](https://www.bfh.ch/de/weiterbildung/kurse/ki-in-der-lehre-intermediate/) -->
@@ -12,6 +16,10 @@ title: "AI-Enhanced Journal Club"
 {{< revealjs file="./slides/index.html" height="500px" class="ratio ratio-16x9" >}}
 
 
-<!-- ```{=html}
-<iframe src="./slides/index.html" width="100%" height="500px"></iframe>
-```  -->
+{{< html file="https://miro.com/app/board/uXjVLGuTZVs=/?share_link_id=568408642727" width="100%" height="500px" >}}
+
+{{< html file="https://app.wooclap.com/QIGOPB?from=event-page" width="100%" height="600px" >}}
+
+```{=html}
+<iframe src="https://miro.com/app/board/uXjVLGuTZVs=/?share_link_id=568408642727" width="100%" height="600px"></iframe>
+```
