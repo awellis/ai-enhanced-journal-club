@@ -4,11 +4,11 @@ project:
     port: 8800
     browser: false
   output-dir: docs
-  render:
-    - index.qmd
+  # render:
+  #   - index.qmd
     # - pages/*.ipynb
     # - pages/*.qmd
-    - slides/*.qmd
+    # - slides/*.qmd
 
 website:
   title: "AI-Enhanced Journal Club //"
@@ -19,7 +19,13 @@ website:
       - href: index.qmd
         text: Home
       - about.qmd
-      - slides/index.qmd
+      - icon: file-slides
+        text: "Slides" # {{< fa person-chalkboard >}}
+        menu:
+          - text: "How to read a paper"
+            file: slides/index.qmd
+      
+      - miro-board/index.qmd
 
 page-footer:
     right:
