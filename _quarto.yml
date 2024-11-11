@@ -49,4 +49,7 @@ execute:
 
 
 
-
+revealjs-plugins:
+  - attribution
+filters:
+  - timer
