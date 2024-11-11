@@ -21,6 +21,11 @@ website:
       - about.qmd
       - slides/index.qmd
 
+page-footer:
+    right:
+    - icon: github
+      href: https://github.com/virtuelleakademie/promptly-literate
+
 format:
   html:
     theme:
@@ -34,5 +39,14 @@ format:
 comments:
   hypothesis: 
     theme: clean
+  # utterances: 
+    # repo: virtuelleakademie/promptly-literate
+
+execute:
+  cache: true
+  freeze: auto
+  execute-dir: project
+
+
 
 
