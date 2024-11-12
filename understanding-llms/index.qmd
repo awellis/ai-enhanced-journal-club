@@ -1,11 +1,11 @@
 ---
 title: "Understanding Large Language Models"
 author: "Andrew Ellis"
-date: "24 October, 2024"
+date: "13 November, 2024"
 date-format: "DD MMMM, YYYY"
 bibliography: ../bibliography.bib
-nocite: |
-  @bowenTeachingAI2024, @langCheatingLessons2013a, @schulhoffPromptReportSystematic2024
+# nocite: |
+#   @bowenTeachingAI2024, @langCheatingLessons2013a, @schulhoffPromptReportSystematic2024
 format: 
     revealjs:
         theme: [simple, ../styles/custom-reveal.scss]
@@ -55,7 +55,7 @@ format:
 ## What is a Large Language Model?
 
 - Neural network trained on vast amounts of text data.
-- Output a distribution over all possible tokens in a sequence conditional on input. 
+- Outputs a distribution over all possible tokens, conditioned on input sequence. 
 - LLMs undergo three key stages of training:
 
 ![](../assets/images/training.png)
@@ -63,16 +63,14 @@ format:
 
 
 ## How do LLMs generate text?
-
-
 $$
 \newcommand{\purple}[1]{\color{purple}{#1}}
 \newcommand{\red}[1]{\color{red}{#1}}
 \newcommand{\blue}[1]{\color{blue}{#1}}
 $$
-
 $$\purple{P(x_{i+1}} \mid \blue{\text{Context}}, \red{\text{Model}})$$
 
+<!-- $$P(x_{i+1} \mid \text{Context}, \text{Model})$$ -->
 
 - $\purple{\text{Next token}}$
 - $\blue{\text{The input sequence}:\ x_1, \ldots, x_i}$
@@ -82,8 +80,8 @@ $$\purple{P(x_{i+1}} \mid \blue{\text{Context}}, \red{\text{Model}})$$
 
 ## How do LLMs generate text?
 
-$$\purple{P(x_{i+1}} \mid \blue{\text{Context}}, \red{\text{Model}})$$
-
+<!-- $$\purple{P(x_{i+1}} \mid \blue{\text{Context}}, \red{\text{Model}})$$ -->
+<br><br><br>
 
 ![](../assets/images/once-upon-a-time.png)
 
@@ -108,12 +106,12 @@ An LLM has the capacity to generate any number of possible documents based on it
 
 
 ## What Do LLMs Learn?
-$$\purple{P(x_{i+1}} \mid \blue{\text{Context}}, \red{\text{Model}})$$
+<!-- $$\purple{P(x_{i+1}} \mid \blue{\text{Context}}, \red{\text{Model}})$$ -->
 
-- Knowledge is statistical and not grounded in direct experience or sensory input
-  - Syntax and grammar
-  - Semantics, pragmatics
-  - Associations between concepts, facts, and common knowledge
+- Syntax and grammar
+- Semantics, pragmatics
+  
+- World knowledge is statistical (associational) and not grounded in direct experience or sensory input
 
 - They can simulate reasoning and planning, but can they actually reason and plan [@kambhampatiCanLargeLanguage2024]?
 
@@ -121,7 +119,7 @@ $$\purple{P(x_{i+1}} \mid \blue{\text{Context}}, \red{\text{Model}})$$
 ## Can LLMs Reason?
 
 :::{.prompt-example}
-A farmer needs to transport a wolf, a goat, and a cabbage across a river using a small boat. The boat can carry only the farmer and one other item (either the wolf, the goat, or the cabbage) at a time. However, if left together without the farmer's supervision: The wolf will eat the cabbage. The goat will eat the wolf. The challenge is to figure out how the farmer can get all three items across the river safely. What is the sequence of moves that the farmer needs to make?
+A farmer needs to transport a wolf, a goat, and a cabbage across a river using a small boat. The boat can carry only the farmer and one other item (either the wolf, the goat, or the cabbage) at a time. However, if left together without the farmer's supervision: **The wolf will eat the cabbage**. **The goat will eat the wolf**. The challenge is to figure out how the farmer can get all three items across the river safely. What is the sequence of moves that the farmer needs to make?
 :::
 
 
@@ -169,20 +167,35 @@ covers of the same materials.
 :::
 ::::
 
-## Probabilistic Reasoning
+## Sycophancy
+
+According to @sharmaUnderstandingSycophancyLanguage2023, LLMs are often programmed to be sycophantic, meaning they will say whatever the user wants to hear. This can be problematic in scientific discussions, but can be allowed for by prompting.
+
+:::{.prompt-example}
+So sycophancy is basically a result of training an LLM to respect human preferences?
+:::
+
+:::{.output-example}
+Yes, that's a good way to put it - it's essentially an unintended consequence of training models to be "helpful" and "preferred" by humans. The paper shows this happens through several key mechanisms...
+:::
+
+<!-- ## Probabilistic Reasoning
 
 :::: {.columns}
 ::: {.column width="50%"}
-- A tool capable of reasoning about possible causes of
+- A system capable of reasoning about possible causes of
 observable symptoms must perform probabilistic reasoning.
-- LLMs cannot do this,
+- LLMs cannot do this
+
 :::
 ::: {.column width="50%"}
 ![](../assets/images/probabilistic-reasoning.png)
 :::
-::::
+:::: -->
 
-## Prompting: Guiding the Model Through its Space of Possible Outputs
+## Prompting 
+
+Prompting guides the model through its space of possible outputs
 
 $\purple{P(x_{i+1}} \mid \blue{\text{Context}}, \red{\text{Model}})$
 
@@ -207,20 +220,22 @@ shrinks, making the model’s behavior more predictable.
 - Controls the behaviour of LLMs, steering them toward relevant outputs.
 - Without effective prompting, the full potential of an LLM remains untapped, as it may generate irrelevant or misleading outputs.
 
-Prompting allows us to:
+**Prompting allows us to:**
+
 - Navigate the vast space of possible outputs. 
 - Achieve more controlled and useful results.
 
-Contexts are combinatorial: we do not know how a model will behave conditioned on all possible contexts.
+**Contexts are combinatorial:**
+
+- We do not know how a model will behave conditioned on all possible contexts.
 The output is highly contingent on the prompt. 
 
 ## {{< bi box-fill >}} Prompt Engineering
 
 
-We treat LLMs as black boxes and use engineering
-approaches to guide their behaviour.
+- We treat LLMs as black boxes
+- We use engineering approaches or trial and error to guide their behaviour.
 
-## Questions / Discussion {{< bi chat-dots >}}
 
 ## References {background-color="#D8DEE9"}
 
