@@ -25,8 +25,10 @@ website:
       - icon: file-slides
         text: "Slides" # {{< fa person-chalkboard >}}
         menu:
-          - text: "How to read a paper"
+          - text: "AI-enhanced journal club"
             file: slides/index.qmd
+          - text: "Understanding LLMs"
+            file: understanding-llms/index.qmd
       - icon: share
         text: "Miro boards"
         menu:
@@ -69,11 +71,141 @@ execute:
   freeze: auto
   execute-dir: project
 
+editor:
+  render-on-save: true
+
 revealjs-plugins:
   - attribution
 filters:
   - timer
+  - custom-callout
 
-editor:
-  render-on-save: true
+custom-callout:
+  # todo:
+  #   icon-symbol: "📝"
+  #   collapse: true
+  #   color: "pink"
 
+  # thumbs-up:
+  #   title: "Great job!"
+  #   icon-symbol: "👍🏼"
+  #   color: "steelblue"
+
+
+  # Activity Types
+  individual:
+    title: "Individual Work"
+    icon-symbol: "💻"
+    color: "steelblue"
+    collapse: false
+
+  pair:
+    title: "Pair Work"
+    icon-symbol: "👥"
+    color: "forestgreen"
+    collapse: false
+
+  group:
+    title: "Group Work"
+    icon-symbol: "👥"
+    color: "purple"
+    collapse: false
+
+  screens-down:
+    title: "Screens Down"
+    icon-symbol: "🔽"
+    color: "orange"
+    collapse: false
+
+  screens-up:
+    title: "Screens Up"
+    icon-symbol: "🔼"
+    color: "green"
+    collapse: false
+
+  # Learning Process
+  try:
+    title: "Try It"
+    icon-symbol: "🔄"
+    color: "blue"
+    collapse: false
+
+  reflect:
+    title: "Reflection"
+    icon-symbol: "💭"
+    color: "purple"
+    collapse: false
+
+  feedback:
+    title: "Feedback"
+    icon-symbol: "📝"
+    color: "teal"
+    collapse: true
+
+  caution:
+    title: "Watch Out"
+    icon-symbol: "⚠️"
+    color: "orange"
+    collapse: true
+
+  tip:
+    title: "Pro Tip"
+    icon-symbol: "💡"
+    color: "gold"
+    collapse: true
+
+  # Technical Elements
+  prompt-example:
+    title: "Example Prompt"
+    icon-symbol: "👩🏼‍🔧"
+    color: "darkblue"
+    collapse: false
+
+  output-example:
+    title: "Output Example"
+    icon-symbol: "📄"
+    color: "darkgreen"
+    collapse: true
+
+  prompt-template:
+    title: "Prompt Template"
+    icon-symbol: "📋"
+    color: "indigo"
+    collapse: true
+
+  testing:
+    title: "Test Your Prompt"
+    icon-symbol: "🧪"
+    color: "green"
+    collapse: false
+
+  export:
+    title: "Export"
+    icon-symbol: "📤"
+    color: "brown"
+    collapse: true
+
+  # Workshop Flow
+  setup:
+    title: "Setup"
+    icon-symbol: "⚙️"
+    color: "gray"
+    collapse: true
+
+  timing:
+    title: "Time Check"
+    icon-symbol: "⏱️"
+    color: "red"
+    collapse: false
+
+  break:
+    title: "Break Time"
+    icon-symbol: "☕"
+    color: "brown"
+    collapse: false
+
+  checkpoint:
+    title: "Checkpoint"
+    icon-symbol: "🎯"
+    color: "purple"
+    collapse: false
