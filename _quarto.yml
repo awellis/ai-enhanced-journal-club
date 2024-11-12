@@ -27,7 +27,7 @@ website:
         menu:
           - text: "How to read a paper"
             file: slides/index.qmd
-      - icon: pen
+      - icon: share
         text: "Miro boards"
         menu:
           - text: "Morning session"
