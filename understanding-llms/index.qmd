@@ -1,0 +1,228 @@
+---
+title: "Understanding Large Language Models"
+author: "Andrew Ellis"
+date: "24 October, 2024"
+date-format: "DD MMMM, YYYY"
+bibliography: ../bibliography.bib
+nocite: |
+  @bowenTeachingAI2024, @langCheatingLessons2013a, @schulhoffPromptReportSystematic2024
+format: 
+    revealjs:
+        theme: [simple, ../styles/custom-reveal.scss]
+      #   theme: default
+        title-slide-attributes:
+          # data-background-image: ../assets/background-purple.png
+          # data-background-size: contain
+          data-background-opacity: "1"
+        
+        # headetmr-logo: ../assets/bfh-logo.png
+        # header: Berner Fachhochschule | Bern University of Applied Sciences
+        # footer: <a href="../index.html">back to website {{< bi box-arrow-up-left >}} </a>
+        footer: Berner Fachhochschule | Bern University of Applied Sciences
+        logo: ../assets/bfh-logo.png
+        navigation-mode: linear
+        progress: true
+        scrollable: false
+        slide-number: true
+        slide-level: 2
+        show-slide-number: all
+        hash: true
+        controls: auto
+        # controls-layout: bottom-right
+        controls-tutorial: true
+        preview-links: auto
+        chalkboard: true
+        from: markdown+emoji
+        code-fold: true
+        code-summary: "Show code"
+        code-tools: true
+        menu: 
+          sticky: true
+          keyboard: true
+          autoOpen: true
+          width: normal
+          numbers: true
+          markers: true
+        callout-appearance: simple
+        callout-icon: false
+        smaller: true
+# revealjs-plugins:
+#   - attribution
+# filters:
+#   - timer
+---
+
+## What is a Large Language Model?
+
+- Neural network trained on vast amounts of text data.
+- Output a distribution over all possible tokens in a sequence conditional on input. 
+- LLMs undergo three key stages of training:
+
+![](../assets/images/training.png)
+ 
+
+
+## How do LLMs generate text?
+
+
+$$
+\newcommand{\purple}[1]{\color{purple}{#1}}
+\newcommand{\red}[1]{\color{red}{#1}}
+\newcommand{\blue}[1]{\color{blue}{#1}}
+$$
+
+$$\purple{P(x_{i+1}} \mid \blue{\text{Context}}, \red{\text{Model}})$$
+
+
+- $\purple{\text{Next token}}$
+- $\blue{\text{The input sequence}:\ x_1, \ldots, x_i}$
+- $\red{\text{The learned model}}$
+
+
+
+## How do LLMs generate text?
+
+$$\purple{P(x_{i+1}} \mid \blue{\text{Context}}, \red{\text{Model}})$$
+
+
+![](../assets/images/once-upon-a-time.png)
+
+
+
+## The Space Of All Possible Outputs
+
+![](../assets/images/multiverse.png)
+
+::: {.attribution}
+Figure from @shanahanRolePlayLarge2023
+:::
+
+::: {.notes}
+An LLM has the capacity to generate any number of possible documents based on its training. However, the context we provide narrows down the potential outputs by guiding the model along specific trajectories.
+
+	- Without context: All paths are equally possible.
+	- With context: The paths are constrained, reducing the potential outcomes.
+
+	Figure Description: A branching tree diagram. At the base (without context), the tree splits into many branches, each representing a possible document. As tokens (context) are added, paths narrow, showing fewer branches remaining as viable output possibilities.
+:::
+
+
+## What Do LLMs Learn?
+$$\purple{P(x_{i+1}} \mid \blue{\text{Context}}, \red{\text{Model}})$$
+
+- Knowledge is statistical and not grounded in direct experience or sensory input
+  - Syntax and grammar
+  - Semantics, pragmatics
+  - Associations between concepts, facts, and common knowledge
+
+- They can simulate reasoning and planning, but can they actually reason and plan [@kambhampatiCanLargeLanguage2024]?
+
+
+## Can LLMs Reason?
+
+:::{.prompt-example}
+A farmer needs to transport a wolf, a goat, and a cabbage across a river using a small boat. The boat can carry only the farmer and one other item (either the wolf, the goat, or the cabbage) at a time. However, if left together without the farmer's supervision: The wolf will eat the cabbage. The goat will eat the wolf. The challenge is to figure out how the farmer can get all three items across the river safely. What is the sequence of moves that the farmer needs to make?
+:::
+
+
+:::{.output-example}
+This is a classic puzzle with a twist! Here’s the step-by-step solution for safely transporting the wolf, goat, and cabbage across the river:
+
+	1.	First trip: The farmer takes the goat across the river and leaves it on the other side.
+	2.	Second trip: The farmer returns alone to the original side.
+	3.	Third trip: The farmer takes the wolf across the river.
+	4.	Fourth trip: The farmer leaves the wolf on the other side but takes the goat back to the original side.
+	5.	Fifth trip: The farmer takes the cabbage across the river and leaves it with the wolf.
+	6.	Sixth trip: The farmer returns alone to the original side.
+	7.	Seventh trip: The farmer takes the goat across the river.
+
+Now, all three (wolf, goat, and cabbage) are safely across the river, and the puzzle is solved!
+
+Key point: By taking the goat back on the fourth trip, the farmer ensures that neither the wolf nor the goat are left together, and neither are the goat and the cabbage left together.
+:::
+
+
+
+[{{< bi link >}} A wolf, goat, and cabbage problem with a twist](https://en.wikipedia.org/wiki/Wolf,_goat_and_cabbage_problem)
+
+
+## Manhole Covers: Why Are They Round?
+
+
+![](../assets/images/manhole-cover.png)
+
+## Manhole Covers: Why Are They Round?
+
+:::: {.columns}
+::: {.column width="50%"}
+![](../assets/images/manhole-cover.png)
+:::
+::: {.column width="50%"}
+1. The human body that had to fit through the hole is round.
+2. A circle gives a maximum opening for a minimum surface area.
+3. Heavy round covers can be rolled rather than lifted into position.
+4. They were easier and cheaper to manufacture than square pit
+covers of the same materials.
+5. A circle has a constant diameter and won’t fall into the pit if rotatedthe wrong way – a tricky problem to remedy if the access cover weighs well over 100kg as concrete and iron covers did.
+
+[{{< bi link >}} Why are manhole covers round?](https://terrafirmaindustries.com.au/why-are-manhole-covers-round/)
+:::
+::::
+
+## Probabilistic Reasoning
+
+:::: {.columns}
+::: {.column width="50%"}
+- A tool capable of reasoning about possible causes of
+observable symptoms must perform probabilistic reasoning.
+- LLMs cannot do this,
+:::
+::: {.column width="50%"}
+![](../assets/images/probabilistic-reasoning.png)
+:::
+::::
+
+## Prompting: Guiding the Model Through its Space of Possible Outputs
+
+$\purple{P(x_{i+1}} \mid \blue{\text{Context}}, \red{\text{Model}})$
+
+- Prompting guides the LLM along specific paths in its space of
+possible documents.
+- Every token in a prompt reduces the number of potential
+outcomes, helping the model generate relevant responses.
+  - Without a prompt, all outputs are possible.
+  - As tokens are added, the range of possible outputs
+shrinks, making the model’s behavior more predictable.
+
+
+## How Prompting Reduces Uncertainty
+
+- Each token conditions the model's next prediction
+- With more context, the uncertainty (entropy) decreases, guiding the model towards a more specific output.
+
+![](../assets/images/once-upon-a-time.png)
+
+## The Power of Prompting: Why It Matters
+
+- Controls the behaviour of LLMs, steering them toward relevant outputs.
+- Without effective prompting, the full potential of an LLM remains untapped, as it may generate irrelevant or misleading outputs.
+
+Prompting allows us to:
+- Navigate the vast space of possible outputs. 
+- Achieve more controlled and useful results.
+
+Contexts are combinatorial: we do not know how a model will behave conditioned on all possible contexts.
+The output is highly contingent on the prompt. 
+
+## {{< bi box-fill >}} Prompt Engineering
+
+
+We treat LLMs as black boxes and use engineering
+approaches to guide their behaviour.
+
+## Questions / Discussion {{< bi chat-dots >}}
+
+## References {background-color="#D8DEE9"}
+
+::: {#refs}
+:::
