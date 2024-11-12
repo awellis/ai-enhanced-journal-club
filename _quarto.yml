@@ -11,7 +11,7 @@ project:
     # - slides/*.qmd
 
 website:
-  title: "AI-Enhanced Journal Club"
+  title: "AI-enhanced journal club"
   site-url: https://virtuelleakademie.github.io/ai-enhanced-journal-club
   repo-url: https://github.com/virtuelleakademie/ai-enhanced-journal-club
   navbar:
@@ -19,6 +19,9 @@ website:
       - icon: card-list
         href: workshop/index.qmd
         text: Workshop
+      - icon: info-circle
+        href: prompting-llms/index.qmd
+        text: Prompting recommendations
       - icon: file-slides
         text: "Slides" # {{< fa person-chalkboard >}}
         menu:
@@ -28,9 +31,9 @@ website:
         text: "Miro boards"
         menu:
           - text: "Morning session"
-            file: miro-board/morning.qmd
+            file: miro-board/morning/index.qmd
           - text: "Afternoon session"
-            file: miro-board/afternoon.qmd
+            file: miro-board/afternoon/index.qmd
 
   # sidebar:
   #   - title: "Workshop"
@@ -70,3 +73,7 @@ revealjs-plugins:
   - attribution
 filters:
   - timer
+
+editor:
+  render-on-save: true
+
