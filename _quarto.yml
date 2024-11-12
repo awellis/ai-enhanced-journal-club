@@ -28,9 +28,9 @@ website:
         text: "Miro boards"
         menu:
           - text: "Morning session"
-            file: miro-board/index.qmd
+            file: miro-board/morning.qmd
           - text: "Afternoon session"
-            file: miro-board/index.qmd
+            file: miro-board/afternoon.qmd
 
   # sidebar:
   #   - title: "Workshop"
