@@ -1,12 +1,44 @@
 ---
 title: "AI-Enhanced Journal Club"
+date: 13 November, 2024
+date-format: "DD MMM, YYYY"
+author: 
+  - name: Andrew Ellis
+    url: https://github.com/awellis
+    affiliation: Virtuelle Akademie, Berner Fachhochschule
+    affiliation-url: https://virtuelleakademie.ch
+    orcid: 0000-0002-2788-936X
+license: CC BY
+citation: true
+bibliography: ./bibliography.bib
+format:
+    html:
+        toc: true
+        code-fold: true
+        code-link: true
+        callout-appearance: simple
+        callout-icon: false
 ---
 
-# Link
+
+# QR Code
 
 {{< qrcode https://awellis.github.io/ai-enhanced-journal-club/ width=100 height=100 colorDark='#000000' >}}
 
-# Using AI in research
+# 1. Opening Warm-up (10 minutes)
+INSERT SLIDES HERE
+
+**Activity: "Paper Pain Points"**
+
+- **Format**: Pair discussion + group sharing
+- **Instructions**:
+  1. Pairs discuss (3 min): "Share your worst experience trying to understand a scientific paper"
+  2. Quick-fire round (5 min): Each pair shares their most memorable story
+  3. Facilitator notes common themes (2 min)
+- **Purpose**: Build rapport, identify shared challenges, set context for LLM solutions
+
+
+# How to read a paper
 
 <!-- [{{< bi link >}} [bfh.ch/de/weiterbildung/kurse/ki-in-der-lehre-intermediate/](https://www.bfh.ch/de/weiterbildung/kurse/ki-in-der-lehre-intermediate/) -->
 
@@ -16,15 +48,44 @@ title: "AI-Enhanced Journal Club"
 {{< revealjs file="./slides/index.html" height="500px" class="ratio ratio-16x9" >}}
 
 
-{{< html file="https://miro.com/app/board/uXjVLGuTZVs=/?share_link_id=568408642727" width="100%" height="500px" >}}
-
-{{< html file="https://app.wooclap.com/QIGOPB?from=event-page" width="100%" height="600px" >}}
-
-```{=html}
-<iframe src="https://miro.com/app/board/uXjVLGuTZVs=/?share_link_id=568408642727" width="100%" height="600px"></iframe>
-```
 
 # Understanding LLMs
 
 {{< revealjs file="./understanding-llms/index.html" height="500px" class="ratio ratio-16x9" >}}
 
+
+# Limitations
+
+- sycophancy
+- reasoning capabilities
+
+# Prompting strategies
+
+# Useful tools
+
+- ChatGPT data analysis
+- Claude interactive visualizations
+- Elicit
+- Notebook LLM
+
+# Activities
+
+read @fleckensteinTeachersSpotAI2024a
+
+<!-- {{< audio file="assets/fleckensteinTeachersSpotAI2024a.mp3" >}} -->
+
+
+
+Use this paper for demonstration and for exercises
+
+
+{{< bi volume-up >}} [Listen to the paper](https://notebooklm.google.com/notebook/cc116ea0-0de5-4732-b691-e737a8f07ffa/audio)
+
+
+## Further reading
+
+- @dellacquaNavigatingJaggedTechnological2023
+- @toner-rodgersArtificialIntelligenceScientific
+- @liangCanLargeLanguage2023
+
+# References
