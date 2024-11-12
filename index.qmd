@@ -6,7 +6,7 @@ format:
     toc: false
 about:
   template: solana #trestles
-  image: "assets/bfh-logo.png"
+#   image: "assets/logo.png"
   links:
     - icon: magic
       text: Virtuelle Akademie
