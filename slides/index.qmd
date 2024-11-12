@@ -4,8 +4,8 @@ author: "Andrew Ellis"
 date: "13 November, 2024"
 date-format: "DD MMMM, YYYY"
 bibliography: ../bibliography.bib
-nocite: |
-  @cuiEffectsGenerativeAI2024a
+# nocite: |
+#   @cuiEffectsGenerativeAI2024a
 format: 
     revealjs:
         theme: [simple, ../styles/custom-reveal.scss]
@@ -53,37 +53,44 @@ filters:
 #   - reveal-header
 ---
 
-## Slide 1
 
-::::{.columns}
-:::{.column}
-:::
+### What is a journal club?
 
-:::{.column}
+A journal club is a group activity where researchers meet to critically discuss and analyze scientific papers from their field.
 
-<br><br><br>
-
-:::{.timer #UNIQUE-ID-1 seconds=600 starton=interaction}
-:::
-:::
-::::
+- Promotes deep understanding of research methods and findings
+- Promotes critical thinking and constructive critique
+- Builds collaboration and knowledge sharing
+- Identifies new research directions and open questions
 
 
+## Problems with large groups
 
-## Slide 2
+- Traditional "brainstorming" in large groups is ineffective
+- Room dynamics lead to limited participation
+- Stronger voices dominate discussions
+- Many participants remain silent
+- Ideas often go unexpressed or underdeveloped
 
-:::{.timer #UNIQUE-ID-2 seconds=100 starton=interaction}
-:::
-## Slide 3
+## Optimal scientific collaboration
 
-## Slide 4
+- @yanaiItTakesTwo2024 argue that two-person collaborations represent the optimal format for creative scientific discussions and idea development
+- They draw on insights from improvisational theater and evolutionary psychology
+- Through paired discussions, scientists can create a trusting environment
+- This environment encourages free exploration of ideas
+- It avoids the social complexities and participation barriers of larger group discussions
 
-## Slide 5
 
-## Slide 6
+## Core concept
 
-## Slide 7
+LLMs can
 
-## Slide 8
+- provide always-available thinking partners for immediate feedback and alternative perspectives
+- can embody the "Yes, and" principle, building on ideas without criticism
+- remove social anxiety, enabling creative exploration of early ideas
+- help structure ideas into clearer linear thinking
+- can make assumptions explicitand identify reasoning flaws through questioning
+- **complement** human collaboration by providing a safe space for initial idea development
 
-## Slide 9
+
+## References
