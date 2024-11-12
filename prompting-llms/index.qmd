@@ -1,0 +1,25 @@
+---
+title: "Prompting recommendations"
+date: 13 November, 2024
+date-format: "DD MMM, YYYY"
+author: 
+  - name: Andrew Ellis
+    url: https://github.com/awellis
+    affiliation: Virtuelle Akademie, Berner Fachhochschule
+    affiliation-url: https://virtuelleakademie.ch
+    orcid: 0000-0002-2788-936X
+license: CC BY
+citation: true
+bibliography: ../bibliography.bib
+format:
+    html:
+        toc: true
+        code-fold: true
+        code-link: true
+        callout-appearance: simple
+        callout-icon: false
+---
+
+
+
+# References
