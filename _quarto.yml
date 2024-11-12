@@ -11,30 +11,34 @@ project:
     # - slides/*.qmd
 
 website:
-  title: "AI-Enhanced Journal Club //"
-  site-url: https://virtuelleakademie.github.io/promptly-educated
-  repo-url: https://github.com/virtuelleakademie/promptly-educated
+  title: "AI-Enhanced Journal Club"
+  site-url: https://virtuelleakademie.github.io/ai-enhanced-journal-club
+  repo-url: https://github.com/virtuelleakademie/ai-enhanced-journal-club
   navbar:
     left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
+      - icon: card-list
+        href: workshop/index.qmd
+        text: Workshop
       - icon: file-slides
         text: "Slides" # {{< fa person-chalkboard >}}
         menu:
           - text: "How to read a paper"
             file: slides/index.qmd
-      - miro-board/index.qmd
+      - icon: pen
+        text: "Miro boards"
+        menu:
+          - text: "Morning session"
+            file: miro-board/index.qmd
+          - text: "Afternoon session"
+            file: miro-board/index.qmd
 
-  sidebar:
-    - title: "Contents"
-      style: "docked"
-      search: true
-      background: light
-      contents:
-        - tutorials.qmd
-        - tutorial-1.qmd
-        - tutorial-2.qmd
+  # sidebar:
+  #   - title: "Workshop"
+  #     style: "docked"
+  #     search: true
+  #     background: light
+  #     contents:
+  #       - workshop/index.qmd
 
 page-footer:
     right:
@@ -61,8 +65,6 @@ execute:
   cache: true
   freeze: auto
   execute-dir: project
-
-
 
 revealjs-plugins:
   - attribution
