@@ -9,11 +9,12 @@
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/quarto-contrib/quarto-timer-1.0.0/timer.js"></script>
-<link href="../site_libs/quarto-contrib/quarto-timer-1.0.0/timer.css" rel="stylesheet"><meta charset="utf-8">
+<link href="../site_libs/quarto-contrib/quarto-timer-1.0.0/timer.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/bootstrap-icons-1.11.1/all.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="Andrew Ellis">
-  <title>AI-enhanced journal club – AI-Enhanced Journal Club</title>
+  <title>AI-enhanced journal club – Understanding Large Language Models</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -35,7 +36,6 @@
     div.csl-bib-body { }
     div.csl-entry {
       clear: both;
-      margin-bottom: 0em;
     }
     .hanging-indent div.csl-entry {
       margin-left:2em;
@@ -362,7 +362,7 @@
     <div class="slides">
 
 <section id="title-slide" data-background-opacity="1" class="quarto-title-block center">
-  <h1 class="title">AI-Enhanced Journal Club</h1>
+  <h1 class="title">Understanding Large Language Models</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -372,64 +372,170 @@ Andrew Ellis
 </div>
 </div>
 
-  <p class="date">13 November, 2024</p>
+  <p class="date">24 October, 2024</p>
 </section>
-<section id="slide-1" class="slide level2">
-<h2>Slide 1</h2>
-<div class="columns">
-<div class="column">
+<section id="what-is-a-large-language-model" class="slide level2">
+<h2>What is a Large Language Model?</h2>
+<ul>
+<li>Neural network trained on vast amounts of text data.</li>
+<li>Output a distribution over all possible tokens in a sequence conditional on input.</li>
+<li>LLMs undergo three key stages of training:</li>
+</ul>
 
-</div><div class="column">
-<p><br><br><br></p>
-                    <div id="UNIQUE-ID-1"></div>
-                    <script>
-                        document.addEventListener("DOMContentLoaded", function () {
-                            initializeTimer("UNIQUE-ID-1", 600, "interaction");
-                        });
-                    </script>
-                
+<img data-src="../assets/images/training.png" class="r-stretch"></section>
+<section id="how-do-llms-generate-text" class="slide level2">
+<h2>How do LLMs generate text?</h2>
+<p><span class="math display">\[
+\newcommand{\purple}[1]{\color{purple}{#1}}
+\newcommand{\red}[1]{\color{red}{#1}}
+\newcommand{\blue}[1]{\color{blue}{#1}}
+\]</span></p>
+<p><span class="math display">\[\purple{P(x_{i+1}} \mid \blue{\text{Context}}, \red{\text{Model}})\]</span></p>
+<ul>
+<li><span class="math inline">\(\purple{\text{Next token}}\)</span></li>
+<li><span class="math inline">\(\blue{\text{The input sequence}:\ x_1, \ldots, x_i}\)</span></li>
+<li><span class="math inline">\(\red{\text{The learned model}}\)</span></li>
+</ul>
+</section>
+<section id="how-do-llms-generate-text-1" class="slide level2">
+<h2>How do LLMs generate text?</h2>
+<p><span class="math display">\[\purple{P(x_{i+1}} \mid \blue{\text{Context}}, \red{\text{Model}})\]</span></p>
+
+<img data-src="../assets/images/once-upon-a-time.png" class="r-stretch"></section>
+<section id="the-space-of-all-possible-outputs" class="slide level2">
+<h2>The Space Of All Possible Outputs</h2>
+
+<img data-src="../assets/images/multiverse.png" class="r-stretch"><div class="attribution">
+<p>Figure from <span class="citation" data-cites="shanahanRolePlayLarge2023">(<a href="#/references" role="doc-biblioref" onclick=""><strong>shanahanRolePlayLarge2023?</strong></a>)</span></p>
+</div>
+<aside class="notes">
+<p>An LLM has the capacity to generate any number of possible documents based on its training. However, the context we provide narrows down the potential outputs by guiding the model along specific trajectories.</p>
+<pre><code>- Without context: All paths are equally possible.
+- With context: The paths are constrained, reducing the potential outcomes.
+
+Figure Description: A branching tree diagram. At the base (without context), the tree splits into many branches, each representing a possible document. As tokens (context) are added, paths narrow, showing fewer branches remaining as viable output possibilities.</code></pre>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="what-do-llms-learn" class="slide level2">
+<h2>What Do LLMs Learn?</h2>
+<p><span class="math display">\[\purple{P(x_{i+1}} \mid \blue{\text{Context}}, \red{\text{Model}})\]</span></p>
+<ul>
+<li>Knowledge is statistical and not grounded in direct experience or sensory input
+<ul>
+<li>Syntax and grammar</li>
+<li>Semantics, pragmatics</li>
+<li>Associations between concepts, facts, and common knowledge</li>
+</ul></li>
+<li>They can simulate reasoning and planning, but can they actually reason and plan <span class="citation" data-cites="kambhampatiCanLargeLanguage2024">(<a href="#/references" role="doc-biblioref" onclick=""><strong>kambhampatiCanLargeLanguage2024?</strong></a>)</span>?</li>
+</ul>
+</section>
+<section id="can-llms-reason" class="slide level2">
+<h2>Can LLMs Reason?</h2>
+<div class="prompt-example">
+<p>A farmer needs to transport a wolf, a goat, and a cabbage across a river using a small boat. The boat can carry only the farmer and one other item (either the wolf, the goat, or the cabbage) at a time. However, if left together without the farmer’s supervision: The wolf will eat the cabbage. The goat will eat the wolf. The challenge is to figure out how the farmer can get all three items across the river safely. What is the sequence of moves that the farmer needs to make?</p>
+</div>
+<div class="output-example">
+<p>This is a classic puzzle with a twist! Here’s the step-by-step solution for safely transporting the wolf, goat, and cabbage across the river:</p>
+<pre><code>1.  First trip: The farmer takes the goat across the river and leaves it on the other side.
+2.  Second trip: The farmer returns alone to the original side.
+3.  Third trip: The farmer takes the wolf across the river.
+4.  Fourth trip: The farmer leaves the wolf on the other side but takes the goat back to the original side.
+5.  Fifth trip: The farmer takes the cabbage across the river and leaves it with the wolf.
+6.  Sixth trip: The farmer returns alone to the original side.
+7.  Seventh trip: The farmer takes the goat across the river.</code></pre>
+<p>Now, all three (wolf, goat, and cabbage) are safely across the river, and the puzzle is solved!</p>
+<p>Key point: By taking the goat back on the fourth trip, the farmer ensures that neither the wolf nor the goat are left together, and neither are the goat and the cabbage left together.</p>
+</div>
+<p><a href="https://en.wikipedia.org/wiki/Wolf,_goat_and_cabbage_problem"><i class="bi-link " style="" role="img" aria-hidden="true"></i> A wolf, goat, and cabbage problem with a twist</a></p>
+</section>
+<section id="manhole-covers-why-are-they-round" class="slide level2">
+<h2>Manhole Covers: Why Are They Round?</h2>
+
+<img data-src="../assets/images/manhole-cover.png" class="r-stretch"></section>
+<section id="manhole-covers-why-are-they-round-1" class="slide level2">
+<h2>Manhole Covers: Why Are They Round?</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="../assets/images/manhole-cover.png"></p>
+</div><div class="column" style="width:50%;">
+<ol type="1">
+<li>The human body that had to fit through the hole is round.</li>
+<li>A circle gives a maximum opening for a minimum surface area.</li>
+<li>Heavy round covers can be rolled rather than lifted into position.</li>
+<li>They were easier and cheaper to manufacture than square pit covers of the same materials.</li>
+<li>A circle has a constant diameter and won’t fall into the pit if rotatedthe wrong way – a tricky problem to remedy if the access cover weighs well over 100kg as concrete and iron covers did.</li>
+</ol>
+<p><a href="https://terrafirmaindustries.com.au/why-are-manhole-covers-round/"><i class="bi-link " style="" role="img" aria-hidden="true"></i> Why are manhole covers round?</a></p>
 </div></div>
 </section>
-<section id="slide-2" class="slide level2">
-<h2>Slide 2</h2>
-                    <div id="UNIQUE-ID-2"></div>
-                    <script>
-                        document.addEventListener("DOMContentLoaded", function () {
-                            initializeTimer("UNIQUE-ID-2", 100, "interaction");
-                        });
-                    </script>
-                
+<section id="probabilistic-reasoning" class="slide level2">
+<h2>Probabilistic Reasoning</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>A tool capable of reasoning about possible causes of observable symptoms must perform probabilistic reasoning.</li>
+<li>LLMs cannot do this,</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><img data-src="../assets/images/probabilistic-reasoning.png"></p>
+</div></div>
 </section>
-<section id="slide-3" class="slide level2">
-<h2>Slide 3</h2>
+<section id="prompting-guiding-the-model-through-its-space-of-possible-outputs" class="slide level2">
+<h2>Prompting: Guiding the Model Through its Space of Possible Outputs</h2>
+<p><span class="math inline">\(\purple{P(x_{i+1}} \mid \blue{\text{Context}}, \red{\text{Model}})\)</span></p>
+<ul>
+<li>Prompting guides the LLM along specific paths in its space of possible documents.</li>
+<li>Every token in a prompt reduces the number of potential outcomes, helping the model generate relevant responses.
+<ul>
+<li>Without a prompt, all outputs are possible.</li>
+<li>As tokens are added, the range of possible outputs shrinks, making the model’s behavior more predictable.</li>
+</ul></li>
+</ul>
 </section>
-<section id="slide-4" class="slide level2">
-<h2>Slide 4</h2>
+<section id="how-prompting-reduces-uncertainty" class="slide level2">
+<h2>How Prompting Reduces Uncertainty</h2>
+<ul>
+<li>Each token conditions the model’s next prediction</li>
+<li>With more context, the uncertainty (entropy) decreases, guiding the model towards a more specific output.</li>
+</ul>
+
+<img data-src="../assets/images/once-upon-a-time.png" class="r-stretch"></section>
+<section id="the-power-of-prompting-why-it-matters" class="slide level2">
+<h2>The Power of Prompting: Why It Matters</h2>
+<ul>
+<li>Controls the behaviour of LLMs, steering them toward relevant outputs.</li>
+<li>Without effective prompting, the full potential of an LLM remains untapped, as it may generate irrelevant or misleading outputs.</li>
+</ul>
+<p>Prompting allows us to: - Navigate the vast space of possible outputs. - Achieve more controlled and useful results.</p>
+<p>Contexts are combinatorial: we do not know how a model will behave conditioned on all possible contexts. The output is highly contingent on the prompt.</p>
 </section>
-<section id="slide-5" class="slide level2">
-<h2>Slide 5</h2>
+<section id="prompt-engineering" class="slide level2">
+<h2><i class="bi-box-fill " style="" role="img" aria-hidden="true"></i> Prompt Engineering</h2>
+<p>We treat LLMs as black boxes and use engineering approaches to guide their behaviour.</p>
 </section>
-<section id="slide-6" class="slide level2">
-<h2>Slide 6</h2>
+<section id="questions-discussion" class="slide level2">
+<h2>Questions / Discussion <i class="bi-chat-dots " style="" role="img" aria-hidden="true"></i></h2>
 </section>
-<section id="slide-7" class="slide level2">
-<h2>Slide 7</h2>
-</section>
-<section id="slide-8" class="slide level2">
-<h2>Slide 8</h2>
-</section>
-<section id="slide-9" class="slide level2 smaller scrollable">
-<h2>Slide 9</h2>
+<section id="references" class="slide level2 smaller scrollable" data-background-color="#D8DEE9">
+<h2>References</h2>
+<div id="refs" role="list">
+
+</div>
 
 <div class="quarto-auto-generated-content">
 <p><img src="../assets/bfh-logo.png" class="slide-logo"></p>
 <div class="footer footer-default">
 <p>Berner Fachhochschule | Bern University of Applied Sciences</p>
-</div>
-</div>
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-cuiEffectsGenerativeAI2024a" class="csl-entry" role="listitem">
-Cui, Zheyuan (Kevin), Mert Demirer, Sonia Jaffe, Leon Musolff, Sida Peng, and Tobias Salz. 2024. <span>“The <span>Effects</span> of <span>Generative AI</span> on <span>High Skilled Work</span>: <span>Evidence</span> from <span>Three Field Experiments</span> with <span>Software Developers</span>.”</span> SSRN Scholarly Paper. Rochester, NY. September 3, 2024. <a href="https://doi.org/10.2139/ssrn.4945566">https://doi.org/10.2139/ssrn.4945566</a>.
 </div>
 </div>
 </section>

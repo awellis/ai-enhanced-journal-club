@@ -1,1 +1,1 @@
-Sitemap: https://virtuelleakademie.github.io/promptly-educated/sitemap.xml
+Sitemap: https://virtuelleakademie.github.io/ai-enhanced-journal-club/sitemap.xml

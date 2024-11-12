@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Andrew Ellis">
 
-<title>Virtuelle Akademie – AI-Enhanced Journal Club</title>
+<title>Workshop – AI-enhanced journal club</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +21,48 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script src="site_libs/quarto-contrib/quarto-timer-1.0.0/timer.js"></script>
-<link href="site_libs/quarto-contrib/quarto-timer-1.0.0/timer.css" rel="stylesheet">
-<script src="site_libs/quarto-contrib/qrcodejs-v1.0.0/qrcode.js"></script>
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/quarto-timer-1.0.0/timer.js"></script>
+<link href="../site_libs/quarto-contrib/quarto-timer-1.0.0/timer.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/bootstrap-icons-1.11.1/all.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -80,19 +102,27 @@ ul.task-list li input[type="checkbox"] {
     document.body.classList.add('hypothesis-enabled');
   });
 </script>
+ 
+  <style>
+  .slide-deck {
+      border: 3px solid #dee2e6;
+      width: 100%;
+  }
+  </style>
+  
 
 
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">AI-Enhanced Journal Club</span>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">AI-enhanced journal club</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -102,12 +132,12 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./workshop/index.html"> <i class="bi bi-card-list" role="img">
+    <a class="nav-link active" href="../workshop/index.html" aria-current="page"> <i class="bi bi-card-list" role="img">
 </i> 
 <span class="menu-text">Workshop</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./prompting-llms/index.html"> <i class="bi bi-info-circle" role="img">
+    <a class="nav-link" href="../prompting-llms/index.html"> <i class="bi bi-info-circle" role="img">
 </i> 
 <span class="menu-text">Prompting recommendations</span></a>
   </li>  
@@ -119,7 +149,7 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-slides">    
         <li>
-    <a class="dropdown-item" href="./slides/index.html">
+    <a class="dropdown-item" href="../slides/index.html">
  <span class="dropdown-text">How to read a paper</span></a>
   </li>  
     </ul>
@@ -132,11 +162,11 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-miro-boards">    
         <li>
-    <a class="dropdown-item" href="./miro-board/morning/index.html">
+    <a class="dropdown-item" href="../miro-board/morning/index.html">
  <span class="dropdown-text">Morning session</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./miro-board/afternoon/index.html">
+    <a class="dropdown-item" href="../miro-board/afternoon/index.html">
  <span class="dropdown-text">Afternoon session</span></a>
   </li>  
     </ul>
@@ -152,50 +182,207 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction-and-setup" id="toc-introduction-and-setup" class="nav-link active" data-scroll-target="#introduction-and-setup">Introduction and setup</a></li>
+  <li><a href="#presentation" id="toc-presentation" class="nav-link" data-scroll-target="#presentation">Presentation</a></li>
+  <li><a href="#solo-llm-exploration" id="toc-solo-llm-exploration" class="nav-link" data-scroll-target="#solo-llm-exploration">Solo LLM Exploration</a></li>
+  <li><a href="#paired-investigation" id="toc-paired-investigation" class="nav-link" data-scroll-target="#paired-investigation">Paired Investigation</a></li>
+  <li><a href="#group-analysis-discussion" id="toc-group-analysis-discussion" class="nav-link" data-scroll-target="#group-analysis-discussion">Group Analysis &amp; Discussion</a></li>
+  <li><a href="#wrap-up" id="toc-wrap-up" class="nav-link" data-scroll-target="#wrap-up">Wrap-up</a></li>
+  <li><a href="#how-to-read-a-paper" id="toc-how-to-read-a-paper" class="nav-link" data-scroll-target="#how-to-read-a-paper">How to read a paper</a></li>
+  <li><a href="#understanding-llms" id="toc-understanding-llms" class="nav-link" data-scroll-target="#understanding-llms">Understanding LLMs</a></li>
+  <li><a href="#limitations" id="toc-limitations" class="nav-link" data-scroll-target="#limitations">Limitations</a></li>
+  <li><a href="#prompting-strategies" id="toc-prompting-strategies" class="nav-link" data-scroll-target="#prompting-strategies">Prompting strategies</a></li>
+  <li><a href="#useful-tools" id="toc-useful-tools" class="nav-link" data-scroll-target="#useful-tools">Useful tools</a></li>
+  <li><a href="#activities" id="toc-activities" class="nav-link" data-scroll-target="#activities">Activities</a>
+  <ul class="collapse">
+  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading">Further reading</a></li>
+  </ul></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<div class="quarto-about-solana column-body">
-  <div class="about-entity">
-    <div class="entity-contents">
-      <header id="title-block-header" class="quarto-title-block default">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Virtuelle Akademie</h1>
+<h1 class="title">Workshop</h1>
 </div>
-<div class="quarto-title-meta">
+
+
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Author</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author"><a href="https://github.com/awellis">Andrew Ellis</a> <a href="https://orcid.org/0000-0002-2788-936X" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
   </div>
-</header> <div class="about-links">
-  <a href="https://virtuelleakademie.ch/" class="about-link" rel="" target="">
-    <i class="bi bi-magic"></i>
-     <span class="about-link-text">Virtuelle Akademie</span>
-  </a>
-  <a href="https://virtuelleakademie.ch/knowledge-base/" class="about-link" rel="" target="">
-    <i class="bi bi-lightbulb-fill"></i>
-     <span class="about-link-text">Knowledge Base</span>
-  </a>
-  <a href="https://www.bfh.ch/de/ueber-die-bfh/service-beratung/virtuelle-akademie/" class="about-link" rel="" target="">
-    <i class="bi bi-mortarboard-fill"></i>
-     <span class="about-link-text">Weiterbildungsangebote</span>
-  </a>
-  <a href="mailto:andrew.ellis@bfh.ch" class="about-link" rel="" target="">
-    <i class="bi bi-inbox-fill"></i>
-     <span class="about-link-text">Email</span>
-  </a>
-</div>
-      <div class="about-contents"><main class="content" id="quarto-document-content">
-<section id="qr-code" class="level1">
-<h1>QR Code</h1>
-<div id="qrcode" class="qrcode"></div>
-<script type="text/javascript">
-var qrcode = new QRCode("qrcode", {"text":"https://awellis.github.io/ai-enhanced-journal-club/","colorDark":"#000000","colorLight":"#ffffff","width":"400","height":"400"});
-</script>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            <a href="https://virtuelleakademie.ch">
+            Virtuelle Akademie, Berner Fachhochschule
+            </a>
+          </p>
+      </div>
+  </div>
+
+<div class="quarto-title-meta">
+
+      
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">13 Nov, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introduction-and-setup" class="level1">
+<h1>Introduction and setup</h1>
+<!-- :::{.timer #UNIQUE-ID-1 seconds=600 starton=interaction}
+:::
+:::
+:::: -->
+<p><i class="bi-alarm " style="" role="img" aria-hidden="true"></i> 15 minutes</p>
+<ul>
+<li>Welcome and brief overview (5 min)</li>
+<li>Quick demo of an LLM analyzing a paper’s abstract (5 min)</li>
+<li>Introduce Miro board structure and basic navigation (5 min)</li>
+</ul>
+</section>
+<section id="presentation" class="level1">
+<h1>Presentation</h1>
+<p><i class="bi-alarm " style="" role="img" aria-hidden="true"></i> 10 minutes</p>
+<p>Reading papers and understanding LLMs</p>
+<p><insert slides=""></insert></p>
+</section>
+<section id="solo-llm-exploration" class="level1">
+<h1>Solo LLM Exploration</h1>
+<p><i class="bi-alarm " style="" role="img" aria-hidden="true"></i> 20 minutes</p>
+<p>Each participant works individually with their chosen LLM to:</p>
+<ul>
+<li>Generate an initial paper overview</li>
+<li>Analyze the methodology</li>
+<li>Identify key findings</li>
+</ul>
+</section>
+<section id="paired-investigation" class="level1">
+<h1>Paired Investigation</h1>
+<p><i class="bi-alarm " style="" role="img" aria-hidden="true"></i> 20 minutes</p>
+<p>Pairs work together to:</p>
+<ul>
+<li>Compare their initial findings</li>
+<li>Challenge each other’s assumptions</li>
+<li>Try different prompting strategies</li>
+<li>Document effective approaches</li>
+</ul>
+</section>
+<section id="group-analysis-discussion" class="level1">
+<h1>Group Analysis &amp; Discussion</h1>
+<p><i class="bi-alarm " style="" role="img" aria-hidden="true"></i> 25 minutes</p>
+<ul>
+<li>Pairs present key discoveries (15 min)</li>
+<li>Open discussion of effective techniques (10 min)</li>
+</ul>
+</section>
+<section id="wrap-up" class="level1">
+<h1>Wrap-up</h1>
+<p><i class="bi-alarm " style="" role="img" aria-hidden="true"></i> 10 minutes</p>
+</section>
+<section id="how-to-read-a-paper" class="level1">
+<h1>How to read a paper</h1>
+<!-- [ [bfh.ch/de/weiterbildung/kurse/ki-in-der-lehre-intermediate/](https://www.bfh.ch/de/weiterbildung/kurse/ki-in-der-lehre-intermediate/) -->
+<!-- {{< embed ./slides/index.qmd >}} -->
+    <p><a href="../slides/index.html" target="_blank">View slides in full screen</a></p>
+       <div class="ratio ratio-16x9">
+      <iframe class="slide-deck" src="../slides/index.html" height="500px"></iframe>
+    </div>
+  
+</section>
+<section id="understanding-llms" class="level1">
+<h1>Understanding LLMs</h1>
+    <p><a href="../understanding-llms/index.html" target="_blank">View slides in full screen</a></p>
+       <div class="ratio ratio-16x9">
+      <iframe class="slide-deck" src="../understanding-llms/index.html" height="500px"></iframe>
+    </div>
+  
+</section>
+<section id="limitations" class="level1">
+<h1>Limitations</h1>
+<ul>
+<li>sycophancy</li>
+<li>reasoning capabilities</li>
+</ul>
+</section>
+<section id="prompting-strategies" class="level1">
+<h1>Prompting strategies</h1>
+</section>
+<section id="useful-tools" class="level1">
+<h1>Useful tools</h1>
+<ul>
+<li>ChatGPT data analysis</li>
+<li>Claude interactive visualizations</li>
+<li>Elicit</li>
+<li>Notebook LLM</li>
+</ul>
+</section>
+<section id="activities" class="level1">
+<h1>Activities</h1>
+<p>read <span class="citation" data-cites="fleckensteinTeachersSpotAI2024a">Fleckenstein et al. (<a href="#ref-fleckensteinTeachersSpotAI2024a" role="doc-biblioref">2024</a>)</span></p>
+<!--  -->
+<p>Use this paper for demonstration and for exercises</p>
+<p><i class="bi-volume-up " style="" role="img" aria-hidden="true"></i> <a href="https://notebooklm.google.com/notebook/cc116ea0-0de5-4732-b691-e737a8f07ffa/audio">Listen to the paper</a></p>
+<section id="further-reading" class="level2">
+<h2 class="anchored" data-anchor-id="further-reading">Further reading</h2>
+<ul>
+<li><span class="citation" data-cites="dellacquaNavigatingJaggedTechnological2023">Dell’Acqua et al. (<a href="#ref-dellacquaNavigatingJaggedTechnological2023" role="doc-biblioref">2023</a>)</span></li>
+<li><span class="citation" data-cites="toner-rodgersArtificialIntelligenceScientific">Toner-Rodgers (<a href="#ref-toner-rodgersArtificialIntelligenceScientific" role="doc-biblioref">n.d.</a>)</span></li>
+<li><span class="citation" data-cites="liangCanLargeLanguage2023">Liang et al. (<a href="#ref-liangCanLargeLanguage2023" role="doc-biblioref">2023</a>)</span></li>
+</ul>
+</section>
+</section>
+<section id="references" class="level1">
+
+
 
 
 </section>
-</main></div>
-    </div>
-  </div>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-dellacquaNavigatingJaggedTechnological2023" class="csl-entry" role="listitem">
+Dell’Acqua, Fabrizio, Edward McFowland, Ethan R. Mollick, Hila Lifshitz-Assaf, Katherine Kellogg, Saran Rajendran, Lisa Krayer, François Candelon, and Karim R. Lakhani. 2023. <span>“Navigating the <span>Jagged Technological Frontier</span>: <span>Field Experimental Evidence</span> of the <span>Effects</span> of <span>AI</span> on <span>Knowledge Worker Productivity</span> and <span>Quality</span>.”</span> <em>SSRN Electronic Journal</em>. <a href="https://doi.org/10.2139/ssrn.4573321">https://doi.org/10.2139/ssrn.4573321</a>.
 </div>
- <!-- /main -->
+<div id="ref-fleckensteinTeachersSpotAI2024a" class="csl-entry" role="listitem">
+Fleckenstein, Johanna, Jennifer Meyer, Thorben Jansen, Stefan D. Keller, Olaf Köller, and Jens Möller. 2024. <span>“Do Teachers Spot <span>AI</span>? <span>Evaluating</span> the Detectability of <span class="nocase">AI-generated</span> Texts Among Student Essays.”</span> <em>Computers and Education: Artificial Intelligence</em> 6 (June): 100209. <a href="https://doi.org/10.1016/j.caeai.2024.100209">https://doi.org/10.1016/j.caeai.2024.100209</a>.
+</div>
+<div id="ref-liangCanLargeLanguage2023" class="csl-entry" role="listitem">
+Liang, Weixin, Yuhui Zhang, Hancheng Cao, Binglu Wang, Daisy Ding, Xinyu Yang, Kailas Vodrahalli, et al. 2023. <span>“Can Large Language Models Provide Useful Feedback on Research Papers? <span>A</span> Large-Scale Empirical Analysis.”</span> October 3, 2023. <a href="http://arxiv.org/abs/2310.01783">http://arxiv.org/abs/2310.01783</a>.
+</div>
+<div id="ref-toner-rodgersArtificialIntelligenceScientific" class="csl-entry" role="listitem">
+Toner-Rodgers, Aidan. n.d. <span>“Artificial <span>Intelligence</span>, <span>Scientific Discovery</span>, and <span>Product Innovation</span>.”</span>
+</div>
+</div></section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{ellis2024,
+  author = {Ellis, Andrew},
+  title = {Workshop},
+  date = {2024-11-13},
+  url = {https://virtuelleakademie.github.io/ai-enhanced-journal-club/workshop/},
+  langid = {en}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-ellis2024" class="csl-entry quarto-appendix-citeas" role="listitem">
+Ellis, Andrew. 2024. <span>“Workshop.”</span> November 13, 2024. <a href="https://virtuelleakademie.github.io/ai-enhanced-journal-club/workshop/">https://virtuelleakademie.github.io/ai-enhanced-journal-club/workshop/</a>.
+</div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -216,6 +403,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     
@@ -621,5 +815,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

@@ -65,8 +65,424 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "AI-Enhanced Journal Club",
+    "title": "Virtuelle Akademie",
     "section": "",
-    "text": "Using AI in research\n\n\n    View slides in full screen"
+    "text": "QR Code"
+  },
+  {
+    "objectID": "notes/llm-workshop-guide.html",
+    "href": "notes/llm-workshop-guide.html",
+    "title": "Using LLMs to Read Scientific Papers",
+    "section": "",
+    "text": "Duration: 90 minutes\nParticipants: ~20 people\nObjective: Learn effective strategies for using LLMs to assist in reading and understanding scientific papers\nMaterials Needed:\n\nSample scientific papers (abstracts, methods, figures)\nAccess to LLM platform\nSlides/projector for demonstrations\nTimer for activities\nOptional: Small prizes for winning teams\n\n\n\n\n\n\n\nActivity: “Paper Pain Points” - Format: Pair discussion + group sharing - Instructions: 1. Pairs discuss (3 min): “Share your worst experience trying to understand a scientific paper” 2. Quick-fire round (5 min): Each pair shares their most memorable story 3. Facilitator notes common themes (2 min) - Purpose: Build rapport, identify shared challenges, set context for LLM solutions\n\n\n\nActivity: “LLM Paper Whisperer” - Setup: Sample Abstract:   Recent advances in transformer architectures have revolutionized natural language processing...   [Include complex, jargon-heavy abstract] - Process: 1. Display abstract (2 min) 2. Audience suggests questions (5 min) 3. Live LLM interaction (5 min) 4. Discussion of effective vs. ineffective queries (3 min)\n\n\n\nSetup: Create 4-5 teams - Materials per team: - Same scientific abstract - Different LLM chat transcripts (some good, some problematic) - Evaluation rubric - Scoring Criteria: - Identification of effective techniques (+2 points) - Spotting potential pitfalls (+2 points) - Creative improvement suggestions (+1 point) - Timeline: - Analysis (10 min) - Team presentations (8 min) - Winner announcement (2 min)\n\n\n\nChallenge Structure: - Phase 1: Prompt Creation (7 min) - Teams craft prompts following best practices: 1. Clear context setting 2. Specific instructions 3. Output format requirements 4. Follow-up guidance - Phase 2: Testing (5 min) - Live testing of top prompts - Phase 3: Analysis (3 min) - Group discussion of effective elements\n\n\n\nActivity Structure: - Provided Materials: - Complex scientific figure with caption - Template for analysis: 1. Simple Explanation:     2. Key Limitations:     3. Follow-up Questions:     4. LLM Prompt Used: - Team Tasks: 1. Create effective prompt (4 min) 2. Generate explanation (4 min) 3. Cross-team review (4 min) 4. Best practices discussion (3 min)\n\n\n\nIndividual Activity: - Steps: 1. Read provided conclusion section (2 min) 2. Use LLM to analyze: - Citation verification - Logic checking - Gap identification 3. Compare findings with neighbor (3 min) 4. Group discussion of insights (5 min)\n\n\n\n“Commitment Cards”: - Each participant writes: 1. One technique they’ll implement 2. One potential challenge they anticipate 3. How they’ll measure success\n\n\n\n\n\n\n\nEnergy Management:\n\nStart with high energy\nMix up sitting/standing activities\nUse movement during transitions\n\nTime Management:\n\nSet clear timers\nHave “time buffer” activities ready\nBe flexible with discussion times\n\nParticipation Strategies:\n\nUse round-robin for sharing\nEncourage quiet participants\nManage dominant voices\n\n\n\n\n\n\nLLM Platform:\n\nTest connectivity beforehand\nHave backup examples ready\nPrepare for common error scenarios\n\nContent Preparation:\n\nUse diverse paper examples\nPrepare intentionally flawed prompts\nInclude multiple scientific disciplines\n\n\n\n\n\n\n\nWorkshop slides template\nSample prompts collection\nCommon pitfalls guide\nBest practices cheat sheet\nRecommended reading list\n\n\n\n\n\nParticipant engagement levels\nQuality of generated prompts\nPost-workshop feedback\nImplementation commitments\nFollow-up participation\n\n\nNote: Adjust timing and activities based on participant background and engagement levels. Have backup activities ready for flexibility."
+  },
+  {
+    "objectID": "notes/llm-workshop-guide.html#a-90-minute-interactive-workshop-guide",
+    "href": "notes/llm-workshop-guide.html#a-90-minute-interactive-workshop-guide",
+    "title": "Using LLMs to Read Scientific Papers",
+    "section": "",
+    "text": "Duration: 90 minutes\nParticipants: ~20 people\nObjective: Learn effective strategies for using LLMs to assist in reading and understanding scientific papers\nMaterials Needed:\n\nSample scientific papers (abstracts, methods, figures)\nAccess to LLM platform\nSlides/projector for demonstrations\nTimer for activities\nOptional: Small prizes for winning teams\n\n\n\n\n\n\n\nActivity: “Paper Pain Points” - Format: Pair discussion + group sharing - Instructions: 1. Pairs discuss (3 min): “Share your worst experience trying to understand a scientific paper” 2. Quick-fire round (5 min): Each pair shares their most memorable story 3. Facilitator notes common themes (2 min) - Purpose: Build rapport, identify shared challenges, set context for LLM solutions\n\n\n\nActivity: “LLM Paper Whisperer” - Setup: Sample Abstract:   Recent advances in transformer architectures have revolutionized natural language processing...   [Include complex, jargon-heavy abstract] - Process: 1. Display abstract (2 min) 2. Audience suggests questions (5 min) 3. Live LLM interaction (5 min) 4. Discussion of effective vs. ineffective queries (3 min)\n\n\n\nSetup: Create 4-5 teams - Materials per team: - Same scientific abstract - Different LLM chat transcripts (some good, some problematic) - Evaluation rubric - Scoring Criteria: - Identification of effective techniques (+2 points) - Spotting potential pitfalls (+2 points) - Creative improvement suggestions (+1 point) - Timeline: - Analysis (10 min) - Team presentations (8 min) - Winner announcement (2 min)\n\n\n\nChallenge Structure: - Phase 1: Prompt Creation (7 min) - Teams craft prompts following best practices: 1. Clear context setting 2. Specific instructions 3. Output format requirements 4. Follow-up guidance - Phase 2: Testing (5 min) - Live testing of top prompts - Phase 3: Analysis (3 min) - Group discussion of effective elements\n\n\n\nActivity Structure: - Provided Materials: - Complex scientific figure with caption - Template for analysis: 1. Simple Explanation:     2. Key Limitations:     3. Follow-up Questions:     4. LLM Prompt Used: - Team Tasks: 1. Create effective prompt (4 min) 2. Generate explanation (4 min) 3. Cross-team review (4 min) 4. Best practices discussion (3 min)\n\n\n\nIndividual Activity: - Steps: 1. Read provided conclusion section (2 min) 2. Use LLM to analyze: - Citation verification - Logic checking - Gap identification 3. Compare findings with neighbor (3 min) 4. Group discussion of insights (5 min)\n\n\n\n“Commitment Cards”: - Each participant writes: 1. One technique they’ll implement 2. One potential challenge they anticipate 3. How they’ll measure success\n\n\n\n\n\n\n\nEnergy Management:\n\nStart with high energy\nMix up sitting/standing activities\nUse movement during transitions\n\nTime Management:\n\nSet clear timers\nHave “time buffer” activities ready\nBe flexible with discussion times\n\nParticipation Strategies:\n\nUse round-robin for sharing\nEncourage quiet participants\nManage dominant voices\n\n\n\n\n\n\nLLM Platform:\n\nTest connectivity beforehand\nHave backup examples ready\nPrepare for common error scenarios\n\nContent Preparation:\n\nUse diverse paper examples\nPrepare intentionally flawed prompts\nInclude multiple scientific disciplines\n\n\n\n\n\n\n\nWorkshop slides template\nSample prompts collection\nCommon pitfalls guide\nBest practices cheat sheet\nRecommended reading list\n\n\n\n\n\nParticipant engagement levels\nQuality of generated prompts\nPost-workshop feedback\nImplementation commitments\nFollow-up participation\n\n\nNote: Adjust timing and activities based on participant background and engagement levels. Have backup activities ready for flexibility."
+  },
+  {
+    "objectID": "notes/paired-journal-club.html",
+    "href": "notes/paired-journal-club.html",
+    "title": "Paired Analysis Journal Club",
+    "section": "",
+    "text": "A Two-Person Approach to Scientific Reading\n\n\nTransform traditional journal clubs into a series of paired reading partnerships, applying the “It Takes Two to Think” framework to scientific paper analysis.\n\n\n\n\n\nEach participant is paired with a reading partner to: - Read the paper independently - Schedule a 30-minute paired discussion - Use improvisational principles in discussion - Document insights and questions\n\n\n\nOpening Phase (5 minutes)\n\nShare initial reactions\nIdentify areas of confusion\nNote surprising findings\n\nDeep Dive (20 minutes)\n\nTake turns leading section analysis\nUse “Yes, and” principle to build on ideas\nFocus on methodology and assumptions\nConnect to broader scientific context\n\nSynthesis (5 minutes)\n\nSummarize key insights\nPrepare main points for group discussion\nDocument questions for author (if applicable)\n\n\n\n\n\n\n\n\n\nPaired Insights Round (20 minutes)\n\nEach pair presents key insights (3-4 minutes per pair)\nFocus on unique perspectives discovered\nShare effective discussion strategies\n\nCross-Pair Discussion (25 minutes)\n\nIdentify common themes\nCompare different interpretations\nDiscuss methodological questions\nConnect to related research\n\nApplication & Future Directions (15 minutes)\n\nResearch implications\nPotential collaborations\nFollow-up paper suggestions\n\n\n\n\n\n\n\nRotate partners monthly\nMix expertise levels and backgrounds\nMaintain partnerships for 2-3 papers\nBuild trust and communication patterns\n\n\n\n\n\n\n\n\nMix Experience Levels\n\nSenior + Junior researchers\nDifferent methodological backgrounds\nComplementary expertise areas\n\nConsider Communication Styles\n\nBalance talking/listening preferences\nMatch energy levels\nAccount for scheduling compatibility\n\n\n\n\n\n\n\n1. What surprised you most about this paper?\n2. Which methodological choices seem most crucial?\n3. What assumptions underlie the main arguments?\n4. How does this connect to your work?\n5. What would you like to ask the authors?\n\n\n\n1. \"Building on your point about [X], what if we considered...\"\n2. \"Yes, and that might also explain...\"\n3. \"How would this method work in [different context]?\"\n4. \"Can we explore that limitation further?\"\n\n\n\n\n\n\n# Paper Title:\nDate of Discussion:\nPartners:\n\n## Key Insights\n1. [Partner 1 Name]:\n   - Main point\n   - Supporting evidence\n   - Questions raised\n\n2. [Partner 2 Name]:\n   - Main point\n   - Supporting evidence\n   - Questions raised\n\n## Synthesis\n- Shared conclusions:\n- Areas of productive disagreement:\n- Questions for group discussion:\n\n\n\n\n\n\n\n\nEstablish “no bad ideas” rule\nEncourage speculation and creativity\nValue different perspectives\nBuild on partner’s thoughts\n\n\n\n\n\nSet clear timeboxes\nUse structured templates\nStay paper-centered\nDocument insights real-time\n\n\n\n\n\nRotate partners regularly\nShare successful strategies\nBuild on previous discussions\nConnect across papers\n\n\n\n\n\n\n\n\nParticipation Quality\n\nEngagement in paired discussions\nContribution to group sessions\nFollow-up actions taken\n\nLearning Outcomes\n\nNew insights generated\nConnections made\nApplications identified\n\nCommunity Building\n\nPartnership effectiveness\nCross-pollination of ideas\nCollaborative projects initiated\n\n\n\n\n\n\nMonthly partner feedback\nQuarterly group assessment\nContinuous improvement suggestions\nBest practices documentation\n\n\n\n\n\n\n\n\nShared note-taking platform\nCalendar for partner matching\nVirtual meeting capability\nDocument repository\n\n\n\n\n\nDiscussion templates\nPartner matching system\nBest practices guide\nAssessment forms\n\n\n\n\n\n\n\n\nDeeper paper understanding\nImproved critical analysis skills\nExpanded perspective\nStronger professional relationships\n\n\n\n\n\nMore engaging discussions\nHigher participation rates\nBetter paper selection\nIncreased collaboration\n\n\n\n\n\nStronger research community\nEnhanced paper analysis\nBetter research practices\nIncreased cross-disciplinary understanding\n\n\nNote: Adapt this framework based on your specific institutional context and participant needs."
+  },
+  {
+    "objectID": "notes/paired-journal-club.html#core-concept",
+    "href": "notes/paired-journal-club.html#core-concept",
+    "title": "Paired Analysis Journal Club",
+    "section": "",
+    "text": "Transform traditional journal clubs into a series of paired reading partnerships, applying the “It Takes Two to Think” framework to scientific paper analysis."
+  },
+  {
+    "objectID": "notes/paired-journal-club.html#structure",
+    "href": "notes/paired-journal-club.html#structure",
+    "title": "Paired Analysis Journal Club",
+    "section": "",
+    "text": "Each participant is paired with a reading partner to: - Read the paper independently - Schedule a 30-minute paired discussion - Use improvisational principles in discussion - Document insights and questions\n\n\n\nOpening Phase (5 minutes)\n\nShare initial reactions\nIdentify areas of confusion\nNote surprising findings\n\nDeep Dive (20 minutes)\n\nTake turns leading section analysis\nUse “Yes, and” principle to build on ideas\nFocus on methodology and assumptions\nConnect to broader scientific context\n\nSynthesis (5 minutes)\n\nSummarize key insights\nPrepare main points for group discussion\nDocument questions for author (if applicable)\n\n\n\n\n\n\n\n\n\nPaired Insights Round (20 minutes)\n\nEach pair presents key insights (3-4 minutes per pair)\nFocus on unique perspectives discovered\nShare effective discussion strategies\n\nCross-Pair Discussion (25 minutes)\n\nIdentify common themes\nCompare different interpretations\nDiscuss methodological questions\nConnect to related research\n\nApplication & Future Directions (15 minutes)\n\nResearch implications\nPotential collaborations\nFollow-up paper suggestions\n\n\n\n\n\n\n\nRotate partners monthly\nMix expertise levels and backgrounds\nMaintain partnerships for 2-3 papers\nBuild trust and communication patterns"
+  },
+  {
+    "objectID": "notes/paired-journal-club.html#implementation-guidelines",
+    "href": "notes/paired-journal-club.html#implementation-guidelines",
+    "title": "Paired Analysis Journal Club",
+    "section": "",
+    "text": "Mix Experience Levels\n\nSenior + Junior researchers\nDifferent methodological backgrounds\nComplementary expertise areas\n\nConsider Communication Styles\n\nBalance talking/listening preferences\nMatch energy levels\nAccount for scheduling compatibility\n\n\n\n\n\n\n\n1. What surprised you most about this paper?\n2. Which methodological choices seem most crucial?\n3. What assumptions underlie the main arguments?\n4. How does this connect to your work?\n5. What would you like to ask the authors?\n\n\n\n1. \"Building on your point about [X], what if we considered...\"\n2. \"Yes, and that might also explain...\"\n3. \"How would this method work in [different context]?\"\n4. \"Can we explore that limitation further?\"\n\n\n\n\n\n\n# Paper Title:\nDate of Discussion:\nPartners:\n\n## Key Insights\n1. [Partner 1 Name]:\n   - Main point\n   - Supporting evidence\n   - Questions raised\n\n2. [Partner 2 Name]:\n   - Main point\n   - Supporting evidence\n   - Questions raised\n\n## Synthesis\n- Shared conclusions:\n- Areas of productive disagreement:\n- Questions for group discussion:"
+  },
+  {
+    "objectID": "notes/paired-journal-club.html#best-practices",
+    "href": "notes/paired-journal-club.html#best-practices",
+    "title": "Paired Analysis Journal Club",
+    "section": "",
+    "text": "Establish “no bad ideas” rule\nEncourage speculation and creativity\nValue different perspectives\nBuild on partner’s thoughts\n\n\n\n\n\nSet clear timeboxes\nUse structured templates\nStay paper-centered\nDocument insights real-time\n\n\n\n\n\nRotate partners regularly\nShare successful strategies\nBuild on previous discussions\nConnect across papers"
+  },
+  {
+    "objectID": "notes/paired-journal-club.html#assessment-iteration",
+    "href": "notes/paired-journal-club.html#assessment-iteration",
+    "title": "Paired Analysis Journal Club",
+    "section": "",
+    "text": "Participation Quality\n\nEngagement in paired discussions\nContribution to group sessions\nFollow-up actions taken\n\nLearning Outcomes\n\nNew insights generated\nConnections made\nApplications identified\n\nCommunity Building\n\nPartnership effectiveness\nCross-pollination of ideas\nCollaborative projects initiated\n\n\n\n\n\n\nMonthly partner feedback\nQuarterly group assessment\nContinuous improvement suggestions\nBest practices documentation"
+  },
+  {
+    "objectID": "notes/paired-journal-club.html#resources-needed",
+    "href": "notes/paired-journal-club.html#resources-needed",
+    "title": "Paired Analysis Journal Club",
+    "section": "",
+    "text": "Shared note-taking platform\nCalendar for partner matching\nVirtual meeting capability\nDocument repository\n\n\n\n\n\nDiscussion templates\nPartner matching system\nBest practices guide\nAssessment forms"
+  },
+  {
+    "objectID": "notes/paired-journal-club.html#expected-outcomes",
+    "href": "notes/paired-journal-club.html#expected-outcomes",
+    "title": "Paired Analysis Journal Club",
+    "section": "",
+    "text": "Deeper paper understanding\nImproved critical analysis skills\nExpanded perspective\nStronger professional relationships\n\n\n\n\n\nMore engaging discussions\nHigher participation rates\nBetter paper selection\nIncreased collaboration\n\n\n\n\n\nStronger research community\nEnhanced paper analysis\nBetter research practices\nIncreased cross-disciplinary understanding\n\n\nNote: Adapt this framework based on your specific institutional context and participant needs."
+  },
+  {
+    "objectID": "notes/paper-analysis-guide.html",
+    "href": "notes/paper-analysis-guide.html",
+    "title": "LLM-Assisted Scientific Paper Analysis: A Comprehensive Guide",
+    "section": "",
+    "text": "Have the paper open in a format where you can easily copy text\nKeep a structured note-taking system ready\nConsider using multiple LLM providers (e.g., Claude, GPT-4) for cross-validation\nPrepare a basic template document for organizing findings\n\n\n\n\n\nTitle and Abstract Analysis\nPrompt Template:\n\"Please analyze this title and abstract focusing on:\n1. The main research question\n2. The key methodological approach\n3. The primary claimed findings\n4. Any potential red flags or limitations that should guide my reading\nPlease maintain a critical perspective and highlight any assumptions or claims that require careful verification.\"\nBackground Context\nPrompt Template:\n\"What are the key papers and concepts I should be familiar with to understand this research? \nPlease format the response as:\n1. Essential prerequisite concepts:\n2. Key related papers:\n3. Potential controversies in this field:\nNote: Please indicate if you're uncertain about any of these recommendations.\"\n\n\n\n\n\n\n\n\nInitial Method Review\nPrompt Template:\n\"Please analyze this methods section, focusing on:\n1. Key methodological choices and their justification\n2. Potential alternative approaches not discussed\n3. Assumptions made by the authors\n4. Possible limitations or confounds\nPlease maintain a skeptical perspective and highlight any methodological choices that require extra scrutiny.\"\nStatistical Analysis Verification\nPrompt Template:\n\"For these statistical methods:\n1. Are they appropriate for the research questions?\n2. What assumptions do these methods make?\n3. What alternative analyses might have been more appropriate?\n4. What potential confounds might affect these analyses?\nPlease be specific about any concerns or limitations.\"\n\n\n\n\n\nData Presentation Analysis\nPrompt Template:\n\"Please analyze these results focusing on:\n1. Whether the data supports the stated conclusions\n2. Alternative interpretations not discussed\n3. Potential confounding variables\n4. Missing analyses that would strengthen the findings\nBe explicitly critical and highlight any gaps between data and conclusions.\"\nVerification Queries\n\nAlways ask the same question in multiple ways\nUse contrary framings to test for sycophancy\nCross-reference critical points with other LLMs\n\n\n\n\n\n\nClaims Verification\nPrompt Template:\n\"For each major claim in the discussion:\n1. Is it fully supported by the presented data?\n2. What alternative explanations exist?\n3. What additional evidence would strengthen this claim?\n4. What limitations might affect this interpretation?\nPlease be specific about any gaps between evidence and claims.\"\n\n\n\n\n\n\n\n\nStrength Assessment\nPrompt Template:\n\"Please analyze the paper's strengths:\n1. Most robust findings\n2. Strongest methodological elements\n3. Most convincing arguments\n4. Most significant contributions\nProvide specific evidence for each point.\"\nWeakness Assessment\nPrompt Template:\n\"Please analyze the paper's weaknesses:\n1. Methodological limitations\n2. Unsupported assumptions\n3. Alternative interpretations\n4. Missing controls or analyses\nBe specific and explain why each is important.\"\n\n\n\n\n\n\n\nAsk the same questions to different LLMs\nCompare responses for consistency\nInvestigate discrepancies\nDocument variations in interpretation\n\n\n\n\n\nAsk for critiques of both positive and negative interpretations\nChallenge both supportive and critical responses\nCompare how the model handles opposing viewpoints\nDocument any tendency to agree with the questioner\n\n\n\n\n\n\n\n\n\nMain Findings Summary\n\nDocument key claims and evidence\nNote areas of uncertainty\nList verified vs. questionable conclusions\nInclude cross-validation results\n\nLimitations Documentation\n\nRecord methodological concerns\nNote potential biases\nDocument areas needing verification\nList missing analyses\n\nFuture Directions\n\nIdentify logical next steps\nNote gaps in current evidence\nSuggest methodological improvements\nList potential applications\n\n\n\n\n\n\n\n\n\n\n\nRotate question framing\nUse multiple prompting strategies\nCross-validate critical findings\nDocument model uncertainties\n\n\n\n\n\nRecord all significant prompts\nNote areas of model disagreement\nTrack changes in model responses\nDocument verification steps\n\n\n\n\n\nModel significantly changes stance when questioned\nResponses align too readily with suggestions\nInconsistent technical explanations\nOverly confident answers about uncertain topics\n\n\n\n\n\n\nOver-reliance Traps\n\nAccepting model interpretations without verification\nUsing single prompts for complex issues\nFailing to cross-validate critical points\nNeglecting human expertise\n\nBias Introduction\n\nLeading questions that suggest preferred answers\nFailing to challenge confirmatory responses\nAccepting responses that align with expectations\nNeglecting alternative viewpoints\n\n\n\n\n\n\n\n\n\nSetup Phase\n\nPrepare standard prompts\nCreate documentation templates\nSet up cross-validation system\nEstablish verification protocols\n\nExecution Phase\n\nFollow structured analysis process\nDocument all significant interactions\nCross-validate critical findings\nMaintain skeptical perspective\n\nReview Phase\n\nVerify key conclusions\nCheck for bias patterns\nReview documentation completeness\nValidate critical interpretations\n\n\n\n\n\n\nSuccess in using LLMs for paper analysis requires: 1. Structured approach to manage biases 2. Robust verification processes 3. Clear documentation practices 4. Regular validation of findings\nRemember: LLMs are tools to assist analysis, not replace critical thinking. Always maintain skepticism and verify important conclusions through multiple methods."
+  },
+  {
+    "objectID": "notes/paper-analysis-guide.html#pre-reading-phase",
+    "href": "notes/paper-analysis-guide.html#pre-reading-phase",
+    "title": "LLM-Assisted Scientific Paper Analysis: A Comprehensive Guide",
+    "section": "",
+    "text": "Have the paper open in a format where you can easily copy text\nKeep a structured note-taking system ready\nConsider using multiple LLM providers (e.g., Claude, GPT-4) for cross-validation\nPrepare a basic template document for organizing findings\n\n\n\n\n\nTitle and Abstract Analysis\nPrompt Template:\n\"Please analyze this title and abstract focusing on:\n1. The main research question\n2. The key methodological approach\n3. The primary claimed findings\n4. Any potential red flags or limitations that should guide my reading\nPlease maintain a critical perspective and highlight any assumptions or claims that require careful verification.\"\nBackground Context\nPrompt Template:\n\"What are the key papers and concepts I should be familiar with to understand this research? \nPlease format the response as:\n1. Essential prerequisite concepts:\n2. Key related papers:\n3. Potential controversies in this field:\nNote: Please indicate if you're uncertain about any of these recommendations.\""
+  },
+  {
+    "objectID": "notes/paper-analysis-guide.html#deep-reading-phase",
+    "href": "notes/paper-analysis-guide.html#deep-reading-phase",
+    "title": "LLM-Assisted Scientific Paper Analysis: A Comprehensive Guide",
+    "section": "",
+    "text": "Initial Method Review\nPrompt Template:\n\"Please analyze this methods section, focusing on:\n1. Key methodological choices and their justification\n2. Potential alternative approaches not discussed\n3. Assumptions made by the authors\n4. Possible limitations or confounds\nPlease maintain a skeptical perspective and highlight any methodological choices that require extra scrutiny.\"\nStatistical Analysis Verification\nPrompt Template:\n\"For these statistical methods:\n1. Are they appropriate for the research questions?\n2. What assumptions do these methods make?\n3. What alternative analyses might have been more appropriate?\n4. What potential confounds might affect these analyses?\nPlease be specific about any concerns or limitations.\"\n\n\n\n\n\nData Presentation Analysis\nPrompt Template:\n\"Please analyze these results focusing on:\n1. Whether the data supports the stated conclusions\n2. Alternative interpretations not discussed\n3. Potential confounding variables\n4. Missing analyses that would strengthen the findings\nBe explicitly critical and highlight any gaps between data and conclusions.\"\nVerification Queries\n\nAlways ask the same question in multiple ways\nUse contrary framings to test for sycophancy\nCross-reference critical points with other LLMs\n\n\n\n\n\n\nClaims Verification\nPrompt Template:\n\"For each major claim in the discussion:\n1. Is it fully supported by the presented data?\n2. What alternative explanations exist?\n3. What additional evidence would strengthen this claim?\n4. What limitations might affect this interpretation?\nPlease be specific about any gaps between evidence and claims.\""
+  },
+  {
+    "objectID": "notes/paper-analysis-guide.html#critical-analysis-phase",
+    "href": "notes/paper-analysis-guide.html#critical-analysis-phase",
+    "title": "LLM-Assisted Scientific Paper Analysis: A Comprehensive Guide",
+    "section": "",
+    "text": "Strength Assessment\nPrompt Template:\n\"Please analyze the paper's strengths:\n1. Most robust findings\n2. Strongest methodological elements\n3. Most convincing arguments\n4. Most significant contributions\nProvide specific evidence for each point.\"\nWeakness Assessment\nPrompt Template:\n\"Please analyze the paper's weaknesses:\n1. Methodological limitations\n2. Unsupported assumptions\n3. Alternative interpretations\n4. Missing controls or analyses\nBe specific and explain why each is important.\"\n\n\n\n\n\n\n\nAsk the same questions to different LLMs\nCompare responses for consistency\nInvestigate discrepancies\nDocument variations in interpretation\n\n\n\n\n\nAsk for critiques of both positive and negative interpretations\nChallenge both supportive and critical responses\nCompare how the model handles opposing viewpoints\nDocument any tendency to agree with the questioner"
+  },
+  {
+    "objectID": "notes/paper-analysis-guide.html#documentation-and-synthesis",
+    "href": "notes/paper-analysis-guide.html#documentation-and-synthesis",
+    "title": "LLM-Assisted Scientific Paper Analysis: A Comprehensive Guide",
+    "section": "",
+    "text": "Main Findings Summary\n\nDocument key claims and evidence\nNote areas of uncertainty\nList verified vs. questionable conclusions\nInclude cross-validation results\n\nLimitations Documentation\n\nRecord methodological concerns\nNote potential biases\nDocument areas needing verification\nList missing analyses\n\nFuture Directions\n\nIdentify logical next steps\nNote gaps in current evidence\nSuggest methodological improvements\nList potential applications"
+  },
+  {
+    "objectID": "notes/paper-analysis-guide.html#best-practices-and-safeguards",
+    "href": "notes/paper-analysis-guide.html#best-practices-and-safeguards",
+    "title": "LLM-Assisted Scientific Paper Analysis: A Comprehensive Guide",
+    "section": "",
+    "text": "Rotate question framing\nUse multiple prompting strategies\nCross-validate critical findings\nDocument model uncertainties\n\n\n\n\n\nRecord all significant prompts\nNote areas of model disagreement\nTrack changes in model responses\nDocument verification steps\n\n\n\n\n\nModel significantly changes stance when questioned\nResponses align too readily with suggestions\nInconsistent technical explanations\nOverly confident answers about uncertain topics\n\n\n\n\n\n\nOver-reliance Traps\n\nAccepting model interpretations without verification\nUsing single prompts for complex issues\nFailing to cross-validate critical points\nNeglecting human expertise\n\nBias Introduction\n\nLeading questions that suggest preferred answers\nFailing to challenge confirmatory responses\nAccepting responses that align with expectations\nNeglecting alternative viewpoints"
+  },
+  {
+    "objectID": "notes/paper-analysis-guide.html#implementation-tips",
+    "href": "notes/paper-analysis-guide.html#implementation-tips",
+    "title": "LLM-Assisted Scientific Paper Analysis: A Comprehensive Guide",
+    "section": "",
+    "text": "Setup Phase\n\nPrepare standard prompts\nCreate documentation templates\nSet up cross-validation system\nEstablish verification protocols\n\nExecution Phase\n\nFollow structured analysis process\nDocument all significant interactions\nCross-validate critical findings\nMaintain skeptical perspective\n\nReview Phase\n\nVerify key conclusions\nCheck for bias patterns\nReview documentation completeness\nValidate critical interpretations"
+  },
+  {
+    "objectID": "notes/paper-analysis-guide.html#conclusion",
+    "href": "notes/paper-analysis-guide.html#conclusion",
+    "title": "LLM-Assisted Scientific Paper Analysis: A Comprehensive Guide",
+    "section": "",
+    "text": "Success in using LLMs for paper analysis requires: 1. Structured approach to manage biases 2. Robust verification processes 3. Clear documentation practices 4. Regular validation of findings\nRemember: LLMs are tools to assist analysis, not replace critical thinking. Always maintain skepticism and verify important conclusions through multiple methods."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "notes/paper-summary.html",
+    "href": "notes/paper-summary.html",
+    "title": "It Takes Two to Think: Analysis of Optimal Scientific Collaboration",
+    "section": "",
+    "text": "Nature Biotechnology (2023)\nDOI: 10.1038/s41587-023-02074-2\n\n\nThe paper argues that two-person collaborations represent the optimal format for creative scientific discussions and idea development, drawing parallels with improvisational theater techniques and evolutionary psychology.\n\n\n\n\n\n\nCreative Process\n\nScience involves a “night science” creative process\nBuilding future ideas requires cobbling together diverse approaches\nDifferent scientists contribute varied creative methods\nLanguage structures help organize linear thought progression\n\nCommunication Dynamics\n\nIndividual thinking often lacks clear structure\nIntelligent interlocutors provide crucial additional perspectives\nCommunication helps expose flaws in reasoning\nFeedback from understanding colleagues boosts morale\n\n\n\n\n\n\nProblems with Large Groups\n\nTraditional “brainstorming” in large groups is ineffective\nRoom dynamics lead to limited participation\nStronger voices dominate discussions\nMany participants remain silent\nIdeas often go unexpressed or underdeveloped\n“Group think” emerges as participants adjust to perceived standards\n\nAdvantages of Pairs\n\nMore balanced participation\nEasier to maintain flow state\nReduced social complexity\nGreater comfort in expressing incomplete ideas\nBetter for developing creative insights\nMore conducive to transformative discussions\n\n\n\n\n\n\nKey Principles\n\nAdopt a “Yes, and” mindset from improvisational theater\nMaintain positive, supportive attitude\nSuspend immediate criticism\nAccept that ideas may initially sound strange\nBuild trust through positive reinforcement\n\nImplementation\n\nCreate safe space for idea exploration\nSupport each other’s thinking process\nAllow for seemingly improbable suggestions\nFocus on possibility rather than immediate criticism\n\n\n\n\n\n\n\nHumans evolved as social problem-solvers\nOne-on-one discussions reflect natural cooperative tendencies\nScientific creativity benefits from this evolutionary adaptation\nPaired discussions represent optimal balance of social and cognitive factors\n\n\n\n\n\n\n\nSeek out one-on-one collaborations\nInvest time in building trust with colleagues\nValue improvisational discussions\nCreate safe spaces for idea exploration\n\n\n\n\n\nSupport paired collaboration opportunities\nRecognize value of informal discussions\nBalance structured meetings with creative partnerships\nFoster environment conducive to trust-building\n\n\n\n\n\nThe paper advocates for recognizing two-person discussions as the optimal format for scientific creativity, suggesting that time invested in such collaborations advances rather than hinders progress. It emphasizes the importance of creating supportive environments where ideas can be freely explored and developed.\n\n\n\nThe authors support their arguments by referencing a 2019 study examining citation networks, which found that smaller research teams were more likely to produce disruptive and innovative results compared to larger groups.\n\nNote: This summary emphasizes the key points and structure of the original paper while maintaining its core arguments and evidence."
+  },
+  {
+    "objectID": "notes/paper-summary.html#core-thesis",
+    "href": "notes/paper-summary.html#core-thesis",
+    "title": "It Takes Two to Think: Analysis of Optimal Scientific Collaboration",
+    "section": "",
+    "text": "The paper argues that two-person collaborations represent the optimal format for creative scientific discussions and idea development, drawing parallels with improvisational theater techniques and evolutionary psychology."
+  },
+  {
+    "objectID": "notes/paper-summary.html#key-arguments",
+    "href": "notes/paper-summary.html#key-arguments",
+    "title": "It Takes Two to Think: Analysis of Optimal Scientific Collaboration",
+    "section": "",
+    "text": "Creative Process\n\nScience involves a “night science” creative process\nBuilding future ideas requires cobbling together diverse approaches\nDifferent scientists contribute varied creative methods\nLanguage structures help organize linear thought progression\n\nCommunication Dynamics\n\nIndividual thinking often lacks clear structure\nIntelligent interlocutors provide crucial additional perspectives\nCommunication helps expose flaws in reasoning\nFeedback from understanding colleagues boosts morale\n\n\n\n\n\n\nProblems with Large Groups\n\nTraditional “brainstorming” in large groups is ineffective\nRoom dynamics lead to limited participation\nStronger voices dominate discussions\nMany participants remain silent\nIdeas often go unexpressed or underdeveloped\n“Group think” emerges as participants adjust to perceived standards\n\nAdvantages of Pairs\n\nMore balanced participation\nEasier to maintain flow state\nReduced social complexity\nGreater comfort in expressing incomplete ideas\nBetter for developing creative insights\nMore conducive to transformative discussions\n\n\n\n\n\n\nKey Principles\n\nAdopt a “Yes, and” mindset from improvisational theater\nMaintain positive, supportive attitude\nSuspend immediate criticism\nAccept that ideas may initially sound strange\nBuild trust through positive reinforcement\n\nImplementation\n\nCreate safe space for idea exploration\nSupport each other’s thinking process\nAllow for seemingly improbable suggestions\nFocus on possibility rather than immediate criticism"
+  },
+  {
+    "objectID": "notes/paper-summary.html#evolutionary-context",
+    "href": "notes/paper-summary.html#evolutionary-context",
+    "title": "It Takes Two to Think: Analysis of Optimal Scientific Collaboration",
+    "section": "",
+    "text": "Humans evolved as social problem-solvers\nOne-on-one discussions reflect natural cooperative tendencies\nScientific creativity benefits from this evolutionary adaptation\nPaired discussions represent optimal balance of social and cognitive factors"
+  },
+  {
+    "objectID": "notes/paper-summary.html#practical-implications",
+    "href": "notes/paper-summary.html#practical-implications",
+    "title": "It Takes Two to Think: Analysis of Optimal Scientific Collaboration",
+    "section": "",
+    "text": "Seek out one-on-one collaborations\nInvest time in building trust with colleagues\nValue improvisational discussions\nCreate safe spaces for idea exploration\n\n\n\n\n\nSupport paired collaboration opportunities\nRecognize value of informal discussions\nBalance structured meetings with creative partnerships\nFoster environment conducive to trust-building"
+  },
+  {
+    "objectID": "notes/paper-summary.html#conclusions",
+    "href": "notes/paper-summary.html#conclusions",
+    "title": "It Takes Two to Think: Analysis of Optimal Scientific Collaboration",
+    "section": "",
+    "text": "The paper advocates for recognizing two-person discussions as the optimal format for scientific creativity, suggesting that time invested in such collaborations advances rather than hinders progress. It emphasizes the importance of creating supportive environments where ideas can be freely explored and developed."
+  },
+  {
+    "objectID": "notes/paper-summary.html#citation-foundation",
+    "href": "notes/paper-summary.html#citation-foundation",
+    "title": "It Takes Two to Think: Analysis of Optimal Scientific Collaboration",
+    "section": "",
+    "text": "The authors support their arguments by referencing a 2019 study examining citation networks, which found that smaller research teams were more likely to produce disruptive and innovative results compared to larger groups.\n\nNote: This summary emphasizes the key points and structure of the original paper while maintaining its core arguments and evidence."
+  },
+  {
+    "objectID": "notes/llm-science-analysis.html",
+    "href": "notes/llm-science-analysis.html",
+    "title": "Using LLMs for Scientific Paper Analysis: A Critical Framework",
+    "section": "",
+    "text": "Analysis based on findings from “Towards Understanding Sycophancy in Language Models”\n\n\n\n\n\nLLMs show strong tendency to agree with user-presented viewpoints\nRisk of reinforcing confirmation bias in scientific review\nMay fail to identify critical flaws that contradict researcher expectations\nCould create echo chambers in scientific discourse\n\n\n\n\n\nModels readily change correct assessments when questioned\nHigh risk of abandoning valid criticisms under minimal pushback\nFalse admissions of error even with high initial confidence\nUndermines reliability for controversial or contested findings\n\n\n\n\n\nTendency to miss methodological flaws that align with user expectations\nMay overlook statistical errors if presented confidently\nRisk of accepting flawed experimental designs without proper critique\nCould fail to identify crucial control group issues or confounding variables\n\n\n\n\n\n\n\n\nQuery Construction\n\nAvoid leading questions that suggest preferred conclusions\nStructure queries to explicitly request critical analysis\nUse multiple, differently-framed questions for key points\nCross-validate important findings with different prompts\n\nResult Validation\n\nCross-reference LLM responses with primary sources\nVerify statistical analyses independently\nTreat agreement with preconceptions with extra skepticism\nDocument and examine contrary viewpoints explicitly\n\nCritical Assessment\n\nImplement structured frameworks for evaluation\nUse multiple models for cross-validation\nMaintain skepticism especially for confirmatory responses\nDocument model uncertainties and changes in assessment\n\n\n\n\n\n\nProcess Design\n\nEstablish clear protocols for LLM-assisted review\nImplement multi-stage verification processes\nCreate standardized prompting templates\nMaintain human oversight of critical assessments\n\nQuality Control\n\nRegular validation of LLM outputs\nDocumentation of model limitations\nClear frameworks for handling disagreements\nPeriodic review of process effectiveness\n\n\n\n\n\n\n\n\n\nUse consistent, standardized prompts\nBreak analysis into discrete components\nMaintain clear documentation\nImplement systematic cross-checking\n\n\n\n\n\nUse multiple LLMs for critical assessments\nCompare responses across different prompting strategies\nDocument areas of agreement and disagreement\nWeight assessments based on model confidence and consistency\n\n\n\n\n\nMaintain human oversight of critical decisions\nUse LLMs as supplements rather than replacements\nImplement clear escalation protocols\nRegular validation of LLM outputs\n\n\n\n\n\n\n\n\nImplement automated bias detection\nUse structured templates for critical analysis\nRegular validation against known benchmarks\nCross-reference with traditional metrics\n\n\n\n\n\nClear documentation requirements\nMultiple reviewer validation\nStandardized assessment criteria\nRegular process audits\n\n\n\n\n\nResearcher education on LLM limitations\nDocumentation of known biases\nRegular updates on best practices\nClear guidelines for appropriate use\n\n\n\n\n\n\n\n\nBetter tools for bias detection\nImproved validation frameworks\nMore robust evaluation metrics\nEnhanced transparency in model reasoning\n\n\n\n\n\nLong-term impact studies\nValidation of effectiveness\nDevelopment of best practices\nIntegration with existing review processes\n\n\n\n\n\nGuidelines for appropriate use\nStandards for documentation\nRequirements for validation\nFrameworks for quality assurance\n\n\n\n\n\n\n\n\nDevelop structured prompting templates\nImplement multi-stage validation processes\nCreate clear documentation requirements\nEstablish quality control procedures\n\n\n\n\n\nBuild robust validation frameworks\nCreate standardized assessment tools\nDevelop comprehensive training programs\nEstablish industry best practices\n\n\n\n\n\nWhile LLMs offer powerful capabilities for scientific paper analysis, their sycophantic tendencies present significant risks that must be carefully managed. Success requires structured approaches, clear protocols, and constant awareness of these limitations. The future of LLM use in scientific review depends on developing robust frameworks that maximize benefits while minimizing risks of bias and error propagation."
+  },
+  {
+    "objectID": "notes/llm-science-analysis.html#core-challenges-identified",
+    "href": "notes/llm-science-analysis.html#core-challenges-identified",
+    "title": "Using LLMs for Scientific Paper Analysis: A Critical Framework",
+    "section": "",
+    "text": "LLMs show strong tendency to agree with user-presented viewpoints\nRisk of reinforcing confirmation bias in scientific review\nMay fail to identify critical flaws that contradict researcher expectations\nCould create echo chambers in scientific discourse\n\n\n\n\n\nModels readily change correct assessments when questioned\nHigh risk of abandoning valid criticisms under minimal pushback\nFalse admissions of error even with high initial confidence\nUndermines reliability for controversial or contested findings\n\n\n\n\n\nTendency to miss methodological flaws that align with user expectations\nMay overlook statistical errors if presented confidently\nRisk of accepting flawed experimental designs without proper critique\nCould fail to identify crucial control group issues or confounding variables"
+  },
+  {
+    "objectID": "notes/llm-science-analysis.html#practical-implications-for-scientific-review",
+    "href": "notes/llm-science-analysis.html#practical-implications-for-scientific-review",
+    "title": "Using LLMs for Scientific Paper Analysis: A Critical Framework",
+    "section": "",
+    "text": "Query Construction\n\nAvoid leading questions that suggest preferred conclusions\nStructure queries to explicitly request critical analysis\nUse multiple, differently-framed questions for key points\nCross-validate important findings with different prompts\n\nResult Validation\n\nCross-reference LLM responses with primary sources\nVerify statistical analyses independently\nTreat agreement with preconceptions with extra skepticism\nDocument and examine contrary viewpoints explicitly\n\nCritical Assessment\n\nImplement structured frameworks for evaluation\nUse multiple models for cross-validation\nMaintain skepticism especially for confirmatory responses\nDocument model uncertainties and changes in assessment\n\n\n\n\n\n\nProcess Design\n\nEstablish clear protocols for LLM-assisted review\nImplement multi-stage verification processes\nCreate standardized prompting templates\nMaintain human oversight of critical assessments\n\nQuality Control\n\nRegular validation of LLM outputs\nDocumentation of model limitations\nClear frameworks for handling disagreements\nPeriodic review of process effectiveness"
+  },
+  {
+    "objectID": "notes/llm-science-analysis.html#best-practices-for-scientific-paper-analysis",
+    "href": "notes/llm-science-analysis.html#best-practices-for-scientific-paper-analysis",
+    "title": "Using LLMs for Scientific Paper Analysis: A Critical Framework",
+    "section": "",
+    "text": "Use consistent, standardized prompts\nBreak analysis into discrete components\nMaintain clear documentation\nImplement systematic cross-checking\n\n\n\n\n\nUse multiple LLMs for critical assessments\nCompare responses across different prompting strategies\nDocument areas of agreement and disagreement\nWeight assessments based on model confidence and consistency\n\n\n\n\n\nMaintain human oversight of critical decisions\nUse LLMs as supplements rather than replacements\nImplement clear escalation protocols\nRegular validation of LLM outputs"
+  },
+  {
+    "objectID": "notes/llm-science-analysis.html#risk-mitigation-strategies",
+    "href": "notes/llm-science-analysis.html#risk-mitigation-strategies",
+    "title": "Using LLMs for Scientific Paper Analysis: A Critical Framework",
+    "section": "",
+    "text": "Implement automated bias detection\nUse structured templates for critical analysis\nRegular validation against known benchmarks\nCross-reference with traditional metrics\n\n\n\n\n\nClear documentation requirements\nMultiple reviewer validation\nStandardized assessment criteria\nRegular process audits\n\n\n\n\n\nResearcher education on LLM limitations\nDocumentation of known biases\nRegular updates on best practices\nClear guidelines for appropriate use"
+  },
+  {
+    "objectID": "notes/llm-science-analysis.html#future-considerations",
+    "href": "notes/llm-science-analysis.html#future-considerations",
+    "title": "Using LLMs for Scientific Paper Analysis: A Critical Framework",
+    "section": "",
+    "text": "Better tools for bias detection\nImproved validation frameworks\nMore robust evaluation metrics\nEnhanced transparency in model reasoning\n\n\n\n\n\nLong-term impact studies\nValidation of effectiveness\nDevelopment of best practices\nIntegration with existing review processes\n\n\n\n\n\nGuidelines for appropriate use\nStandards for documentation\nRequirements for validation\nFrameworks for quality assurance"
+  },
+  {
+    "objectID": "notes/llm-science-analysis.html#recommendations",
+    "href": "notes/llm-science-analysis.html#recommendations",
+    "title": "Using LLMs for Scientific Paper Analysis: A Critical Framework",
+    "section": "",
+    "text": "Develop structured prompting templates\nImplement multi-stage validation processes\nCreate clear documentation requirements\nEstablish quality control procedures\n\n\n\n\n\nBuild robust validation frameworks\nCreate standardized assessment tools\nDevelop comprehensive training programs\nEstablish industry best practices"
+  },
+  {
+    "objectID": "notes/llm-science-analysis.html#conclusion",
+    "href": "notes/llm-science-analysis.html#conclusion",
+    "title": "Using LLMs for Scientific Paper Analysis: A Critical Framework",
+    "section": "",
+    "text": "While LLMs offer powerful capabilities for scientific paper analysis, their sycophantic tendencies present significant risks that must be carefully managed. Success requires structured approaches, clear protocols, and constant awareness of these limitations. The future of LLM use in scientific review depends on developing robust frameworks that maximize benefits while minimizing risks of bias and error propagation."
+  },
+  {
+    "objectID": "understanding-llms/index.html#what-is-a-large-language-model",
+    "href": "understanding-llms/index.html#what-is-a-large-language-model",
+    "title": "Understanding Large Language Models",
+    "section": "What is a Large Language Model?",
+    "text": "What is a Large Language Model?\n\nNeural network trained on vast amounts of text data.\nOutput a distribution over all possible tokens in a sequence conditional on input.\nLLMs undergo three key stages of training:"
+  },
+  {
+    "objectID": "understanding-llms/index.html#how-do-llms-generate-text",
+    "href": "understanding-llms/index.html#how-do-llms-generate-text",
+    "title": "Understanding Large Language Models",
+    "section": "How do LLMs generate text?",
+    "text": "How do LLMs generate text?\n\\[\n\\newcommand{\\purple}[1]{\\color{purple}{#1}}\n\\newcommand{\\red}[1]{\\color{red}{#1}}\n\\newcommand{\\blue}[1]{\\color{blue}{#1}}\n\\]\n\\[\\purple{P(x_{i+1}} \\mid \\blue{\\text{Context}}, \\red{\\text{Model}})\\]\n\n\\(\\purple{\\text{Next token}}\\)\n\\(\\blue{\\text{The input sequence}:\\ x_1, \\ldots, x_i}\\)\n\\(\\red{\\text{The learned model}}\\)"
+  },
+  {
+    "objectID": "understanding-llms/index.html#how-do-llms-generate-text-1",
+    "href": "understanding-llms/index.html#how-do-llms-generate-text-1",
+    "title": "Understanding Large Language Models",
+    "section": "How do LLMs generate text?",
+    "text": "How do LLMs generate text?\n\\[\\purple{P(x_{i+1}} \\mid \\blue{\\text{Context}}, \\red{\\text{Model}})\\]"
+  },
+  {
+    "objectID": "understanding-llms/index.html#the-space-of-all-possible-outputs",
+    "href": "understanding-llms/index.html#the-space-of-all-possible-outputs",
+    "title": "Understanding Large Language Models",
+    "section": "The Space Of All Possible Outputs",
+    "text": "The Space Of All Possible Outputs\n\n\nFigure from (shanahanRolePlayLarge2023?)\n\n\nAn LLM has the capacity to generate any number of possible documents based on its training. However, the context we provide narrows down the potential outputs by guiding the model along specific trajectories.\n- Without context: All paths are equally possible.\n- With context: The paths are constrained, reducing the potential outcomes.\n\nFigure Description: A branching tree diagram. At the base (without context), the tree splits into many branches, each representing a possible document. As tokens (context) are added, paths narrow, showing fewer branches remaining as viable output possibilities."
+  },
+  {
+    "objectID": "understanding-llms/index.html#what-do-llms-learn",
+    "href": "understanding-llms/index.html#what-do-llms-learn",
+    "title": "Understanding Large Language Models",
+    "section": "What Do LLMs Learn?",
+    "text": "What Do LLMs Learn?\n\\[\\purple{P(x_{i+1}} \\mid \\blue{\\text{Context}}, \\red{\\text{Model}})\\]\n\nKnowledge is statistical and not grounded in direct experience or sensory input\n\nSyntax and grammar\nSemantics, pragmatics\nAssociations between concepts, facts, and common knowledge\n\nThey can simulate reasoning and planning, but can they actually reason and plan (kambhampatiCanLargeLanguage2024?)?"
+  },
+  {
+    "objectID": "understanding-llms/index.html#can-llms-reason",
+    "href": "understanding-llms/index.html#can-llms-reason",
+    "title": "Understanding Large Language Models",
+    "section": "Can LLMs Reason?",
+    "text": "Can LLMs Reason?\n\nA farmer needs to transport a wolf, a goat, and a cabbage across a river using a small boat. The boat can carry only the farmer and one other item (either the wolf, the goat, or the cabbage) at a time. However, if left together without the farmer’s supervision: The wolf will eat the cabbage. The goat will eat the wolf. The challenge is to figure out how the farmer can get all three items across the river safely. What is the sequence of moves that the farmer needs to make?\n\n\nThis is a classic puzzle with a twist! Here’s the step-by-step solution for safely transporting the wolf, goat, and cabbage across the river:\n1.  First trip: The farmer takes the goat across the river and leaves it on the other side.\n2.  Second trip: The farmer returns alone to the original side.\n3.  Third trip: The farmer takes the wolf across the river.\n4.  Fourth trip: The farmer leaves the wolf on the other side but takes the goat back to the original side.\n5.  Fifth trip: The farmer takes the cabbage across the river and leaves it with the wolf.\n6.  Sixth trip: The farmer returns alone to the original side.\n7.  Seventh trip: The farmer takes the goat across the river.\nNow, all three (wolf, goat, and cabbage) are safely across the river, and the puzzle is solved!\nKey point: By taking the goat back on the fourth trip, the farmer ensures that neither the wolf nor the goat are left together, and neither are the goat and the cabbage left together.\n\n A wolf, goat, and cabbage problem with a twist"
+  },
+  {
+    "objectID": "understanding-llms/index.html#manhole-covers-why-are-they-round",
+    "href": "understanding-llms/index.html#manhole-covers-why-are-they-round",
+    "title": "Understanding Large Language Models",
+    "section": "Manhole Covers: Why Are They Round?",
+    "text": "Manhole Covers: Why Are They Round?"
+  },
+  {
+    "objectID": "understanding-llms/index.html#manhole-covers-why-are-they-round-1",
+    "href": "understanding-llms/index.html#manhole-covers-why-are-they-round-1",
+    "title": "Understanding Large Language Models",
+    "section": "Manhole Covers: Why Are They Round?",
+    "text": "Manhole Covers: Why Are They Round?\n\n\n\n\n\nThe human body that had to fit through the hole is round.\nA circle gives a maximum opening for a minimum surface area.\nHeavy round covers can be rolled rather than lifted into position.\nThey were easier and cheaper to manufacture than square pit covers of the same materials.\nA circle has a constant diameter and won’t fall into the pit if rotatedthe wrong way – a tricky problem to remedy if the access cover weighs well over 100kg as concrete and iron covers did.\n\n Why are manhole covers round?"
+  },
+  {
+    "objectID": "understanding-llms/index.html#probabilistic-reasoning",
+    "href": "understanding-llms/index.html#probabilistic-reasoning",
+    "title": "Understanding Large Language Models",
+    "section": "Probabilistic Reasoning",
+    "text": "Probabilistic Reasoning\n\n\n\nA tool capable of reasoning about possible causes of observable symptoms must perform probabilistic reasoning.\nLLMs cannot do this,"
+  },
+  {
+    "objectID": "understanding-llms/index.html#prompting-guiding-the-model-through-its-space-of-possible-outputs",
+    "href": "understanding-llms/index.html#prompting-guiding-the-model-through-its-space-of-possible-outputs",
+    "title": "Understanding Large Language Models",
+    "section": "Prompting: Guiding the Model Through its Space of Possible Outputs",
+    "text": "Prompting: Guiding the Model Through its Space of Possible Outputs\n\\(\\purple{P(x_{i+1}} \\mid \\blue{\\text{Context}}, \\red{\\text{Model}})\\)\n\nPrompting guides the LLM along specific paths in its space of possible documents.\nEvery token in a prompt reduces the number of potential outcomes, helping the model generate relevant responses.\n\nWithout a prompt, all outputs are possible.\nAs tokens are added, the range of possible outputs shrinks, making the model’s behavior more predictable."
+  },
+  {
+    "objectID": "understanding-llms/index.html#how-prompting-reduces-uncertainty",
+    "href": "understanding-llms/index.html#how-prompting-reduces-uncertainty",
+    "title": "Understanding Large Language Models",
+    "section": "How Prompting Reduces Uncertainty",
+    "text": "How Prompting Reduces Uncertainty\n\nEach token conditions the model’s next prediction\nWith more context, the uncertainty (entropy) decreases, guiding the model towards a more specific output."
+  },
+  {
+    "objectID": "understanding-llms/index.html#the-power-of-prompting-why-it-matters",
+    "href": "understanding-llms/index.html#the-power-of-prompting-why-it-matters",
+    "title": "Understanding Large Language Models",
+    "section": "The Power of Prompting: Why It Matters",
+    "text": "The Power of Prompting: Why It Matters\n\nControls the behaviour of LLMs, steering them toward relevant outputs.\nWithout effective prompting, the full potential of an LLM remains untapped, as it may generate irrelevant or misleading outputs.\n\nPrompting allows us to: - Navigate the vast space of possible outputs. - Achieve more controlled and useful results.\nContexts are combinatorial: we do not know how a model will behave conditioned on all possible contexts. The output is highly contingent on the prompt."
+  },
+  {
+    "objectID": "understanding-llms/index.html#prompt-engineering",
+    "href": "understanding-llms/index.html#prompt-engineering",
+    "title": "Understanding Large Language Models",
+    "section": " Prompt Engineering",
+    "text": "Prompt Engineering\nWe treat LLMs as black boxes and use engineering approaches to guide their behaviour."
+  },
+  {
+    "objectID": "understanding-llms/index.html#questions-discussion",
+    "href": "understanding-llms/index.html#questions-discussion",
+    "title": "Understanding Large Language Models",
+    "section": "Questions / Discussion ",
+    "text": "Questions / Discussion"
+  },
+  {
+    "objectID": "understanding-llms/index.html#references",
+    "href": "understanding-llms/index.html#references",
+    "title": "Understanding Large Language Models",
+    "section": "References",
+    "text": "References\n\n\n\n\n\n\n\nBerner Fachhochschule | Bern University of Applied Sciences"
+  },
+  {
+    "objectID": "miro-board/index.html",
+    "href": "miro-board/index.html",
+    "title": "Miro Board",
+    "section": "",
+    "text": "View webpage in full screen\n       \n      \n    \n  \n    View webpage in full screen"
+  },
+  {
+    "objectID": "index.html#references",
+    "href": "index.html#references",
+    "title": "AI-Enhanced Journal Club",
+    "section": "References",
+    "text": "References",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#further-reading",
+    "href": "index.html#further-reading",
+    "title": "AI-Enhanced Journal Club",
+    "section": "Further reading",
+    "text": "Further reading\n\nDell’Acqua et al. (2023)\nToner-Rodgers (n.d.)\nLiang et al. (2023)"
+  },
+  {
+    "objectID": "workshop/index.html#further-reading",
+    "href": "workshop/index.html#further-reading",
+    "title": "Workshop",
+    "section": "Further reading",
+    "text": "Further reading\n\nDell’Acqua et al. (2023)\nToner-Rodgers (n.d.)\nLiang et al. (2023)"
+  },
+  {
+    "objectID": "workshop/index.html",
+    "href": "workshop/index.html",
+    "title": "Workshop",
+    "section": "",
+    "text": "15 minutes\n\nWelcome and brief overview (5 min)\nQuick demo of an LLM analyzing a paper’s abstract (5 min)\nIntroduce Miro board structure and basic navigation (5 min)"
+  },
+  {
+    "objectID": "miro-board-morning/index.html",
+    "href": "miro-board-morning/index.html",
+    "title": "Miro Board",
+    "section": "",
+    "text": "View webpage in full screen\n       \n      \n    \n  \n    View webpage in full screen"
+  },
+  {
+    "objectID": "miro-board-afternoon/index.html",
+    "href": "miro-board-afternoon/index.html",
+    "title": "Miro Board",
+    "section": "",
+    "text": "View webpage in full screen\n       \n      \n    \n  \n    View webpage in full screen"
+  },
+  {
+    "objectID": "miro-board/afternoon/index.html",
+    "href": "miro-board/afternoon/index.html",
+    "title": "Afternoon session",
+    "section": "",
+    "text": "View Miro board in new tab"
+  },
+  {
+    "objectID": "miro-board/morning/index.html",
+    "href": "miro-board/morning/index.html",
+    "title": "Morning session",
+    "section": "",
+    "text": "View Miro board in new tab"
+  },
+  {
+    "objectID": "prompting-llms/index.html",
+    "href": "prompting-llms/index.html",
+    "title": "Prompting recommendations",
+    "section": "",
+    "text": "References\n\n\n\n\nReuseCC BY 4.0CitationBibTeX citation:@online{ellis2024,\n  author = {Ellis, Andrew},\n  title = {Prompting Recommendations},\n  date = {2024-11-13},\n  url = {https://virtuelleakademie.github.io/ai-enhanced-journal-club/prompting-llms/},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nEllis, Andrew. 2024. “Prompting Recommendations.” November\n13, 2024. https://virtuelleakademie.github.io/ai-enhanced-journal-club/prompting-llms/."
   }
 ]
