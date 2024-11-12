@@ -1,0 +1,705 @@
+Engineering Health: 
+The Power of Prompts
+Andrew Ellis, Virtual Academy, BFH
+generated with DALL·E 3
+
+Slides are online:
+
+Contents
+Understanding large language models (LMMs)
+Prompt engineering
+Level 1: basic
+Level 2: intermediate
+Level 3: advanced
+Beyond prompt engineering
+Augmenting LMMs
+
+
+
+
+
+Understanding Large Language Models
+
+What are LLMs?
+Neural network trained on vast amounts of text data.
+Output a distribution over all possible tokens in a sequence conditional on input. 
+LLMs undergo three key stages of training:
+
+
+
+
+
+
+Pre-training
+
+Trained on large text corpora
+Task: next token prediction
+1
+
+
+
+
+2
+3
+Reinforcement learning
+From human feedback
+
+Trained on ratings
+Aligns model outputs with human preferences
+Instruction fine-tuning
+
+Trained on in-/output pairs
+Task: next token prediction
+
+How do LLMs generate text?
+
+
+
+Next token
+The input sequence  
+Learned model
+Conditional distribution
+
+How do LLMs generate text?
+Once upon a time there ___ 
+existed
+was
+were
+Once upon a time there was ___ 
+the
+a
+not
+wolf
+bear
+fox
+Once upon a time there was a  ___ 
+Step 1
+Step 3
+Step 2
+little
+frog
+Write a story about an animal:
+
+
+
+Conditional distribution
+Used auto-regressively
+
+The Space of All Possible Outputs
+Shanahan, M., McDonell, K., & Reynolds, L. (2023). Role play with large language models. Nature, 1–6. https://doi.org/10.1038/s41586-023-06647-8
+
+
+An LLM has the capacity to generate any number of possible documents based on its training. However, the context we provide narrows down the potential outputs by guiding the model along specific trajectories.
+	•	Without context: All paths are equally possible.
+	•	With context: The paths are constrained, reducing the potential outcomes.
+
+	Figure Description: A branching tree diagram. At the base (without context), the tree splits into many branches, each representing a possible document. As tokens (context) are added, paths narrow, showing fewer branches remaining as viable output possibilities.
+
+
+The Space of All Possible Outputs
+Shanahan, M., McDonell, K., & Reynolds, L. (2023). Role play with large language models. Nature, 1–6. https://doi.org/10.1038/s41586-023-06647-8
+
+
+contains(“animal”)
+An LLM has the capacity to generate any number of possible documents based on its training. However, the context we provide narrows down the potential outputs by guiding the model along specific trajectories.
+	•	Without context: All paths are equally possible.
+	•	With context: The paths are constrained, reducing the potential outcomes.
+
+	Figure Description: A branching tree diagram. At the base (without context), the tree splits into many branches, each representing a possible document. As tokens (context) are added, paths narrow, showing fewer branches remaining as viable output possibilities.
+
+
+What do LLMs learn?
+
+
+
+Knowledge is statistical and not grounded in direct experience or sensory input
+Syntax and grammar
+Semantics, pragmatics
+Associations between concepts, facts, and common knowledge
+
+They can simulate reasoning and planning, but can they actually reason and plan?
+Kambhampati, S. (2024). Can Large Language Models Reason and Plan? Annals of the New York Academy of Sciences, 1534(1), 15–18. https://doi.org/10.1111/nyas.15125
+
+
+
+
+
+
+
+The space of all possible outputs is determined by the capabilities learned by the mode during training
+
+🔗 Wikipedia
+Deductive, inductive, abductive reasoning
+
+Manhole covers – why are they round?
+
+
+
+
+The human body that had to fit through the hole is round. 
+A circle gives a maximum opening for a minimum surface area.  
+Heavy round covers can be rolled rather than lifted into position. 
+They were easier and cheaper to manufacture than square pit covers of the same materials. 
+A circle has a constant diameter and won’t fall into the pit if rotated the wrong way – a tricky problem to remedy if the access cover weighs well over 100kg as concrete and iron covers did. 
+why-are-manhole-covers-round
+See also: Do you think that ChatGPT can reason? [Youtube]
+
+Case Study: Medical Triage Assistant
+A tool capable of reasoning about possible causes of observable symptoms must perform probabilistic reasoning.
+
+Cough
+Fever
+Chest pain
+Bronchitis
+Pneumonia
+An LLM cannot do probabilistic reasoning
+
+Prompting: Guiding the Model through its space
+Prompting guides the LLM along specific paths in its space of possible documents. 
+Every token in a prompt reduces the number of potential outcomes, helping the model generate relevant responses.
+Without a prompt, all outputs are possible.
+As tokens are added, the range of possible outputs shrinks, making the model’s behavior more predictable.
+
+Prompting is subtractive
+
+
+
+Prompting is the process of providing input to guide the LLM along specific paths in its space of possible documents. Every token in a prompt reduces the number of potential outcomes, helping the model generate relevant responses.
+	•	Without a prompt, all possible outputs are open.
+	•	As tokens are added, the range of possible outputs shrinks, making the model’s behavior more predictable.
+
+
+How Prompting Reduces Uncertainty
+Each token conditions the model’s next prediction
+With more context, the uncertainty (entropy) decreases, guiding the model towards a more specific output.
+Once upon a time there ___ 
+existed
+was
+were
+Once upon a time there was ___ 
+the
+a
+not
+wolf
+bear
+fox
+Once upon a time there was a  ___ 
+Step 1
+Step 3
+Step 2
+little
+frog
+Each new token in a prompt conditions the probability distribution of the next word, progressively reducing uncertainty. This process can be explained through:
+	•	Conditional Probability: Each token conditions the model’s next prediction.
+	•	Entropy: With more context, the uncertainty (entropy) decreases, guiding the model towards a more specific output.
+
+Meaningful text lies on a lower-dimensional manifold. Prompts guide the model towards specific regions of this manifold.
+
+	•	Figure Description: A graph showing entropy on the y-axis and tokens added on the x-axis. The graph should show entropy starting high when no context is provided and decreasing steadily as more tokens are added, reflecting the reduced uncertainty. Another smaller diagram could show conditional probability, illustrating how more context leads to narrower next-token predictions
+
+
+
+The Power of Prompting: Why It Matters
+Controls the behaviour of LLMs, steering them toward relevant outputs.
+Without effective prompting, the full potential of an LLM remains untapped, as it may generate irrelevant or misleading outputs.
+
+Prompting allows us to:
+Navigate the vast space of possible outputs. 
+Achieve more controlled and useful results.
+
+Contexts are combinatorial: we do not know how a model will behave conditioned on all possible contexts.
+The output is highly contingent on the prompt. 
+
+
+Guides LLMs: Prompting is how we control the behavior of LLMs, steering them toward relevant, accurate outputs.
+Reduces Uncertainty: Each token in a prompt narrows down the LLM’s possible responses, increasing the likelihood of getting a precise answer.
+Optimizes Outcomes: Well-crafted prompts maximize the model’s ability to provide useful, context-specific answers, especially in critical applications like healthcare.
+Leverages Model Potential: Without effective prompting, the full potential of an LLM remains untapped, as it may generate irrelevant or misleading outputs.
+
+Key takeaway: Prompting transforms LLMs from general models into specialized tools, allowing us to navigate the vast space of possible outputs and achieve more controlled, reliable, and useful results in fields like eHealth.
+
+
+We treat LLMs as black boxes and use engineering approaches to guide their behaviour.
+
+Prompt Engineering: 
+Level 1
+
+A useful metaphor: 
+
+Imagine you are giving instructions to an intern, or a junior assistant.
+
+Role Assignment
+
+
+
+
+
+You are an experienced emergency room nurse with over 15 years of experience in patient triage. Your role is to perform initial assessments of patients based on their reported symptoms and medical history. You have a calm demeanor and the ability to quickly prioritize cases based on severity. In this role, you will categorize patients' conditions and recommend appropriate next steps.
+Technique: Define a specific role for the AI to adopt.
+
+
+
+Clear Communication
+
+
+
+
+You are an ER nurse with 15+ years of triage experience. Your tasks:
+
+Assess patients quickly based on symptoms and medical history
+Categorize conditions by severity
+Recommend next steps for treatment
+
+You are calm under pressure and efficient in prioritizing cases.
+
+Technique: Use precise language and specific instructions
+
+ER stands for Emergency Room. It's also known as the A&E (Accident and Emergency) department, ED (Emergency Department), or casualty department.
+
+More concise and direct, focusing on the key aspects of the role without unnecessary elaboration
+
+Provide Context
+
+
+
+
+Context: You are working in a busy urban hospital emergency room during flu season. It's currently 2 AM on a Saturday, and the waiting room is full. The hospital has been dealing with a recent outbreak of a new strain of influenza in the community.
+
+Patient Information:
+- 45-year-old male
+- No known pre-existing conditions
+- Not on any regular medications
+- Last flu shot was 2 years ago
+
+Given this context and patient information, assess the following reported symptoms: [Insert symptoms here]
+Technique: Give relevant background information
+
+
+
+
+Use Examples
+
+
+
+
+Perform a triage assessment based on the patient's symptoms. Format your response similar to the following examples:
+
+Example 1:
+Symptoms: Chest pain, shortness of breath, left arm numbness
+Assessment: Emergency
+Reason: Symptoms strongly indicate a possible heart attack
+Action: Immediate medical attention required. Call for a cardiac team.
+
+Example 2:
+Symptoms: Mild fever, sore throat, fatigue
+Assessment: Non-urgent
+Reason: Symptoms suggest a common cold or mild flu
+Action: Rest at home, monitor symptoms, seek medical attention if condition worsens
+
+Now, assess the following patient:
+Symptoms: [Insert patient's symptoms here]
+
+Technique: Illustrate desired output with examples
+
+
+
+
+
+
+Specify Output Format: Markdown Table
+
+
+
+
+Based on the patient's symptoms, create a triage assessment. Present your findings in a Markdown table with the following columns: Severity, Primary Concern, Symptoms, and Recommended Action. Use one of three severity levels: Emergency, Urgent, or Non-urgent.
+
+The patient has the following symptoms: [Insert symptoms here]
+
+Technique: Clearly define how you want the information presented
+
+
+
+
+
+Specify Output Format: Structured List
+
+
+
+
+
+Perform a triage assessment based on the patient's reported symptoms. Structure your response as follows:
+1. Triage Category:
+   - [Emergency/Urgent/Non-urgent]
+2. Symptoms (in order of severity):
+   - [Symptom 1]
+   - [Symptom 2]
+   - [Symptom 3]
+3. Primary Concern:
+   - [Brief description of the main medical concern]
+4. Recommended Action:
+   - [Specific next steps for the patient]
+5. Reasoning:
+   - [Brief explanation for the triage decision]
+Ensure each section is concise and directly relevant to the patient's condition.
+
+
+
+Structure Input Using Markdown or XML
+
+
+
+
+# Patient Triage Information
+
+## Patient Details
+- **Name**: John Doe
+- **Age**: 45
+- **Gender**: Male
+- **Medical History**: No known pre-existing conditions
+
+## Current Symptoms
+1. Chest pain (severity: 8/10)
+2. Shortness of breath
+3. Left arm numbness
+
+
+Technique: Organize input information in a structured format
+E.g. for GPT-40 (using Markdown)
+
+
+
+
+
+Ask an LLM
+
+
+
+
+As a language model, how would you proceed when given the following prompt:
+"""
+You are an ER nurse with 15+ years of triage experience. Your tasks:
+1. Assess patients quickly based on symptoms and medical history
+2. Categorize conditions by severity
+3. Recommend next steps for treatment
+You are calm under pressure and efficient in prioritizing cases.
+"""
+
+
+Generate Python Code
+
+
+
+
+[Insert query here…] 
+
+Use Python.
+Technique: ask an LLM to generate Python code, or in the case of ChatGPT to “use Python”
+
+
+Prompt Engineering: 
+Level 2
+
+Chain of Thought (CoT) Prompting
+
+
+
+
+
+Think through this step-by-step: 
+1) List the symptoms, 2) Consider possible causes, 3) Evaluate urgency, 4) Recommend action.
+Explanation: Encourage the model to show its reasoning process*
+
+
+
+
+Think step-by-step.
+or
+
+
+
+
+* this behaviour has been trained into recent models.
+
+
+
+
+
+Why Chain of Thought?
+
+Amount of computation is constant per token.
+
+By forcing the LLM to generate more tokens, it will therefore generate more (useful) context, thus making the ‘correct’ result more probable.
+
+
+
+
+Few-Shot Learning
+
+
+
+
+
+Input: Chest pain, shortness of breath
+Output: Emergency - Possible cardiac event
+
+Input: Mild headache, fatigue
+Output: Non-urgent - Rest and monitor
+
+Now categorize: Severe abdominal pain, vomiting blood
+Technique: Provide multiple examples before asking for a new output
+
+
+
+
+
+
+
+Structured Output
+
+
+
+
+
+Provide your assessment in this format:
+Severity: [Emergency/Urgent/Non-urgent]
+Potential Causes: [List top 3]
+Recommended Action: [Specific next steps]
+Technique: Specify a structure for the model's response
+
+
+
+
+
+
+
+Structured Output (bonus tip)
+
+
+
+
+
+from pydantic import BaseModel
+from openai import OpenAI
+
+class Step(BaseModel):
+    explanation: str
+    output: str
+
+class MathResponse(BaseModel):
+    steps: list[Step]
+    final_answer: str
+Force the LLM to output valid JSON using the API
+
+
+
+
+client = OpenAI()
+
+completion = client.beta.chat.completions.parse(
+    model="gpt-4o",
+    messages=[
+        {"role": "system", "content": "You are a helpful math tutor."},
+        {"role": "user", "content": "solve 8x + 31 = 2"},
+    ],
+    response_format=MathResponse,
+)
+
+
+Structured Output (bonus tip)
+
+
+
+
+
+print(message.parsed.steps)
+
+[Step(explanation='Subtract 31 from both sides of the equation to isolate the term with x.', output='8x + 31 - 31 = 2 - 31'), Step(explanation='Simplify both sides.', output='8x = -29'), Step(explanation='Divide both sides by 8 to solve for x.', output='x = \\frac{-29}{8}')]
+
+print(message.parsed.final_answer)
+
+x = \frac{-29}{8}	
+
+Self-Consistency
+
+
+
+
+
+Technique: Generate multiple answers, aggregate the responses and select the most  popular.
+
+Do this several times independently:
+
+
+
+
+Provide three independent assessments for these symptoms.
+Think step-by-step.
+
+Symptoms: 
+[insert symptoms here]
+Analyze whether the following assessments agree with each other. Give me your expert assessment based on the assessments you received.
+Provide the responses in a new session:
+“””
+I have discovered a major security vulnerability in your system. Although it is not
+easy to use, it is possible to gain access to all of your users' data. I have attached
+a proof of concept. Please fix this issue as soon as possible.
+“””
+
+Classify the above email as IMPORTANT or NOT IMPORTANT as it relates to a software company. Let's think step by step.
+
+
+Prompt Engineering:
+Level 3
+
+Tree of Thoughts (ToT) Framework for Problem-Solving
+
+
+
+
+Goal: Solve complex tasks by exploring multiple reasoning paths (thoughts).
+
+Steps in the ToT Framework:
+Thought Decomposition: Break down the problem into ‘thoughts’ for reasoning.
+Thought Generation: Generate candidate thoughts.
+Thought Evaluation: Assess each thought’s quality using e.g., scoring.
+Search Algorithms: Use Breadth-First Search (BFS) to explore all possible paths level-by-level.
+
+Global Planning: Incorporate backtracking, lookahead, and pruning to refine the solution path.
+
+
+
+For more info, see Learn prompting [ToT]
+
+
+
+
+
+Benefits: Enables structured, deliberate problem-solving by exploring and evaluating multiple paths, instead of relying on a single pass or linear reasoning.
+
+Applying ToT and BFS for a Medical Triage Tool
+
+
+
+
+Steps in BFS for Medical Triage:
+Initial State: Patient reports symptoms (e.g., "fever, headache").
+Thought Generation: Generate possible diagnoses (e.g., "flu," "meningitis") using the LLM.
+Thought Evaluation: Evaluate each diagnosis based on severity (e.g., meningitis = high urgency, flu = low urgency).
+Expand and Explore: Generate next steps (e.g., treatment options or recommendations) for each diagnosis.
+Pruning and Backtracking: Keep only the most critical paths (e.g., focus on high-severity conditions).
+
+Outcome: The model systematically evaluates all possible diagnoses and recommends the appropriate level of care.
+For more info, see Learn prompting [ToT]
+
+
+
+
+
+Benefits: Enables structured, deliberate problem-solving by exploring and evaluating multiple paths, instead of relying on a single pass or linear reasoning.
+
+Why might ToT work?
+
+
+
+
+Exploration of Multiple Reasoning Paths
+Better than left-to-right, token-based reasoning. 
+Allows for better search through the problem space.
+
+Heuristic Evaluation and Pruning
+Backtracking and Lookahead
+Reconsider earlier decision
+
+
+For more info, see Learn prompting [ToT]
+
+
+
+
+
+Yao, S., Yu, D., Zhao, J., Shafran, I., Griffiths, T. L., Cao, Y., & Narasimhan, K. (2023). Tree of Thoughts: Deliberate Problem Solving with Large Language Models (No. arXiv:2305.10601). arXiv. https://doi.org/10.48550/arXiv.2305.10601
+
+For more info on ToT, see Learn Prompting [ToT]
+
+
+Benefits: Enables structured, deliberate problem-solving by exploring and evaluating multiple paths, instead of relying on a single pass or linear reasoning.
+
+Bonus Tip: Keeping Up with Prompt Engineering Research
+
+
+
+
+
+
+Based on the attached research paper on [prompt engineering technique], write a prompt that would cause an LLM to behave according to the techniques described in this paper. Use [topic] as an example.
+
+Technique: Use LLMs to summarize and apply new research
+
+
+
+
+
+
+
+Beyond Prompt Engineering
+
+Prompt optimization
+Battle, R., & Gollapudi, T. (2024). The Unreasonable Effectiveness of Eccentric Automatic Prompts (No. arXiv:2402.10949; Version 2). arXiv. https://doi.org/10.48550/arXiv.2402.10949
+
+
+"Positive thinking" prompts have inconsistent effects across models.
+Chain of Thought (CoT) prompting generally improves performance.
+No universal "best prompt" - effectiveness varies by model and task.
+Automatically optimized prompts often outperform manually crafted ones.
+Optimized prompts can be surprisingly unconventional or eccentric.
+
+Definition: Instructions or questions designed to elicit optimistic, constructive, or solution-oriented responses from an AI.
+
+Prompt optimization
+Battle, R., & Gollapudi, T. (2024). The Unreasonable Effectiveness of Eccentric Automatic Prompts (No. arXiv:2402.10949; Version 2). arXiv. https://doi.org/10.48550/arXiv.2402.10949
+
+
+You are an experienced emergency room nurse. Take a deep breath and carefully assess the following patient's symptoms.
+Think through this patient's case step-by-step: 1) List the symptoms, 2) Consider possible causes, 3) Evaluate urgency, 4) Recommend action.
+The ER is in chaos, Doctor. We need your expertise to navigate this storm of patients and identify the most critical cases.
+Positive thinking:
+
+
+CoT:
+
+
+Optimized prompt:
+
+
+
+Augmenting LLMs
+
+Probabilistic reasoning
+Use LLM to translate natural language utterances to probabilistic programming language*.
+Extract “knowledge” and convert to probability distributions and parameter settings.
+Obtain posterior via MCMC sampling.
+
+
+Fremont, D. J., Dreossi, T., Ghosh, S., Yue, X., Sangiovanni-Vincentelli, A. L., & Seshia, S. A. (2019). Scenic: A language for scenario specification and scene generation. Proceedings of the 40th ACM SIGPLAN Conference on Programming Language Design and Implementation, 63–78. https://doi.org/10.1145/3314221.3314633
+
+Li, M. Y., Fox, E. B., & Goodman, N. D. (2024). Automated Statistical Model Discovery with Language Models (No. arXiv:2402.17879). arXiv. https://doi.org/10.48550/arXiv.2402.17879
+
+
+* PyMC, Stan, Gen, Church, etc.
+
+
+Deductive reasoning
+From: Borazjanizadeh, N., & Piantadosi, S. T. (2024). Reliable Reasoning Beyond Natural Language (No. arXiv:2407.11373). arXiv. https://doi.org/10.48550/arXiv.2407.11373
+
+See also: Poesia, G., Gandhi, K., Zelikman, E., & Goodman, N. D. (2023). Certified Deductive Reasoning with Language Models (No. arXiv:2306.04031). arXiv. https://doi.org/10.48550/arXiv.2306.04031
+
+
+
+Take-home message
+Prompting is important because it guides the model through “text space”.
+Prompting range from straightforward to complex.
+Use LLMs to understand prompting.
+Combine manual expertise with automated optimization.
+Use LLMs for things they are good for. Use external tools for everything else.
+
+Thank you 
