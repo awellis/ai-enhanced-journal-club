@@ -1,5 +1,5 @@
 ---
-title: "AI-Enhanced Journal Club"
+title: "Workshop"
 date: 13 November, 2024
 date-format: "DD MMM, YYYY"
 author: 
@@ -21,17 +21,65 @@ format:
 ---
 
 
-# 1. Opening Warm-up (10 minutes)
-INSERT SLIDES HERE
 
-**Activity: "Paper Pain Points"**
+# Introduction and setup
 
-- **Format**: Pair discussion + group sharing
-- **Instructions**:
-  1. Pairs discuss (3 min): "Share your worst experience trying to understand a scientific paper"
-  2. Quick-fire round (5 min): Each pair shares their most memorable story
-  3. Facilitator notes common themes (2 min)
-- **Purpose**: Build rapport, identify shared challenges, set context for LLM solutions
+<!-- :::{.timer #UNIQUE-ID-1 seconds=600 starton=interaction}
+:::
+:::
+:::: -->
+
+{{< bi alarm >}} 15 minutes
+
+- Welcome and brief overview (5 min)
+- Quick demo of an LLM analyzing a paper's abstract (5 min)
+- Introduce Miro board structure and basic navigation (5 min)
+
+# Presentation
+{{< bi alarm >}} 10 minutes
+
+Reading papers and understanding LLMs
+
+<INSERT SLIDES>
+
+
+
+
+
+# Solo LLM Exploration
+
+{{< bi alarm >}} 20 minutes
+
+
+Each participant works individually with their chosen LLM to:
+
+- Generate an initial paper overview
+- Analyze the methodology
+- Identify key findings
+
+
+# Paired Investigation 
+{{< bi alarm >}} 20 minutes
+
+Pairs work together to:
+
+- Compare their initial findings
+- Challenge each other's assumptions
+- Try different prompting strategies
+- Document effective approaches
+
+
+
+# Group Analysis & Discussion 
+
+{{< bi alarm >}} 25 minutes
+
+- Pairs present key discoveries (15 min)
+- Open discussion of effective techniques (10 min)
+
+
+#  Wrap-up 
+{{< bi alarm >}} 10 minutes
 
 
 # How to read a paper
