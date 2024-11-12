@@ -24,8 +24,17 @@ website:
         menu:
           - text: "How to read a paper"
             file: slides/index.qmd
-      
       - miro-board/index.qmd
+
+  sidebar:
+    - title: "Contents"
+      style: "docked"
+      search: true
+      background: light
+      contents:
+        - tutorials.qmd
+        - tutorial-1.qmd
+        - tutorial-2.qmd
 
 page-footer:
     right:
