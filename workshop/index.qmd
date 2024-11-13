@@ -188,7 +188,7 @@ The authors conclude that the increasing sophistication of AI language models ma
 [Summary generated with `claude-3-sonnet-20240229`]
 :::
 
-<!-- {{< audio file="assets/fleckensteinTeachersSpotAI2024a.mp3" >}} -->
+<!-- {{< audio file="../assets/audio/fleckensteinTeachersSpotAI2024a.mp3" >}} -->
 
 
 {{< bi volume-up >}} You can also [listen to a podcast version of the paper](https://notebooklm.google.com/notebook/cc116ea0-0de5-4732-b691-e737a8f07ffa/audio) 
