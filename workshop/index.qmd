@@ -24,7 +24,7 @@ format:
 
 # Introduction and setup
 
-{{< bi alarm >}} 15 minutes
+{{< bi alarm >}} 5 minutes
 
 - Welcome and brief overview
 <!-- - Quick demo of an LLM analyzing a paper's abstract -->
@@ -32,7 +32,7 @@ format:
 
 
 # Presentations
-{{< bi alarm >}} 10 minutes
+{{< bi alarm >}} 20 minutes
 
 ## Reading research papers
 
@@ -58,6 +58,71 @@ In this workshop, we will explore how LLMs can be used to support the paper read
 
 {{< revealjs file="../slides/index.html" height="500px" class="ratio ratio-16x9" >}}
 
+:::{.callout-tip collapse="true"}
+## How to read a research paper
+
+When reading a research paper, it is recommended to follow the three-pass strategy:
+
+### The Three-Pass Method
+
+#### First Pass: The Bird's Eye View
+**Time Investment:**
+
+**Purpose:** Quick scan to grasp the paper's structure and main points
+
+**Steps:**
+
+- Read title, abstract, and introduction
+- Read section and subsection headings
+- Read conclusion
+- Glance at references
+
+**Outcome:** Answer the "five Cs":
+
+- Category (type of paper)
+- Context (relation to other work)
+- Correctness (validity of assumptions)
+- Contributions (main findings)
+- Clarity (writing quality)
+
+#### Second Pass: The Content Grasp
+**Time Investment:** 
+
+**Purpose:** Understand the paper's content without technical details
+
+**Steps:**
+
+- Read with greater attention, ignoring proofs
+- Study figures, diagrams, and graphs carefully
+- Mark important references for follow-up
+
+**Outcome:** Ability to summarize the paper's main thrust with supporting evidence
+
+**Note:** Suitable for papers relevant but not central to your research
+
+#### Third Pass: Deep Understanding
+**Time Investment:** 
+
+**Purpose:** Complete comprehension and virtual replication
+
+**Steps:**
+
+- Attempt to virtually "re-implement" the paper
+- Identify and challenge every assumption
+- Think about alternative presentations
+- Note ideas for future work
+
+**Outcome:**
+- Ability to reconstruct paper from memory
+- Understanding of strengths and weaknesses
+- Recognition of implicit assumptions
+- Identification of missing citations
+- Awareness of potential technical issues
+
+:::{.attribution}
+Adapted from [How to read a research paper](https://web.stanford.edu/class/ee384m/Handouts/HowtoReadPaper.pdf)
+:::
+:::
 
 ## Understanding LLMs
 
@@ -99,6 +164,8 @@ The findings are concerning because these models will sometimes sacrifice truthf
 
 We will use the paper by @fleckensteinTeachersSpotAI2024a for demonstration and for exercises.
 
+
+
 :::{.callout-note collapse="true"}
 ## Paper Summary
 
@@ -121,43 +188,71 @@ The authors conclude that the increasing sophistication of AI language models ma
 
 <!-- {{< audio file="assets/fleckensteinTeachersSpotAI2024a.mp3" >}} -->
 
-Use this paper for demonstration and for exercises
+
+{{< bi volume-up >}} You can also [listen to a podcast version of the paper](https://notebooklm.google.com/notebook/cc116ea0-0de5-4732-b691-e737a8f07ffa/audio) 
+
+::: {.callout-tip}
+Created with [Notebook LLM](https://notebooklm.google.com/)
+:::
 
 
-{{< bi volume-up >}} [Listen to the paper](https://notebooklm.google.com/notebook/cc116ea0-0de5-4732-b691-e737a8f07ffa/audio)
-
-
-
-# Solo LLM Exploration
+## Solo LLM Exploration
 
 {{< bi alarm >}} 20 minutes
 
 
 Each participant works individually with their chosen LLM to:
 
-- Generate an initial paper overview
-- Analyze the methodology
-- Identify key findings
+1. Summarize the paper's key points and contributions (First Pass)
+2. Analyze the methodology and study design (Second Pass)
+3. Identify and critique the key findings and limitations (Third Pass)
+4. Suggest potential future research directions or applications
+
+:::{.checkpoint title="Transfer to Miro Board"}
+Remember to transfer your key findings, insights, and effective prompting strategies to the Miro board for further discussion and collaboration.
+
+You can access the Miro board for this session here:
+
+- {{< bi link >}} [Morning session](../miro-board/morning/index.qmd)
+- {{< bi link >}} [Afternoon session](../miro-board/afternoon/index.qmd)
+:::
 
 
-# Paired Investigation 
+{{< revealjs file="../slides/solo-exploration.html" height="500px" class="ratio ratio-16x9" >}}
+
+
+## Paired Investigation 
 {{< bi alarm >}} 20 minutes
 
-Pairs work together to:
+Work in pairs to:
 
-- Compare their initial findings
+- Compare your initial findings
 - Challenge each other's assumptions
 - Try different prompting strategies
 - Document effective approaches
 
+:::{.checkpoint title="Transfer to Miro Board"}
+Remember to transfer your key findings, insights, and effective prompting strategies to the Miro board for further discussion and collaboration.
+
+You can access the Miro board for this session here:
+
+- {{< bi link >}} [Morning session](../miro-board/morning/index.qmd)
+- {{< bi link >}} [Afternoon session](../miro-board/afternoon/index.qmd)
+:::
+
+{{< revealjs file="../slides/paired-investigation.html" height="500px" class="ratio ratio-16x9" >}}
 
 
-# Group Analysis & Discussion 
+
+## Group Analysis & Discussion 
 
 {{< bi alarm >}} 25 minutes
 
-- Pairs present key discoveries (15 min)
-- Open discussion of effective techniques (10 min)
+- Pairs present key discoveries ({{< bi alarm >}} 15 min)
+- Open discussion of effective techniques ({{< bi alarm >}} 10 min)
+
+{{< revealjs file="../slides/group-analysis.html" height="500px" class="ratio ratio-16x9" >}}
+
 
 
 #  Wrap-up 
