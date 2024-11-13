@@ -29,6 +29,10 @@ website:
             file: slides/index.qmd
           - text: "Understanding LLMs"
             file: understanding-llms/index.qmd
+          - text: "Basic prompt engineering"
+            file: prompt-engineering-basics/index.qmd
+          - text: "Intermediate prompt engineering"
+            file: prompt-engineering-intermediate/index.qmd
       - icon: share
         text: "Miro boards"
         menu:
