@@ -26,3 +26,7 @@ about:
 # QR Code
 
 {{< qrcode https://awellis.github.io/ai-enhanced-journal-club/ width=400 height=400 colorDark='#000000' >}}
+
+<br> 
+
+{{< bi link >}} [awellis.github.io/ai-enhanced-journal-club/](https://awellis.github.io/ai-enhanced-journal-club/)
