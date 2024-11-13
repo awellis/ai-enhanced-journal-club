@@ -36,6 +36,7 @@
     div.csl-bib-body { }
     div.csl-entry {
       clear: both;
+      margin-bottom: 0em;
     }
     .hanging-indent div.csl-entry {
       margin-left:2em;
@@ -356,6 +357,217 @@
       margin-right: 0; 
     }
   </style>
+  <style>
+  div.callout-break.callout {
+    border-left-color: brown;
+  }
+  div.callout-break.callout-style-default > .callout-header {
+    background-color: rgb(from brown r g b / 13%);
+  }
+  div.callout-break .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+  div.callout-break.callout-style-default .callout-icon::before, div.callout-break.callout-titled .callout-icon::before {
+    content: '☕';
+    background-image: none;
+  }
+  div.callout-caution.callout {
+    border-left-color: orange;
+  }
+  div.callout-caution.callout-style-default > .callout-header {
+    background-color: rgb(from orange r g b / 13%);
+  }
+  div.callout-caution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+  div.callout-caution.callout-style-default .callout-icon::before, div.callout-caution.callout-titled .callout-icon::before {
+    content: '⚠️';
+    background-image: none;
+  }
+  div.callout-export.callout {
+    border-left-color: brown;
+  }
+  div.callout-export.callout-style-default > .callout-header {
+    background-color: rgb(from brown r g b / 13%);
+  }
+  div.callout-export .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+  div.callout-export.callout-style-default .callout-icon::before, div.callout-export.callout-titled .callout-icon::before {
+    content: '📤';
+    background-image: none;
+  }
+  div.callout-try.callout {
+    border-left-color: blue;
+  }
+  div.callout-try.callout-style-default > .callout-header {
+    background-color: rgb(from blue r g b / 13%);
+  }
+  div.callout-try .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+  div.callout-try.callout-style-default .callout-icon::before, div.callout-try.callout-titled .callout-icon::before {
+    content: '🔄';
+    background-image: none;
+  }
+  div.callout-individual.callout {
+    border-left-color: steelblue;
+  }
+  div.callout-individual.callout-style-default > .callout-header {
+    background-color: rgb(from steelblue r g b / 13%);
+  }
+  div.callout-individual .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+  div.callout-individual.callout-style-default .callout-icon::before, div.callout-individual.callout-titled .callout-icon::before {
+    content: '💻';
+    background-image: none;
+  }
+  div.callout-feedback.callout {
+    border-left-color: teal;
+  }
+  div.callout-feedback.callout-style-default > .callout-header {
+    background-color: rgb(from teal r g b / 13%);
+  }
+  div.callout-feedback .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+  div.callout-feedback.callout-style-default .callout-icon::before, div.callout-feedback.callout-titled .callout-icon::before {
+    content: '📝';
+    background-image: none;
+  }
+  div.callout-screens-up.callout {
+    border-left-color: green;
+  }
+  div.callout-screens-up.callout-style-default > .callout-header {
+    background-color: rgb(from green r g b / 13%);
+  }
+  div.callout-screens-up .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+  div.callout-screens-up.callout-style-default .callout-icon::before, div.callout-screens-up.callout-titled .callout-icon::before {
+    content: '🔼';
+    background-image: none;
+  }
+  div.callout-pair.callout {
+    border-left-color: forestgreen;
+  }
+  div.callout-pair.callout-style-default > .callout-header {
+    background-color: rgb(from forestgreen r g b / 13%);
+  }
+  div.callout-pair .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+  div.callout-pair.callout-style-default .callout-icon::before, div.callout-pair.callout-titled .callout-icon::before {
+    content: '👥';
+    background-image: none;
+  }
+  div.callout-testing.callout {
+    border-left-color: green;
+  }
+  div.callout-testing.callout-style-default > .callout-header {
+    background-color: rgb(from green r g b / 13%);
+  }
+  div.callout-testing .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+  div.callout-testing.callout-style-default .callout-icon::before, div.callout-testing.callout-titled .callout-icon::before {
+    content: '🧪';
+    background-image: none;
+  }
+  div.callout-tip.callout {
+    border-left-color: gold;
+  }
+  div.callout-tip.callout-style-default > .callout-header {
+    background-color: rgb(from gold r g b / 13%);
+  }
+  div.callout-tip .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+  div.callout-tip.callout-style-default .callout-icon::before, div.callout-tip.callout-titled .callout-icon::before {
+    content: '💡';
+    background-image: none;
+  }
+  div.callout-reflect.callout {
+    border-left-color: purple;
+  }
+  div.callout-reflect.callout-style-default > .callout-header {
+    background-color: rgb(from purple r g b / 13%);
+  }
+  div.callout-reflect .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+  div.callout-reflect.callout-style-default .callout-icon::before, div.callout-reflect.callout-titled .callout-icon::before {
+    content: '💭';
+    background-image: none;
+  }
+  div.callout-prompt-example.callout {
+    border-left-color: darkblue;
+  }
+  div.callout-prompt-example.callout-style-default > .callout-header {
+    background-color: rgb(from darkblue r g b / 13%);
+  }
+  div.callout-prompt-example .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+  div.callout-prompt-example.callout-style-default .callout-icon::before, div.callout-prompt-example.callout-titled .callout-icon::before {
+    content: '👩🏼‍🔧';
+    background-image: none;
+  }
+  div.callout-prompt-template.callout {
+    border-left-color: indigo;
+  }
+  div.callout-prompt-template.callout-style-default > .callout-header {
+    background-color: rgb(from indigo r g b / 13%);
+  }
+  div.callout-prompt-template .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+  div.callout-prompt-template.callout-style-default .callout-icon::before, div.callout-prompt-template.callout-titled .callout-icon::before {
+    content: '📋';
+    background-image: none;
+  }
+  div.callout-group.callout {
+    border-left-color: purple;
+  }
+  div.callout-group.callout-style-default > .callout-header {
+    background-color: rgb(from purple r g b / 13%);
+  }
+  div.callout-group .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+  div.callout-group.callout-style-default .callout-icon::before, div.callout-group.callout-titled .callout-icon::before {
+    content: '👥';
+    background-image: none;
+  }
+  div.callout-output-example.callout {
+    border-left-color: darkgreen;
+  }
+  div.callout-output-example.callout-style-default > .callout-header {
+    background-color: rgb(from darkgreen r g b / 13%);
+  }
+  div.callout-output-example .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+  div.callout-output-example.callout-style-default .callout-icon::before, div.callout-output-example.callout-titled .callout-icon::before {
+    content: '📄';
+    background-image: none;
+  }
+  div.callout-checkpoint.callout {
+    border-left-color: purple;
+  }
+  div.callout-checkpoint.callout-style-default > .callout-header {
+    background-color: rgb(from purple r g b / 13%);
+  }
+  div.callout-checkpoint .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+  div.callout-checkpoint.callout-style-default .callout-icon::before, div.callout-checkpoint.callout-titled .callout-icon::before {
+    content: '🎯';
+    background-image: none;
+  }
+  div.callout-setup.callout {
+    border-left-color: gray;
+  }
+  div.callout-setup.callout-style-default > .callout-header {
+    background-color: rgb(from gray r g b / 13%);
+  }
+  div.callout-setup .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+  div.callout-setup.callout-style-default .callout-icon::before, div.callout-setup.callout-titled .callout-icon::before {
+    content: '⚙️';
+    background-image: none;
+  }
+  div.callout-screens-down.callout {
+    border-left-color: orange;
+  }
+  div.callout-screens-down.callout-style-default > .callout-header {
+    background-color: rgb(from orange r g b / 13%);
+  }
+  div.callout-screens-down .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+  div.callout-screens-down.callout-style-default .callout-icon::before, div.callout-screens-down.callout-titled .callout-icon::before {
+    content: '🔽';
+    background-image: none;
+  }
+  div.callout-timing.callout {
+    border-left-color: red;
+  }
+  div.callout-timing.callout-style-default > .callout-header {
+    background-color: rgb(from red r g b / 13%);
+  }
+  div.callout-timing .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+  div.callout-timing.callout-style-default .callout-icon::before, div.callout-timing.callout-titled .callout-icon::before {
+    content: '⏱️';
+    background-image: none;
+  }
+  </style>
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -372,13 +584,13 @@ Andrew Ellis
 </div>
 </div>
 
-  <p class="date">24 October, 2024</p>
+  <p class="date">13 November, 2024</p>
 </section>
 <section id="what-is-a-large-language-model" class="slide level2">
 <h2>What is a Large Language Model?</h2>
 <ul>
 <li>Neural network trained on vast amounts of text data.</li>
-<li>Output a distribution over all possible tokens in a sequence conditional on input.</li>
+<li>Outputs a distribution over all possible tokens, conditioned on input sequence.</li>
 <li>LLMs undergo three key stages of training:</li>
 </ul>
 
@@ -389,8 +601,8 @@ Andrew Ellis
 \newcommand{\purple}[1]{\color{purple}{#1}}
 \newcommand{\red}[1]{\color{red}{#1}}
 \newcommand{\blue}[1]{\color{blue}{#1}}
-\]</span></p>
-<p><span class="math display">\[\purple{P(x_{i+1}} \mid \blue{\text{Context}}, \red{\text{Model}})\]</span></p>
+\]</span> <span class="math display">\[\purple{P(x_{i+1}} \mid \blue{\text{Context}}, \red{\text{Model}})\]</span></p>
+<!-- $$P(x_{i+1} \mid \text{Context}, \text{Model})$$ -->
 <ul>
 <li><span class="math inline">\(\purple{\text{Next token}}\)</span></li>
 <li><span class="math inline">\(\blue{\text{The input sequence}:\ x_1, \ldots, x_i}\)</span></li>
@@ -399,14 +611,15 @@ Andrew Ellis
 </section>
 <section id="how-do-llms-generate-text-1" class="slide level2">
 <h2>How do LLMs generate text?</h2>
-<p><span class="math display">\[\purple{P(x_{i+1}} \mid \blue{\text{Context}}, \red{\text{Model}})\]</span></p>
+<!-- $$\purple{P(x_{i+1}} \mid \blue{\text{Context}}, \red{\text{Model}})$$ -->
+<p><br><br><br></p>
 
 <img data-src="../assets/images/once-upon-a-time.png" class="r-stretch"></section>
 <section id="the-space-of-all-possible-outputs" class="slide level2">
 <h2>The Space Of All Possible Outputs</h2>
 
 <img data-src="../assets/images/multiverse.png" class="r-stretch"><div class="attribution">
-<p>Figure from <span class="citation" data-cites="shanahanRolePlayLarge2023">(<a href="#/references" role="doc-biblioref" onclick=""><strong>shanahanRolePlayLarge2023?</strong></a>)</span></p>
+<p>Figure from <span class="citation" data-cites="shanahanRolePlayLarge2023">Shanahan, McDonell, and Reynolds (<a href="#/references" role="doc-biblioref" onclick="">2023</a>)</span></p>
 </div>
 <aside class="notes">
 <p>An LLM has the capacity to generate any number of possible documents based on its training. However, the context we provide narrows down the potential outputs by guiding the model along specific trajectories.</p>
@@ -428,23 +641,32 @@ Figure Description: A branching tree diagram. At the base (without context), the
 </section>
 <section id="what-do-llms-learn" class="slide level2">
 <h2>What Do LLMs Learn?</h2>
-<p><span class="math display">\[\purple{P(x_{i+1}} \mid \blue{\text{Context}}, \red{\text{Model}})\]</span></p>
+<!-- $$\purple{P(x_{i+1}} \mid \blue{\text{Context}}, \red{\text{Model}})$$ -->
 <ul>
-<li>Knowledge is statistical and not grounded in direct experience or sensory input
-<ul>
-<li>Syntax and grammar</li>
-<li>Semantics, pragmatics</li>
-<li>Associations between concepts, facts, and common knowledge</li>
-</ul></li>
-<li>They can simulate reasoning and planning, but can they actually reason and plan <span class="citation" data-cites="kambhampatiCanLargeLanguage2024">(<a href="#/references" role="doc-biblioref" onclick=""><strong>kambhampatiCanLargeLanguage2024?</strong></a>)</span>?</li>
+<li><p>Syntax and grammar</p></li>
+<li><p>Semantics, pragmatics</p></li>
+<li><p>World knowledge is statistical (associational) and not grounded in direct experience or sensory input</p></li>
+<li><p>They can simulate reasoning and planning, but can they actually reason and plan <span class="citation" data-cites="kambhampatiCanLargeLanguage2024">(<a href="#/references" role="doc-biblioref" onclick="">Kambhampati 2024</a>)</span>?</p></li>
 </ul>
 </section>
 <section id="can-llms-reason" class="slide level2">
 <h2>Can LLMs Reason?</h2>
-<div class="prompt-example">
-<p>A farmer needs to transport a wolf, a goat, and a cabbage across a river using a small boat. The boat can carry only the farmer and one other item (either the wolf, the goat, or the cabbage) at a time. However, if left together without the farmer’s supervision: The wolf will eat the cabbage. The goat will eat the wolf. The challenge is to figure out how the farmer can get all three items across the river safely. What is the sequence of moves that the farmer needs to make?</p>
+<div class="callout callout-prompt-example no-icon callout-titled callout-style-simple">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Example Prompt</strong></p>
 </div>
-<div class="output-example">
+<div class="callout-content">
+<p>A farmer needs to transport a wolf, a goat, and a cabbage across a river using a small boat. The boat can carry only the farmer and one other item (either the wolf, the goat, or the cabbage) at a time. However, if left together without the farmer’s supervision: <strong>The wolf will eat the cabbage</strong>. <strong>The goat will eat the wolf</strong>. The challenge is to figure out how the farmer can get all three items across the river safely. What is the sequence of moves that the farmer needs to make?</p>
+</div>
+</div>
+</div>
+<div class="callout callout-output-example no-icon callout-titled callout-style-simple">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Output Example</strong></p>
+</div>
+<div class="callout-content">
 <p>This is a classic puzzle with a twist! Here’s the step-by-step solution for safely transporting the wolf, goat, and cabbage across the river:</p>
 <pre><code>1.  First trip: The farmer takes the goat across the river and leaves it on the other side.
 2.  Second trip: The farmer returns alone to the original side.
@@ -455,6 +677,8 @@ Figure Description: A branching tree diagram. At the base (without context), the
 7.  Seventh trip: The farmer takes the goat across the river.</code></pre>
 <p>Now, all three (wolf, goat, and cabbage) are safely across the river, and the puzzle is solved!</p>
 <p>Key point: By taking the goat back on the fourth trip, the farmer ensures that neither the wolf nor the goat are left together, and neither are the goat and the cabbage left together.</p>
+</div>
+</div>
 </div>
 <p><a href="https://en.wikipedia.org/wiki/Wolf,_goat_and_cabbage_problem"><i class="bi-link " style="" role="img" aria-hidden="true"></i> A wolf, goat, and cabbage problem with a twist</a></p>
 </section>
@@ -478,20 +702,46 @@ Figure Description: A branching tree diagram. At the base (without context), the
 <p><a href="https://terrafirmaindustries.com.au/why-are-manhole-covers-round/"><i class="bi-link " style="" role="img" aria-hidden="true"></i> Why are manhole covers round?</a></p>
 </div></div>
 </section>
-<section id="probabilistic-reasoning" class="slide level2">
-<h2>Probabilistic Reasoning</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<ul>
-<li>A tool capable of reasoning about possible causes of observable symptoms must perform probabilistic reasoning.</li>
-<li>LLMs cannot do this,</li>
-</ul>
-</div><div class="column" style="width:50%;">
-<p><img data-src="../assets/images/probabilistic-reasoning.png"></p>
-</div></div>
+<section id="sycophancy" class="slide level2">
+<h2>Sycophancy</h2>
+<p>According to <span class="citation" data-cites="sharmaUnderstandingSycophancyLanguage2023">Sharma et al. (<a href="#/references" role="doc-biblioref" onclick="">2023</a>)</span>, LLMs are often programmed to be sycophantic, meaning they will say whatever the user wants to hear. This can be problematic in scientific discussions, but can be allowed for by prompting.</p>
+<div class="callout callout-prompt-example no-icon callout-titled callout-style-simple">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Example Prompt</strong></p>
+</div>
+<div class="callout-content">
+<p>So sycophancy is basically a result of training an LLM to respect human preferences?</p>
+</div>
+</div>
+</div>
+<div class="callout callout-output-example no-icon callout-titled callout-style-simple">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Output Example</strong></p>
+</div>
+<div class="callout-content">
+<p>Yes, that’s a good way to put it - it’s essentially an unintended consequence of training models to be “helpful” and “preferred” by humans. The paper shows this happens through several key mechanisms…</p>
+</div>
+</div>
+</div>
+<!-- ## Probabilistic Reasoning
+
+:::: {.columns}
+::: {.column width="50%"}
+- A system capable of reasoning about possible causes of
+observable symptoms must perform probabilistic reasoning.
+- LLMs cannot do this
+
+:::
+::: {.column width="50%"}
+![](../assets/images/probabilistic-reasoning.png)
+:::
+:::: -->
 </section>
-<section id="prompting-guiding-the-model-through-its-space-of-possible-outputs" class="slide level2">
-<h2>Prompting: Guiding the Model Through its Space of Possible Outputs</h2>
+<section id="prompting" class="slide level2">
+<h2>Prompting</h2>
+<p>Prompting guides the model through its space of possible outputs</p>
 <p><span class="math inline">\(\purple{P(x_{i+1}} \mid \blue{\text{Context}}, \red{\text{Model}})\)</span></p>
 <ul>
 <li>Prompting guides the LLM along specific paths in its space of possible documents.</li>
@@ -516,20 +766,35 @@ Figure Description: A branching tree diagram. At the base (without context), the
 <li>Controls the behaviour of LLMs, steering them toward relevant outputs.</li>
 <li>Without effective prompting, the full potential of an LLM remains untapped, as it may generate irrelevant or misleading outputs.</li>
 </ul>
-<p>Prompting allows us to: - Navigate the vast space of possible outputs. - Achieve more controlled and useful results.</p>
-<p>Contexts are combinatorial: we do not know how a model will behave conditioned on all possible contexts. The output is highly contingent on the prompt.</p>
+<p><strong>Prompting allows us to:</strong></p>
+<ul>
+<li>Navigate the vast space of possible outputs.</li>
+<li>Achieve more controlled and useful results.</li>
+</ul>
+<p><strong>Contexts are combinatorial:</strong></p>
+<ul>
+<li>We do not know how a model will behave conditioned on all possible contexts. The output is highly contingent on the prompt.</li>
+</ul>
 </section>
 <section id="prompt-engineering" class="slide level2">
 <h2><i class="bi-box-fill " style="" role="img" aria-hidden="true"></i> Prompt Engineering</h2>
-<p>We treat LLMs as black boxes and use engineering approaches to guide their behaviour.</p>
-</section>
-<section id="questions-discussion" class="slide level2">
-<h2>Questions / Discussion <i class="bi-chat-dots " style="" role="img" aria-hidden="true"></i></h2>
+<ul>
+<li>We treat LLMs as black boxes</li>
+<li>We use engineering approaches or trial and error to guide their behaviour.</li>
+</ul>
 </section>
 <section id="references" class="slide level2 smaller scrollable" data-background-color="#D8DEE9">
 <h2>References</h2>
-<div id="refs" role="list">
-
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-kambhampatiCanLargeLanguage2024" class="csl-entry" role="listitem">
+Kambhampati, Subbarao. 2024. <span>“Can <span>Large Language Models Reason</span> and <span>Plan</span>?”</span> <em>Annals of the New York Academy of Sciences</em> 1534 (1): 15–18. <a href="https://doi.org/10.1111/nyas.15125">https://doi.org/10.1111/nyas.15125</a>.
+</div>
+<div id="ref-shanahanRolePlayLarge2023" class="csl-entry" role="listitem">
+Shanahan, Murray, Kyle McDonell, and Laria Reynolds. 2023. <span>“Role Play with Large Language Models.”</span> <em>Nature</em>, November, 1–6. <a href="https://doi.org/10.1038/s41586-023-06647-8">https://doi.org/10.1038/s41586-023-06647-8</a>.
+</div>
+<div id="ref-sharmaUnderstandingSycophancyLanguage2023" class="csl-entry" role="listitem">
+Sharma, Mrinank, Meg Tong, Tomasz Korbak, David Duvenaud, Amanda Askell, Samuel R. Bowman, Newton Cheng, et al. 2023. <span>“Towards <span>Understanding Sycophancy</span> in <span>Language Models</span>.”</span> October 27, 2023. <a href="https://doi.org/10.48550/arXiv.2310.13548">https://doi.org/10.48550/arXiv.2310.13548</a>.
+</div>
 </div>
 
 <div class="quarto-auto-generated-content">
