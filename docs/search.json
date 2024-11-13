@@ -483,7 +483,7 @@
     "href": "prompting-llms/index.html",
     "title": "Prompting recommendations",
     "section": "",
-    "text": "ChatGPT data analysis\nClaude interactive visualizations\nElicit\nNotebook LLM\n\n\n\n\n    View slides in full screen\n       \n      \n    \n  \n\n\n\n    View slides in full screen"
+    "text": "View slides in full screen\n       \n      \n    \n  \n\n\n\n    View slides in full screen"
   },
   {
     "objectID": "workshop/index.html#reading-papers",
@@ -693,21 +693,21 @@
     "href": "prompt-engineering-basics/index.html#emotion-prompting",
     "title": "Prompt Engineering: Basics",
     "section": "Emotion prompting",
-    "text": "Emotion prompting\nTechnique: Incorporate emotional language to potentially improve accuracy and response quality1.\n\n\n\n\n\n\nExample Prompt\n\n\nI’m really excited to learn about this! Can you enthusiastically explain how photosynthesis works?\n\n\n\n\n\n\n\n\n\n\nExample Prompt\n\n\nRate this essay according to [these criteria]. You will receive a bonus if you do a good job.\n\n\n\nEmotion prompting’s effectiveness in improving language model responses is debated. Some argue it could enhance naturalness, while others suggest minimal or inconsistent impact across tasks and models. More research is needed."
+    "text": "Emotion prompting\nTechnique: Incorporate emotional language to potentially improve accuracy and response quality.\n\n\n\n\n\n\nExample Prompt\n\n\nI’m really excited to learn about this! Can you enthusiastically explain how photosynthesis works?\n\n\n\n\n\n\n\n\n\n\nExample Prompt\n\n\nRate this essay according to [these criteria]. You will receive a bonus if you do a good job."
   },
   {
     "objectID": "prompt-engineering-basics/index.html#provide-context",
     "href": "prompt-engineering-basics/index.html#provide-context",
     "title": "Prompt Engineering: Basics",
     "section": "Provide context",
-    "text": "Provide context\nTechnique: Give relevant background information\n\n\n\n\n\n\nExample Prompt\n\n\nContext: You are working in a busy urban hospital emergency room during flu season. It’s currently 2 AM on a Saturday, and the waiting room is full. The hospital has been dealing with a recent outbreak of a new strain of influenza in the community.\nPatient Information:\n\n45-year-old male\nNo known pre-existing conditions\nNot on any regular medications\nLast flu shot was 2 years ago\nGiven this context and patient information, assess the following reported symptoms: [Insert symptoms here]"
+    "text": "Provide context\n** Technique**: Give relevant background information\n\n\n\n\n\n\nExample Prompt\n\n\nContext: You are working in a busy urban hospital emergency room during flu season. It’s currently 2 AM on a Saturday, and the waiting room is full. The hospital has been dealing with a recent outbreak of a new strain of influenza in the community.\nPatient Information:\n\n45-year-old male\nNo known pre-existing conditions\nNot on any regular medications\nLast flu shot was 2 years ago\nGiven this context and patient information, assess the following reported symptoms: [Insert symptoms here]"
   },
   {
     "objectID": "prompt-engineering-basics/index.html#use-examples",
     "href": "prompt-engineering-basics/index.html#use-examples",
     "title": "Prompt Engineering: Basics",
     "section": "Use examples",
-    "text": "Use examples\nThis is known as few-shot prompting.   Technique: Illustrate desired output with examples.\n\n\n\n\n\n\nExample Prompt\n\n\nPerform a triage assessment based on the patient’s symptoms. Format your response similar to the following examples:\nExample 1: Symptoms: Chest pain, shortness of breath, left arm numbness Assessment: Emergency Reason: Symptoms strongly indicate a possible heart attack Action: Immediate medical attention required. Call for a cardiac team.\nExample 2: Symptoms: Mild fever, sore throat, fatigue Assessment: Non-urgent Reason: Symptoms suggest a common cold or mild flu Action: Rest at home, monitor symptoms, seek medical attention if condition worsens.\nAssess the following patient:\nSymptoms: [Insert patient’s symptoms here]"
+    "text": "Use examples\nThis is known as few-shot prompting.\nTechnique: Illustrate desired output with examples.\n\n\n\n\n\n\nExample Prompt\n\n\nPerform a triage assessment based on the patient’s symptoms. Format your response similar to the following examples: Example 1: Symptoms: Chest pain, shortness of breath, left arm numbness Assessment: Emergency Reason: Symptoms strongly indicate a possible heart attack Action: Immediate medical attention required. Call for a cardiac team. Example 2: Symptoms: Mild fever, sore throat, fatigue Assessment: Non-urgent Reason: Symptoms suggest a common cold or mild flu Action: Rest at home, monitor symptoms, seek medical attention if condition worsens Now, assess the following patient: Symptoms: [Insert patient’s symptoms here]"
   },
   {
     "objectID": "prompt-engineering-basics/index.html#specify-output-format",
@@ -728,7 +728,7 @@
     "href": "prompt-engineering-basics/index.html#ask-an-llm",
     "title": "Prompt Engineering: Basics",
     "section": "Ask an LLM",
-    "text": "Ask an LLM\nLLMs have been trained on a lot of data, including prompting techniques1.\n\n\n\n\n\n\nExample Prompt\n\n\nAs a language model, how would you proceed when given the following prompt: ““” You are an ER nurse with 15+ years of triage experience.\nYour tasks: 1. Assess patients quickly based on symptoms and medical history 2. Categorize conditions by severity 3. Recommend next steps for treatment 4. You are calm under pressure and efficient in prioritizing cases. ““”\n\n\n\n\n\n\n\n\n\nExample Prompt\n\n\nHow would you improve this prompt?\n\n\n\nIt is debated whether LLMs are particularly suited to writing prompting techniques."
+    "text": "Ask an LLM\nLLMs have been trained on a lot of data, including prompting techniques.\n\n\n\n\n\n\nExample Prompt\n\n\nAs a language model, how would you proceed when given the following prompt: ““” You are an ER nurse with 15+ years of triage experience.\nYour tasks: 1. Assess patients quickly based on symptoms and medical history 2. Categorize conditions by severity 3. Recommend next steps for treatment 4. You are calm under pressure and efficient in prioritizing cases. ““”\n\n\n\n\n\n\n\n\n\nExample Prompt\n\n\nHow would you improve this prompt?"
   },
   {
     "objectID": "prompt-engineering-basics/index.html#generate-python-code",
@@ -756,7 +756,7 @@
     "href": "prompt-engineering-intermediate/index.html#chain-of-thought-cot-prompting",
     "title": "Prompt Engineering: Intermediate Techniques",
     "section": "Chain of Thought (CoT) prompting",
-    "text": "Chain of Thought (CoT) prompting\nTechniques: Encourage the model to proceed in a step-by-step manner. This has the effect of making the desired output more probable. The output looks like the LLM is showing its reasoning process1.\n\n\n\nExample Prompt\n\n\nThink through this step-by-step: 1) List the symptoms 2) Consider possible causes 3) Evaluate urgency 4) Recommend action\n\n\n\nOften it can be sufficient to just ask the model to think step-by-step.\n\n\n\nExample Prompt\n\n\nThink step-by-step.\n\n\n\nThis behaviour has been trained into recent models."
+    "text": "Chain of Thought (CoT) prompting\nTechniques: Encourage the model to proceed in a step-by-step manner. This has the effect of making the desired output more probable. The output looks like the LLM is showing its reasoning process1.\n\n\n\n\n\n\nExample Prompt\n\n\nThink through this step-by-step: 1) List the symptoms 2) Consider possible causes 3) Evaluate urgency 4) Recommend action\n\n\n\nOften it can be sufficient to just ask the model to think step-by-step.\n\n\n\n\n\n\nExample Prompt\n\n\nThink step-by-step.\n\n\n\nThis behaviour has been trained into recent models."
   },
   {
     "objectID": "prompt-engineering-intermediate/index.html#why-chain-of-thought",
@@ -777,28 +777,28 @@
     "href": "prompt-engineering-intermediate/index.html#few-shot-learning",
     "title": "Prompt Engineering: Intermediate Techniques",
     "section": "Few-Shot Learning",
-    "text": "Few-Shot Learning\nTechnique: Provide multiple examples before asking for a new output.\nThe way that we structure Few-Shot Prompts is very important. By this, we mean do we separate the inputs and outputs with a colon (:) or the words INPUT/OUTPUT. We have seen examples of both earlier in this article. How can you decide? We generally use the input: output format and occasionally use the QA format, which is commonly used in research papers.\nUse 2-5 examples for simple tasks. Use often ~10 examples for harder tasks\n\n\n\nExample Prompt\n\n\nInput: “Great product, 10/10”\nOuput: “Great product, 10/10”: {“label”: “positive”}\n Input: “Didn’t work very well”\nOutput: “Didn’t work very well”: {“label”: “negative”}\n Input: “Super helpful, worth it”\nOutput: “Super helpful, worth it”: {“label”: “positive”}\n Input: “I’m not sure I would buy this again”\nOutput:"
+    "text": "Few-Shot Learning\nTechnique: Provide multiple examples before asking for a new output.\nThe way that we structure Few-Shot Prompts is very important. By this, we mean do we separate the inputs and outputs with a colon (:) or the words INPUT/OUTPUT. We have seen examples of both earlier in this article. How can you decide? We generally use the input: output format and occasionally use the QA format, which is commonly used in research papers.\nUse 2-5 examples for simple tasks. Use often ~10 examples for harder tasks\n\n\n\n\n\n\nExample Prompt\n\n\nInput: “Great product, 10/10”\nOuput: “Great product, 10/10”: {“label”: “positive”}\n Input: “Didn’t work very well”\nOutput: “Didn’t work very well”: {“label”: “negative”}\n Input: “Super helpful, worth it”\nOutput: “Super helpful, worth it”: {“label”: “positive”}\n Input: “I’m not sure I would buy this again”\nOutput:"
   },
   {
     "objectID": "prompt-engineering-intermediate/index.html#structured-output",
     "href": "prompt-engineering-intermediate/index.html#structured-output",
     "title": "Prompt Engineering: Intermediate Techniques",
     "section": "Structured Output",
-    "text": "Structured Output\nTechnique: Specify a structure for the model’s response.\n\n\n\nExample Prompt\n\n\nProvide your assessment in JSON format:\n{\n  \"severity\": \"[Emergency/Urgent/Non-urgent]\",\n  \"potential_causes\": \"[List top 3]\",\n  \"recommended_action\": \"[Specific next steps]\"\n}"
+    "text": "Structured Output\nTechnique: Specify a structure for the model’s response.\n\n\n\n\n\n\nExample Prompt\n\n\nProvide your assessment in JSON format:\n{\n  \"severity\": \"[Emergency/Urgent/Non-urgent]\",\n  \"potential_causes\": \"[List top 3]\",\n  \"recommended_action\": \"[Specific next steps]\"\n}"
   },
   {
     "objectID": "prompt-engineering-intermediate/index.html#self-consistency",
     "href": "prompt-engineering-intermediate/index.html#self-consistency",
     "title": "Prompt Engineering: Intermediate Techniques",
     "section": "Self-Consistency",
-    "text": "Self-Consistency\nLLMs are prone to variability in their responses.\nTechnique: Generate multiple answers, aggregate the responses and select the majority result.\n\n\nDo this several times:\n\n\n\nExample Prompt\n\n\nProvide three independent assessments for these symptoms.\nThink step-by-step.\nSymptoms: [insert symptoms here]\n\n\n\n\nProvide the responses to an LLM in a new session:\n\n\n\nExample Prompt\n\n\nAnalyze whether the following assessments agree with each other. Give me your expert assessment based on the assessments you received."
+    "text": "Self-Consistency\nLLMs are prone to variability in their responses.\nTechnique: Generate multiple answers, aggregate the responses and select the majority result.\n\n\nDo this several times:\n\n\n\n\n\n\nExample Prompt\n\n\nProvide three independent assessments for these symptoms.\nThink step-by-step.\nSymptoms: [insert symptoms here]\n\n\n\n\nProvide the responses to an LLM in a new session:\n\n\n\n\n\n\nExample Prompt\n\n\nAnalyze whether the following assessments agree with each other. Give me your expert assessment based on the assessments you received."
   },
   {
     "objectID": "prompt-engineering-intermediate/index.html#bonus-tip-keep-up-with-prompt-engineering-research",
     "href": "prompt-engineering-intermediate/index.html#bonus-tip-keep-up-with-prompt-engineering-research",
     "title": "Prompt Engineering: Intermediate Techniques",
     "section": "Bonus tip: keep up with prompt engineering research",
-    "text": "Bonus tip: keep up with prompt engineering research\nTechnique: Use LLMs to “read” new research papers.\n\n\n\nExample Prompt\n\n\nBased on the attached research paper on [prompt engineering technique], write a prompt that would cause an LLM to behave according to the techniques described in this paper. Use [topic] as an example."
+    "text": "Bonus tip: keep up with prompt engineering research\nTechnique: Use LLMs to “read” new research papers.\n\n\n\n\n\n\nExample Prompt\n\n\nBased on the attached research paper on [prompt engineering technique], write a prompt that would cause an LLM to behave according to the techniques described in this paper. Use [topic] as an example."
   },
   {
     "objectID": "prompt-engineering-intermediate/index.html#problems-with-prompt-engineering",
@@ -812,7 +812,7 @@
     "href": "prompt-engineering-intermediate/index.html#prompt-optimization",
     "title": "Prompt Engineering: Intermediate Techniques",
     "section": "Prompt optimization",
-    "text": "Prompt optimization\n\n\n\nPositive thinking\n\n\nYou are an experienced emergency room nurse. Take a deep breath and carefully assess the following patient’s symptoms.\n\n\n\n\n\n\nChain of Thought\n\n\nThink through this patient’s case step-by-step: 1) List the symptoms, 2) Consider possible causes, 3) Evaluate urgency, 4) Recommend action.\n\n\n\n\n\n\nOptimized prompt\n\n\nThe ER is in chaos, Doctor. We need your expertise to navigate this storm of patients and identify the most critical cases.\n\n\n\nsee Battle and Gollapudi (2024)"
+    "text": "Prompt optimization\n\n\n\n\n\n\nPositive thinking\n\n\nYou are an experienced emergency room nurse. Take a deep breath and carefully assess the following patient’s symptoms.\n\n\n\n\n\n\n\n\n\nChain of Thought\n\n\nThink through this patient’s case step-by-step: 1) List the symptoms, 2) Consider possible causes, 3) Evaluate urgency, 4) Recommend action.\n\n\n\n\n\n\n\n\n\nOptimized prompt\n\n\nThe ER is in chaos, Doctor. We need your expertise to navigate this storm of patients and identify the most critical cases.\n\n\n\nsee Battle and Gollapudi (2024)"
   },
   {
     "objectID": "prompt-engineering-intermediate/index.html#questions-discussion",

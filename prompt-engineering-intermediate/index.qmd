@@ -44,7 +44,7 @@ format:
           numbers: true
           markers: true
         callout-appearance: default
-        callout-icon: false
+        callout-icon: true
         smaller: true
 revealjs-plugins:
   - attribution

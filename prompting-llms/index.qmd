@@ -17,7 +17,7 @@ format:
         code-fold: true
         code-link: true
         callout-appearance: simple
-        callout-icon: false
+        callout-icon: true
 ---
 
 
@@ -25,12 +25,12 @@ format:
 # Prompting strategies
 
 
-## Useful tools
+<!-- ## Useful tools
 
 - ChatGPT data analysis
 - Claude interactive visualizations
 - Elicit
-- Notebook LLM
+- Notebook LLM -->
 
 
 ## Basic prompting strategies
@@ -75,9 +75,7 @@ format:
 
 # Recommendations for paper analysis
 
-:::{.callout-tip collapse="true"}
-
-# LLM-Assisted Scientific Paper Analysis: A Comprehensive Guide
+:::{.tip title="LLM-Assisted Scientific Paper Analysis: A Comprehensive Guide"collapse="true"}
 
 ## Pre-Reading Phase
 

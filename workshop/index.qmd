@@ -17,7 +17,7 @@ format:
         code-fold: true
         code-link: true
         callout-appearance: simple
-        callout-icon: false
+        callout-icon: true
 ---
 
 
