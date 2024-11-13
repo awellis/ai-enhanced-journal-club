@@ -21,84 +21,278 @@ format:
 ---
 
 
-## How to read a research paper
-
-When reading a research paper, it is recommended to follow the three-pass strategy:
-
-### The Three-Pass Method
-
-#### First Pass: The Bird's Eye View
-**Time Investment:**
-
-**Purpose:** Quick scan to grasp the paper's structure and main points
-
-**Steps:**
-
-- Read title, abstract, and introduction
-- Read section and subsection headings
-- Read conclusion
-- Glance at references
-
-**Outcome:** Answer the "five Cs":
-
-- Category (type of paper)
-- Context (relation to other work)
-- Correctness (validity of assumptions)
-- Contributions (main findings)
-- Clarity (writing quality)
-
-#### Second Pass: The Content Grasp
-**Time Investment:** 
-
-**Purpose:** Understand the paper's content without technical details
-
-**Steps:**
-
-- Read with greater attention, ignoring proofs
-- Study figures, diagrams, and graphs carefully
-- Mark important references for follow-up
-
-**Outcome:** Ability to summarize the paper's main thrust with supporting evidence
-
-**Note:** Suitable for papers relevant but not central to your research
-
-#### Third Pass: Deep Understanding
-**Time Investment:** 
-
-**Purpose:** Complete comprehension and virtual replication
-
-**Steps:**
-
-- Attempt to virtually "re-implement" the paper
-- Identify and challenge every assumption
-- Think about alternative presentations
-- Note ideas for future work
-
-**Outcome:**
-- Ability to reconstruct paper from memory
-- Understanding of strengths and weaknesses
-- Recognition of implicit assumptions
-- Identification of missing citations
-- Awareness of potential technical issues
-
-:::{.attribution}
-Adapted from [How to read a research paper](https://web.stanford.edu/class/ee384m/Handouts/HowtoReadPaper.pdf)
-:::
-
-# Limitations
-
-- sycophancy
-- reasoning capabilities
 
 # Prompting strategies
 
-# Useful tools
+
+## Useful tools
 
 - ChatGPT data analysis
 - Claude interactive visualizations
 - Elicit
 - Notebook LLM
 
+
+## Basic prompting strategies
+
+{{< revealjs file="../prompt-engineering-basics/index.html" height="500px" class="ratio ratio-16x9" >}}
+
+## Intermediate prompting strategies
+
+{{< revealjs file="../prompt-engineering-intermediate/index.html" height="500px" class="ratio ratio-16x9" >}}
+
+
+# Explore these prompting guides
+
+
+:::{.callout-tip collapse="true"}
+### Learn prompting: An comprehensive guide to prompt engineering.
+{{< bi link >}} [Learn prompting](https://learnprompting.org/docs/introduction)
+
+```{=html}
+<iframe src="https://learnprompting.org/docs/introduction" width="100%" height="500px"></iframe>
+``` 
+:::
+
+
+
+:::{.callout-tip collapse="true"}
+### Prompting guide: A more technical guide to prompting
+{{< bi link >}} [Prompting guide](https://www.promptingguide.ai/): **DAIR.AI** (Democratizing Artificial Intelligence Research, Education, and Technologies). The guide is licensed under an MIT license.
+
+```{=html}
+<iframe src="https://www.promptingguide.ai/" width="100%" height="500px"></iframe>
+``` 
+:::
+
+
+# Further reading
+
+@schulhoffPromptReportSystematic2024 provides a comprehensive overview of the current state of prompting research.
+
+@zamfirescu-pereiraWhyJohnnyCant2023 discusses the capabilities of non-experts at designing prompts for LLMs.
+
+
+# Recommendations for paper analysis
+
+:::{.callout-tip collapse="true"}
+
+# LLM-Assisted Scientific Paper Analysis: A Comprehensive Guide
+
+## Pre-Reading Phase
+
+### 1. Setup and Preparation
+- Have the paper open in a format where you can easily copy text
+- Keep a structured note-taking system ready
+- Consider using multiple LLM providers (e.g., Claude, GPT-4) for cross-validation
+- Prepare a basic template document for organizing findings
+
+### 2. Initial Paper Assessment
+1. **Title and Abstract Analysis**
+   ```markdown
+   Prompt Template:
+   "Please analyze this title and abstract focusing on:
+   1. The main research question
+   2. The key methodological approach
+   3. The primary claimed findings
+   4. Any potential red flags or limitations that should guide my reading
+   Please maintain a critical perspective and highlight any assumptions or claims that require careful verification."
+   ```
+
+2. **Background Context**
+   ```markdown
+   Prompt Template:
+   "What are the key papers and concepts I should be familiar with to understand this research? 
+   Please format the response as:
+   1. Essential prerequisite concepts:
+   2. Key related papers:
+   3. Potential controversies in this field:
+   Note: Please indicate if you're uncertain about any of these recommendations."
+   ```
+
+## Deep Reading Phase
+
+### 3. Methodological Analysis
+1. **Initial Method Review**
+   ```markdown
+   Prompt Template:
+   "Please analyze this methods section, focusing on:
+   1. Key methodological choices and their justification
+   2. Potential alternative approaches not discussed
+   3. Assumptions made by the authors
+   4. Possible limitations or confounds
+   Please maintain a skeptical perspective and highlight any methodological choices that require extra scrutiny."
+   ```
+
+2. **Statistical Analysis Verification**
+   ```markdown
+   Prompt Template:
+   "For these statistical methods:
+   1. Are they appropriate for the research questions?
+   2. What assumptions do these methods make?
+   3. What alternative analyses might have been more appropriate?
+   4. What potential confounds might affect these analyses?
+   Please be specific about any concerns or limitations."
+   ```
+
+### 4. Results Interpretation
+1. **Data Presentation Analysis**
+   ```markdown
+   Prompt Template:
+   "Please analyze these results focusing on:
+   1. Whether the data supports the stated conclusions
+   2. Alternative interpretations not discussed
+   3. Potential confounding variables
+   4. Missing analyses that would strengthen the findings
+   Be explicitly critical and highlight any gaps between data and conclusions."
+   ```
+
+2. **Verification Queries**
+   - Always ask the same question in multiple ways
+   - Use contrary framings to test for sycophancy
+   - Cross-reference critical points with other LLMs
+
+### 5. Discussion Analysis
+1. **Claims Verification**
+   ```markdown
+   Prompt Template:
+   "For each major claim in the discussion:
+   1. Is it fully supported by the presented data?
+   2. What alternative explanations exist?
+   3. What additional evidence would strengthen this claim?
+   4. What limitations might affect this interpretation?
+   Please be specific about any gaps between evidence and claims."
+   ```
+
+## Critical Analysis Phase
+
+### 6. Structured Critique
+1. **Strength Assessment**
+   ```markdown
+   Prompt Template:
+   "Please analyze the paper's strengths:
+   1. Most robust findings
+   2. Strongest methodological elements
+   3. Most convincing arguments
+   4. Most significant contributions
+   Provide specific evidence for each point."
+   ```
+
+2. **Weakness Assessment**
+   ```markdown
+   Prompt Template:
+   "Please analyze the paper's weaknesses:
+   1. Methodological limitations
+   2. Unsupported assumptions
+   3. Alternative interpretations
+   4. Missing controls or analyses
+   Be specific and explain why each is important."
+   ```
+
+### 7. Cross-Validation Strategies
+
+#### A. Multiple Model Approach
+1. Ask the same questions to different LLMs
+2. Compare responses for consistency
+3. Investigate discrepancies
+4. Document variations in interpretation
+
+#### B. Reverse Questioning
+1. Ask for critiques of both positive and negative interpretations
+2. Challenge both supportive and critical responses
+3. Compare how the model handles opposing viewpoints
+4. Document any tendency to agree with the questioner
+
+## Documentation and Synthesis
+
+### 8. Creating a Structured Analysis
+1. **Main Findings Summary**
+   - Document key claims and evidence
+   - Note areas of uncertainty
+   - List verified vs. questionable conclusions
+   - Include cross-validation results
+
+2. **Limitations Documentation**
+   - Record methodological concerns
+   - Note potential biases
+   - Document areas needing verification
+   - List missing analyses
+
+3. **Future Directions**
+   - Identify logical next steps
+   - Note gaps in current evidence
+   - Suggest methodological improvements
+   - List potential applications
+
+## Best Practices and Safeguards
+
+### 9. Quality Control Measures
+
+#### A. Bias Prevention
+- Rotate question framing
+- Use multiple prompting strategies
+- Cross-validate critical findings
+- Document model uncertainties
+
+#### B. Documentation Requirements
+- Record all significant prompts
+- Note areas of model disagreement
+- Track changes in model responses
+- Document verification steps
+
+#### C. Red Flags to Watch For
+1. Model significantly changes stance when questioned
+2. Responses align too readily with suggestions
+3. Inconsistent technical explanations
+4. Overly confident answers about uncertain topics
+
+### 10. Common Pitfalls to Avoid
+
+1. **Over-reliance Traps**
+   - Accepting model interpretations without verification
+   - Using single prompts for complex issues
+   - Failing to cross-validate critical points
+   - Neglecting human expertise
+
+2. **Bias Introduction**
+   - Leading questions that suggest preferred answers
+   - Failing to challenge confirmatory responses
+   - Accepting responses that align with expectations
+   - Neglecting alternative viewpoints
+
+## Implementation Tips
+
+### 11. Practical Workflow Integration
+
+1. **Setup Phase**
+   - Prepare standard prompts
+   - Create documentation templates
+   - Set up cross-validation system
+   - Establish verification protocols
+
+2. **Execution Phase**
+   - Follow structured analysis process
+   - Document all significant interactions
+   - Cross-validate critical findings
+   - Maintain skeptical perspective
+
+3. **Review Phase**
+   - Verify key conclusions
+   - Check for bias patterns
+   - Review documentation completeness
+   - Validate critical interpretations
+
+## Conclusion
+
+Success in using LLMs for paper analysis requires:
+
+1. Structured approach to manage biases
+2. Robust verification processes
+3. Clear documentation practices
+4. Regular validation of findings
+
+**Remember: LLMs are tools to assist analysis, not replace critical thinking. Always maintain skepticism and verify important conclusions through multiple methods.**
+:::
 
 
 # References
