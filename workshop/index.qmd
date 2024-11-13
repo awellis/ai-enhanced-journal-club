@@ -164,6 +164,8 @@ The findings are concerning because these models will sometimes sacrifice truthf
 
 We will use the paper by @fleckensteinTeachersSpotAI2024a for demonstration and for exercises.
 
+{{< pdf file="../assets/pdfs/fleckensteinTeachersSpotAI2024a.pdf"  height="600px" download-link=true >}}
+
 
 
 :::{.callout-note collapse="true"}
