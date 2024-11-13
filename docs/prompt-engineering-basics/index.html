@@ -9,11 +9,12 @@
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/quarto-contrib/quarto-timer-1.0.0/timer.js"></script>
-<link href="../site_libs/quarto-contrib/quarto-timer-1.0.0/timer.css" rel="stylesheet"><meta charset="utf-8">
+<link href="../site_libs/quarto-contrib/quarto-timer-1.0.0/timer.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/bootstrap-icons-1.11.1/all.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="Andrew Ellis">
-  <title>AI-enhanced journal club – AI-Enhanced Journal Club</title>
+  <title>AI-enhanced journal club – Prompt Engineering: Basics</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -357,15 +358,15 @@
     }
   </style>
   <style>
-  div.callout-tip.callout {
-    border-left-color: gold;
+  div.callout-group.callout {
+    border-left-color: purple;
   }
-  div.callout-tip.callout-style-default > .callout-header {
-    background-color: rgb(from gold r g b / 13%);
+  div.callout-group.callout-style-default > .callout-header {
+    background-color: rgb(from purple r g b / 13%);
   }
-  div.callout-tip .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-  div.callout-tip.callout-style-default .callout-icon::before, div.callout-tip.callout-titled .callout-icon::before {
-    content: '💡';
+  div.callout-group .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+  div.callout-group.callout-style-default .callout-icon::before, div.callout-group.callout-titled .callout-icon::before {
+    content: '👥';
     background-image: none;
   }
   div.callout-prompt-template.callout {
@@ -379,37 +380,15 @@
     content: '📋';
     background-image: none;
   }
-  div.callout-timing.callout {
-    border-left-color: red;
+  div.callout-export.callout {
+    border-left-color: brown;
   }
-  div.callout-timing.callout-style-default > .callout-header {
-    background-color: rgb(from red r g b / 13%);
+  div.callout-export.callout-style-default > .callout-header {
+    background-color: rgb(from brown r g b / 13%);
   }
-  div.callout-timing .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-  div.callout-timing.callout-style-default .callout-icon::before, div.callout-timing.callout-titled .callout-icon::before {
-    content: '⏱️';
-    background-image: none;
-  }
-  div.callout-caution.callout {
-    border-left-color: orange;
-  }
-  div.callout-caution.callout-style-default > .callout-header {
-    background-color: rgb(from orange r g b / 13%);
-  }
-  div.callout-caution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-  div.callout-caution.callout-style-default .callout-icon::before, div.callout-caution.callout-titled .callout-icon::before {
-    content: '⚠️';
-    background-image: none;
-  }
-  div.callout-feedback.callout {
-    border-left-color: teal;
-  }
-  div.callout-feedback.callout-style-default > .callout-header {
-    background-color: rgb(from teal r g b / 13%);
-  }
-  div.callout-feedback .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-  div.callout-feedback.callout-style-default .callout-icon::before, div.callout-feedback.callout-titled .callout-icon::before {
-    content: '📝';
+  div.callout-export .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+  div.callout-export.callout-style-default .callout-icon::before, div.callout-export.callout-titled .callout-icon::before {
+    content: '📤';
     background-image: none;
   }
   div.callout-try.callout {
@@ -423,15 +402,15 @@
     content: '🔄';
     background-image: none;
   }
-  div.callout-checkpoint.callout {
-    border-left-color: purple;
+  div.callout-feedback.callout {
+    border-left-color: teal;
   }
-  div.callout-checkpoint.callout-style-default > .callout-header {
-    background-color: rgb(from purple r g b / 13%);
+  div.callout-feedback.callout-style-default > .callout-header {
+    background-color: rgb(from teal r g b / 13%);
   }
-  div.callout-checkpoint .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-  div.callout-checkpoint.callout-style-default .callout-icon::before, div.callout-checkpoint.callout-titled .callout-icon::before {
-    content: '🎯';
+  div.callout-feedback .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+  div.callout-feedback.callout-style-default .callout-icon::before, div.callout-feedback.callout-titled .callout-icon::before {
+    content: '📝';
     background-image: none;
   }
   div.callout-break.callout {
@@ -445,6 +424,17 @@
     content: '☕';
     background-image: none;
   }
+  div.callout-testing.callout {
+    border-left-color: green;
+  }
+  div.callout-testing.callout-style-default > .callout-header {
+    background-color: rgb(from green r g b / 13%);
+  }
+  div.callout-testing .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+  div.callout-testing.callout-style-default .callout-icon::before, div.callout-testing.callout-titled .callout-icon::before {
+    content: '🧪';
+    background-image: none;
+  }
   div.callout-screens-down.callout {
     border-left-color: orange;
   }
@@ -454,6 +444,72 @@
   div.callout-screens-down .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
   div.callout-screens-down.callout-style-default .callout-icon::before, div.callout-screens-down.callout-titled .callout-icon::before {
     content: '🔽';
+    background-image: none;
+  }
+  div.callout-timing.callout {
+    border-left-color: red;
+  }
+  div.callout-timing.callout-style-default > .callout-header {
+    background-color: rgb(from red r g b / 13%);
+  }
+  div.callout-timing .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+  div.callout-timing.callout-style-default .callout-icon::before, div.callout-timing.callout-titled .callout-icon::before {
+    content: '⏱️';
+    background-image: none;
+  }
+  div.callout-reflect.callout {
+    border-left-color: purple;
+  }
+  div.callout-reflect.callout-style-default > .callout-header {
+    background-color: rgb(from purple r g b / 13%);
+  }
+  div.callout-reflect .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+  div.callout-reflect.callout-style-default .callout-icon::before, div.callout-reflect.callout-titled .callout-icon::before {
+    content: '💭';
+    background-image: none;
+  }
+  div.callout-output-example.callout {
+    border-left-color: darkgreen;
+  }
+  div.callout-output-example.callout-style-default > .callout-header {
+    background-color: rgb(from darkgreen r g b / 13%);
+  }
+  div.callout-output-example .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+  div.callout-output-example.callout-style-default .callout-icon::before, div.callout-output-example.callout-titled .callout-icon::before {
+    content: '📄';
+    background-image: none;
+  }
+  div.callout-checkpoint.callout {
+    border-left-color: purple;
+  }
+  div.callout-checkpoint.callout-style-default > .callout-header {
+    background-color: rgb(from purple r g b / 13%);
+  }
+  div.callout-checkpoint .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+  div.callout-checkpoint.callout-style-default .callout-icon::before, div.callout-checkpoint.callout-titled .callout-icon::before {
+    content: '🎯';
+    background-image: none;
+  }
+  div.callout-prompt-example.callout {
+    border-left-color: darkblue;
+  }
+  div.callout-prompt-example.callout-style-default > .callout-header {
+    background-color: rgb(from darkblue r g b / 13%);
+  }
+  div.callout-prompt-example .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+  div.callout-prompt-example.callout-style-default .callout-icon::before, div.callout-prompt-example.callout-titled .callout-icon::before {
+    content: '👩🏼‍🔧';
+    background-image: none;
+  }
+  div.callout-caution.callout {
+    border-left-color: orange;
+  }
+  div.callout-caution.callout-style-default > .callout-header {
+    background-color: rgb(from orange r g b / 13%);
+  }
+  div.callout-caution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+  div.callout-caution.callout-style-default .callout-icon::before, div.callout-caution.callout-titled .callout-icon::before {
+    content: '⚠️';
     background-image: none;
   }
   div.callout-pair.callout {
@@ -478,17 +534,6 @@
     content: '🔼';
     background-image: none;
   }
-  div.callout-export.callout {
-    border-left-color: brown;
-  }
-  div.callout-export.callout-style-default > .callout-header {
-    background-color: rgb(from brown r g b / 13%);
-  }
-  div.callout-export .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-  div.callout-export.callout-style-default .callout-icon::before, div.callout-export.callout-titled .callout-icon::before {
-    content: '📤';
-    background-image: none;
-  }
   div.callout-setup.callout {
     border-left-color: gray;
   }
@@ -498,39 +543,6 @@
   div.callout-setup .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
   div.callout-setup.callout-style-default .callout-icon::before, div.callout-setup.callout-titled .callout-icon::before {
     content: '⚙️';
-    background-image: none;
-  }
-  div.callout-output-example.callout {
-    border-left-color: darkgreen;
-  }
-  div.callout-output-example.callout-style-default > .callout-header {
-    background-color: rgb(from darkgreen r g b / 13%);
-  }
-  div.callout-output-example .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-  div.callout-output-example.callout-style-default .callout-icon::before, div.callout-output-example.callout-titled .callout-icon::before {
-    content: '📄';
-    background-image: none;
-  }
-  div.callout-testing.callout {
-    border-left-color: green;
-  }
-  div.callout-testing.callout-style-default > .callout-header {
-    background-color: rgb(from green r g b / 13%);
-  }
-  div.callout-testing .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-  div.callout-testing.callout-style-default .callout-icon::before, div.callout-testing.callout-titled .callout-icon::before {
-    content: '🧪';
-    background-image: none;
-  }
-  div.callout-group.callout {
-    border-left-color: purple;
-  }
-  div.callout-group.callout-style-default > .callout-header {
-    background-color: rgb(from purple r g b / 13%);
-  }
-  div.callout-group .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-  div.callout-group.callout-style-default .callout-icon::before, div.callout-group.callout-titled .callout-icon::before {
-    content: '👥';
     background-image: none;
   }
   div.callout-individual.callout {
@@ -544,26 +556,15 @@
     content: '💻';
     background-image: none;
   }
-  div.callout-reflect.callout {
-    border-left-color: purple;
+  div.callout-tip.callout {
+    border-left-color: gold;
   }
-  div.callout-reflect.callout-style-default > .callout-header {
-    background-color: rgb(from purple r g b / 13%);
+  div.callout-tip.callout-style-default > .callout-header {
+    background-color: rgb(from gold r g b / 13%);
   }
-  div.callout-reflect .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-  div.callout-reflect.callout-style-default .callout-icon::before, div.callout-reflect.callout-titled .callout-icon::before {
-    content: '💭';
-    background-image: none;
-  }
-  div.callout-prompt-example.callout {
-    border-left-color: darkblue;
-  }
-  div.callout-prompt-example.callout-style-default > .callout-header {
-    background-color: rgb(from darkblue r g b / 13%);
-  }
-  div.callout-prompt-example .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-  div.callout-prompt-example.callout-style-default .callout-icon::before, div.callout-prompt-example.callout-titled .callout-icon::before {
-    content: '👩🏼‍🔧';
+  div.callout-tip .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+  div.callout-tip.callout-style-default .callout-icon::before, div.callout-tip.callout-titled .callout-icon::before {
+    content: '💡';
     background-image: none;
   }
   </style>
@@ -573,7 +574,7 @@
     <div class="slides">
 
 <section id="title-slide" data-background-opacity="1" class="quarto-title-block center">
-  <h1 class="title">AI-Enhanced Journal Club</h1>
+  <h1 class="title">Prompt Engineering: Basics</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -585,51 +586,310 @@ Andrew Ellis
 
   <p class="date">13 November, 2024</p>
 </section>
-<section class="slide level2">
+<section id="understand-llms-through-hands-on-experience" class="slide level2">
+<h2>Understand LLMs through Hands-On Experience</h2>
+<ul>
+<li>Dedicate time to actively using large language models (LLMs).</li>
+<li>Utilize LLMs for tasks related to your work or personal interests.</li>
+<li>Explore their abilities by posing diverse and unique prompts.</li>
+<li>Observe where LLMs work well and where they don’t.</li>
+</ul>
+</section>
+<section id="a-useful-metaphor" class="slide level2">
+<h2>A useful metaphor</h2>
+<p>Imagine you are giving instructions to a junior intern or assistant.</p>
+</section>
+<section id="zero-shot-prompting" class="slide level2">
+<h2>Zero-Shot Prompting</h2>
+<p><strong>Definition</strong>: Asking the model to perform a task without providing examples.</p>
+<div class="callout callout-prompt-example callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Example Prompt</strong></p>
+</div>
+<div class="callout-content">
+<p>Translate the following English text to French: ’Hello, how are you?</p>
+</div>
+</div>
+</div>
+</section>
+<section id="role-assignment" class="slide level2">
+<h2>Role assignment</h2>
+<p><strong>Technique</strong>: Define a specific role for the AI to adopt.</p>
+<div class="callout callout-prompt-example callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Example Prompt</strong></p>
+</div>
+<div class="callout-content">
+<p>You are an expert historian. Explain the causes of World War I.</p>
+</div>
+</div>
+</div>
+<p><br></p>
+<div class="callout callout-prompt-example callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Example Prompt</strong></p>
+</div>
+<div class="callout-content">
+<p>You are an 8-year-old child. Explain the causes of World War I.</p>
+</div>
+</div>
+</div>
+<p><br></p>
+<div class="callout callout-prompt-example callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Example Prompt</strong></p>
+</div>
+<div class="callout-content">
+<p>You are an experienced emergency room nurse with over 15 years of experience in patient triage. Your role is to perform initial assessments of patients based on their reported symptoms and medical history. You have a calm demeanor and the ability to quickly prioritize cases based on severity. In this role, you will categorize patients’ conditions and recommend appropriate next steps.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="clear-communication" class="slide level2">
+<h2>Clear communication</h2>
+<p><strong>Technique:</strong> Use precise language and specific instructions</p>
+<div class="callout callout-prompt-example callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Example Prompt</strong></p>
+</div>
+<div class="callout-content">
+<p>You are an ER nurse with 15+ years of triage experience.</p>
+<p>Your tasks: - Assess patients quickly based on symptoms and medical - Categorize conditions by severity - Recommend next steps for treatment</p>
+<p>You are calm under pressure and efficient in prioritizing cases.</p>
+</div>
+</div>
+</div>
+<p><br></p>
+<div class="callout callout-prompt-example callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Example Prompt</strong></p>
+</div>
+<div class="callout-content">
+<p>List five benefits of regular exercise, each in a separate bullet point.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="emotion-prompting" class="slide level2">
+<h2>Emotion prompting</h2>
+<p><strong>Technique</strong>: Incorporate emotional language to potentially improve accuracy and response quality<sup>1</sup>.</p>
+<div class="callout callout-prompt-example callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Example Prompt</strong></p>
+</div>
+<div class="callout-content">
+<p>I’m really excited to learn about this! Can you enthusiastically explain how photosynthesis works?</p>
+</div>
+</div>
+</div>
+<p><br></p>
+<div class="callout callout-prompt-example callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Example Prompt</strong></p>
+</div>
+<div class="callout-content">
+<p>Rate this essay according to [these criteria]. You will receive a bonus if you do a good job.</p>
+</div>
+</div>
+</div>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>Emotion prompting’s effectiveness in improving language model responses is debated. Some argue it could enhance naturalness, while others suggest minimal or inconsistent impact across tasks and models. More research is needed.</p></li></ol></aside></section>
+<section id="provide-context" class="slide level2">
+<h2>Provide context</h2>
+<p><strong>Technique</strong>: Give relevant background information</p>
+<div class="callout callout-prompt-example callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Example Prompt</strong></p>
+</div>
+<div class="callout-content">
+<p>Context: You are working in a busy urban hospital emergency room during flu season. It’s currently 2 AM on a Saturday, and the waiting room is full. The hospital has been dealing with a recent outbreak of a new strain of influenza in the community.</p>
+<p>Patient Information:</p>
+<ul>
+<li>45-year-old male</li>
+<li>No known pre-existing conditions</li>
+<li>Not on any regular medications</li>
+<li>Last flu shot was 2 years ago</li>
+<li>Given this context and patient information, assess the following reported symptoms: [Insert symptoms here]</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="use-examples" class="slide level2">
+<h2>Use examples</h2>
+<p>This is known as <strong>few-shot prompting</strong>. <br> <br> <strong>Technique</strong>: Illustrate desired output with examples.</p>
+<div class="callout callout-prompt-example callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Example Prompt</strong></p>
+</div>
+<div class="callout-content">
+<p>Perform a triage assessment based on the patient’s symptoms. Format your response similar to the following examples:</p>
+<p><strong>Example 1:</strong> Symptoms: Chest pain, shortness of breath, left arm numbness Assessment: Emergency Reason: Symptoms strongly indicate a possible heart attack Action: Immediate medical attention required. Call for a cardiac team.</p>
+<p><strong>Example 2:</strong> Symptoms: Mild fever, sore throat, fatigue Assessment: Non-urgent Reason: Symptoms suggest a common cold or mild flu Action: Rest at home, monitor symptoms, seek medical attention if condition worsens.</p>
+<p>Assess the following patient:</p>
+<p>Symptoms: [Insert patient’s symptoms here]</p>
+</div>
+</div>
+</div>
+</section>
+<section id="specify-output-format" class="slide level2">
+<h2>Specify Output Format</h2>
+<p>For example:</p>
+<ul>
+<li>a Markdown table</li>
+<li>Word or Excel document</li>
+<li>CSV file</li>
+<li>Structured list</li>
+</ul>
+<div class="callout callout-prompt-example callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Example Prompt</strong></p>
+</div>
+<div class="callout-content">
+<p>Based on the patient’s symptoms, create a triage assessment. Present your findings in a Markdown table with the following columns:</p>
+<ul>
+<li>Severity</li>
+<li>Primary Concern</li>
+<li>Symptoms</li>
+<li>Recommended Action</li>
+</ul>
+<p>Use one of three severity levels: Emergency, Urgent, or Non-urgent.</p>
+<p>The patient has the following symptoms: [Insert symptoms here]</p>
+</div>
+</div>
+</div>
+</section>
+<section id="structure-input-using-markdown" class="slide level2">
+<h2>Structure Input Using Markdown</h2>
+<p>Technique: Organize input information in a structured format using <a href="https://www.markdownguide.org/">Markdown</a>.</p>
+<div class="callout callout-prompt-example callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Example Prompt</strong></p>
+</div>
+<div class="callout-content">
+<pre><code>Based on the patient's symptoms, create a triage assessment.
 
-<h3 id="what-is-a-journal-club">What is a journal club?</h3>
-<p>A journal club is a group activity where researchers meet to critically discuss and analyze scientific papers from their field.</p>
-<ul>
-<li>Promotes deep understanding of research methods and findings</li>
-<li>Promotes critical thinking and constructive critique</li>
-<li>Builds collaboration and knowledge sharing</li>
-<li>Identifies new research directions and open questions</li>
-</ul>
+# Patient Triage Information
+
+## Patient Details
+
+- **Name**: John Doe
+- **Age**: 45
+- **Gender**: Male
+- **Medical History**: No known pre-existing conditions
+- 
+## Current Symptoms
+1. Chest pain (severity: 8/10)
+2. Shortness of breath
+3. Left arm numbness</code></pre>
+</div>
+</div>
+</div>
 </section>
-<section id="problems-with-large-groups" class="slide level2">
-<h2>Problems with large groups</h2>
-<ul>
-<li>Traditional “brainstorming” in large groups is ineffective</li>
-<li>Room dynamics lead to limited participation</li>
-<li>Stronger voices dominate discussions</li>
-<li>Many participants remain silent</li>
-<li>Ideas often go unexpressed or underdeveloped</li>
-</ul>
-</section>
-<section id="optimal-scientific-collaboration" class="slide level2">
-<h2>Optimal scientific collaboration</h2>
-<ul>
-<li><span class="citation" data-cites="yanaiItTakesTwo2024">Yanai and Lercher (<a href="#/references" role="doc-biblioref" onclick="">2024</a>)</span> argue that two-person collaborations represent the optimal format for creative scientific discussions and idea development</li>
-<li>They draw on insights from improvisational theater and evolutionary psychology</li>
-<li>Through paired discussions, scientists can create a trusting environment</li>
-<li>This environment encourages free exploration of ideas</li>
-<li>It avoids the social complexities and participation barriers of larger group discussions</li>
-</ul>
-</section>
-<section id="core-concept" class="slide level2">
-<h2>Core concept</h2>
-<p>LLMs can</p>
-<ul>
-<li>provide always-available thinking partners for immediate feedback and alternative perspectives</li>
-<li>can embody the “Yes, and” principle, building on ideas without criticism</li>
-<li>remove social anxiety, enabling creative exploration of early ideas</li>
-<li>help structure ideas into clearer linear thinking</li>
-<li>can make assumptions explicitand identify reasoning flaws through questioning</li>
-<li><strong>complement</strong> human collaboration by providing a safe space for initial idea development</li>
-</ul>
+<section id="ask-an-llm" class="slide level2">
+<h2>Ask an LLM</h2>
+<p>LLMs have been trained on a lot of data, including prompting techniques<sup>1</sup>.</p>
+<div class="callout callout-prompt-example callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Example Prompt</strong></p>
+</div>
+<div class="callout-content">
+<p>As a language model, how would you proceed when given the following prompt: ““” You are an ER nurse with 15+ years of triage experience.</p>
+<p>Your tasks: 1. Assess patients quickly based on symptoms and medical history 2. Categorize conditions by severity 3. Recommend next steps for treatment 4. You are calm under pressure and efficient in prioritizing cases. ““”</p>
+</div>
+</div>
+</div>
+<div class="callout callout-prompt-example callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Example Prompt</strong></p>
+</div>
+<div class="callout-content">
+<p>How would you improve this prompt?</p>
+</div>
+</div>
+</div>
+<aside><ol class="aside-footnotes"><li id="fn2"><p>It is debated whether LLMs are particularly suited to writing prompting techniques.</p></li></ol></aside></section>
+<section id="generate-python-code" class="slide level2">
+<h2>Generate Python code</h2>
+<p><strong>Technique</strong>: ask an LLM to generate Python code, or in the case of ChatGPT to “use Python”</p>
+<div class="callout callout-prompt-example callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Example Prompt</strong></p>
+</div>
+<div class="callout-content">
+<p>[Insert query here…]</p>
+<p>Use Python.</p>
+</div>
+</div>
+</div>
+<!-- ## Questions / Discussion  -->
 </section>
 <section id="references" class="slide level2 smaller scrollable" data-background-color="#D8DEE9">
 <h2>References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-schulhoffPromptReportSystematic2024" class="csl-entry" role="listitem">
+Schulhoff, Sander, Michael Ilie, Nishant Balepur, Konstantine Kahadze, Amanda Liu, Chenglei Si, Yinheng Li, et al. 2024. <span>“The <span>Prompt Report</span>: <span>A Systematic Survey</span> of <span>Prompting Techniques</span>.”</span> June 6, 2024. <a href="http://arxiv.org/abs/2406.06608">http://arxiv.org/abs/2406.06608</a>.
+</div>
+</div>
 
 <div class="quarto-auto-generated-content">
 <p><img src="../assets/bfh-logo.png" class="slide-logo"></p>
@@ -637,12 +897,8 @@ Andrew Ellis
 <p>Berner Fachhochschule | Bern University of Applied Sciences</p>
 </div>
 </div>
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-yanaiItTakesTwo2024" class="csl-entry" role="listitem">
-Yanai, Itai, and Martin J. Lercher. 2024. <span>“It Takes Two to Think.”</span> <em>Nature Biotechnology</em> 42 (1): 18–19. <a href="https://doi.org/10.1038/s41587-023-02074-2">https://doi.org/10.1038/s41587-023-02074-2</a>.
-</div>
-</div>
 </section>
+
     </div>
   </div>
 

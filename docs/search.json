@@ -483,7 +483,7 @@
     "href": "prompting-llms/index.html",
     "title": "Prompting recommendations",
     "section": "",
-    "text": "When reading a research paper, it is recommended to follow the three-pass strategy:\n\n\n\n\nTime Investment:\nPurpose: Quick scan to grasp the paper’s structure and main points\nSteps:\n\nRead title, abstract, and introduction\nRead section and subsection headings\nRead conclusion\nGlance at references\n\nOutcome: Answer the “five Cs”:\n\nCategory (type of paper)\nContext (relation to other work)\nCorrectness (validity of assumptions)\nContributions (main findings)\nClarity (writing quality)\n\n\n\n\nTime Investment:\nPurpose: Understand the paper’s content without technical details\nSteps:\n\nRead with greater attention, ignoring proofs\nStudy figures, diagrams, and graphs carefully\nMark important references for follow-up\n\nOutcome: Ability to summarize the paper’s main thrust with supporting evidence\nNote: Suitable for papers relevant but not central to your research\n\n\n\nTime Investment:\nPurpose: Complete comprehension and virtual replication\nSteps:\n\nAttempt to virtually “re-implement” the paper\nIdentify and challenge every assumption\nThink about alternative presentations\nNote ideas for future work\n\nOutcome: - Ability to reconstruct paper from memory - Understanding of strengths and weaknesses - Recognition of implicit assumptions - Identification of missing citations - Awareness of potential technical issues\n\nAdapted from How to read a research paper"
+    "text": "ChatGPT data analysis\nClaude interactive visualizations\nElicit\nNotebook LLM\n\n\n\n\n    View slides in full screen\n       \n      \n    \n  \n\n\n\n    View slides in full screen"
   },
   {
     "objectID": "workshop/index.html#reading-papers",
@@ -652,5 +652,264 @@
     "title": "Group Analysis",
     "section": "Open discussion of effective techniques",
     "text": "Open discussion of effective techniques\n\n\n\n\n\n                    \n                    \n                \n\n\n\n\n\nBerner Fachhochschule | Bern University of Applied Sciences"
+  },
+  {
+    "objectID": "prompt-engineering-basics/index.html#understand-llms-through-hands-on-experience",
+    "href": "prompt-engineering-basics/index.html#understand-llms-through-hands-on-experience",
+    "title": "Prompt Engineering: Basics",
+    "section": "Understand LLMs through Hands-On Experience",
+    "text": "Understand LLMs through Hands-On Experience\n\nDedicate time to actively using large language models (LLMs).\nUtilize LLMs for tasks related to your work or personal interests.\nExplore their abilities by posing diverse and unique prompts.\nObserve where LLMs work well and where they don’t."
+  },
+  {
+    "objectID": "prompt-engineering-basics/index.html#a-useful-metaphor",
+    "href": "prompt-engineering-basics/index.html#a-useful-metaphor",
+    "title": "Prompt Engineering: Basics",
+    "section": "A useful metaphor",
+    "text": "A useful metaphor\nImagine you are giving instructions to a junior intern or assistant."
+  },
+  {
+    "objectID": "prompt-engineering-basics/index.html#zero-shot-prompting",
+    "href": "prompt-engineering-basics/index.html#zero-shot-prompting",
+    "title": "Prompt Engineering: Basics",
+    "section": "Zero-Shot Prompting",
+    "text": "Zero-Shot Prompting\nDefinition: Asking the model to perform a task without providing examples.\n\n\n\n\n\n\nExample Prompt\n\n\nTranslate the following English text to French: ’Hello, how are you?"
+  },
+  {
+    "objectID": "prompt-engineering-basics/index.html#role-assignment",
+    "href": "prompt-engineering-basics/index.html#role-assignment",
+    "title": "Prompt Engineering: Basics",
+    "section": "Role assignment",
+    "text": "Role assignment\nTechnique: Define a specific role for the AI to adopt.\n\n\n\n\n\n\nExample Prompt\n\n\nYou are an expert historian. Explain the causes of World War I.\n\n\n\n\n\n\n\n\n\n\nExample Prompt\n\n\nYou are an 8-year-old child. Explain the causes of World War I.\n\n\n\n\n\n\n\n\n\n\nExample Prompt\n\n\nYou are an experienced emergency room nurse with over 15 years of experience in patient triage. Your role is to perform initial assessments of patients based on their reported symptoms and medical history. You have a calm demeanor and the ability to quickly prioritize cases based on severity. In this role, you will categorize patients’ conditions and recommend appropriate next steps."
+  },
+  {
+    "objectID": "prompt-engineering-basics/index.html#clear-communication",
+    "href": "prompt-engineering-basics/index.html#clear-communication",
+    "title": "Prompt Engineering: Basics",
+    "section": "Clear communication",
+    "text": "Clear communication\nTechnique: Use precise language and specific instructions\n\n\n\n\n\n\nExample Prompt\n\n\nYou are an ER nurse with 15+ years of triage experience.\nYour tasks: - Assess patients quickly based on symptoms and medical - Categorize conditions by severity - Recommend next steps for treatment\nYou are calm under pressure and efficient in prioritizing cases.\n\n\n\n\n\n\n\n\n\n\nExample Prompt\n\n\nList five benefits of regular exercise, each in a separate bullet point."
+  },
+  {
+    "objectID": "prompt-engineering-basics/index.html#emotion-prompting",
+    "href": "prompt-engineering-basics/index.html#emotion-prompting",
+    "title": "Prompt Engineering: Basics",
+    "section": "Emotion prompting",
+    "text": "Emotion prompting\nTechnique: Incorporate emotional language to potentially improve accuracy and response quality1.\n\n\n\n\n\n\nExample Prompt\n\n\nI’m really excited to learn about this! Can you enthusiastically explain how photosynthesis works?\n\n\n\n\n\n\n\n\n\n\nExample Prompt\n\n\nRate this essay according to [these criteria]. You will receive a bonus if you do a good job.\n\n\n\nEmotion prompting’s effectiveness in improving language model responses is debated. Some argue it could enhance naturalness, while others suggest minimal or inconsistent impact across tasks and models. More research is needed."
+  },
+  {
+    "objectID": "prompt-engineering-basics/index.html#provide-context",
+    "href": "prompt-engineering-basics/index.html#provide-context",
+    "title": "Prompt Engineering: Basics",
+    "section": "Provide context",
+    "text": "Provide context\nTechnique: Give relevant background information\n\n\n\n\n\n\nExample Prompt\n\n\nContext: You are working in a busy urban hospital emergency room during flu season. It’s currently 2 AM on a Saturday, and the waiting room is full. The hospital has been dealing with a recent outbreak of a new strain of influenza in the community.\nPatient Information:\n\n45-year-old male\nNo known pre-existing conditions\nNot on any regular medications\nLast flu shot was 2 years ago\nGiven this context and patient information, assess the following reported symptoms: [Insert symptoms here]"
+  },
+  {
+    "objectID": "prompt-engineering-basics/index.html#use-examples",
+    "href": "prompt-engineering-basics/index.html#use-examples",
+    "title": "Prompt Engineering: Basics",
+    "section": "Use examples",
+    "text": "Use examples\nThis is known as few-shot prompting.   Technique: Illustrate desired output with examples.\n\n\n\n\n\n\nExample Prompt\n\n\nPerform a triage assessment based on the patient’s symptoms. Format your response similar to the following examples:\nExample 1: Symptoms: Chest pain, shortness of breath, left arm numbness Assessment: Emergency Reason: Symptoms strongly indicate a possible heart attack Action: Immediate medical attention required. Call for a cardiac team.\nExample 2: Symptoms: Mild fever, sore throat, fatigue Assessment: Non-urgent Reason: Symptoms suggest a common cold or mild flu Action: Rest at home, monitor symptoms, seek medical attention if condition worsens.\nAssess the following patient:\nSymptoms: [Insert patient’s symptoms here]"
+  },
+  {
+    "objectID": "prompt-engineering-basics/index.html#specify-output-format",
+    "href": "prompt-engineering-basics/index.html#specify-output-format",
+    "title": "Prompt Engineering: Basics",
+    "section": "Specify Output Format",
+    "text": "Specify Output Format\nFor example:\n\na Markdown table\nWord or Excel document\nCSV file\nStructured list\n\n\n\n\n\n\n\nExample Prompt\n\n\nBased on the patient’s symptoms, create a triage assessment. Present your findings in a Markdown table with the following columns:\n\nSeverity\nPrimary Concern\nSymptoms\nRecommended Action\n\nUse one of three severity levels: Emergency, Urgent, or Non-urgent.\nThe patient has the following symptoms: [Insert symptoms here]"
+  },
+  {
+    "objectID": "prompt-engineering-basics/index.html#structure-input-using-markdown",
+    "href": "prompt-engineering-basics/index.html#structure-input-using-markdown",
+    "title": "Prompt Engineering: Basics",
+    "section": "Structure Input Using Markdown",
+    "text": "Structure Input Using Markdown\nTechnique: Organize input information in a structured format using Markdown.\n\n\n\n\n\n\nExample Prompt\n\n\nBased on the patient's symptoms, create a triage assessment.\n\n# Patient Triage Information\n\n## Patient Details\n\n- **Name**: John Doe\n- **Age**: 45\n- **Gender**: Male\n- **Medical History**: No known pre-existing conditions\n- \n## Current Symptoms\n1. Chest pain (severity: 8/10)\n2. Shortness of breath\n3. Left arm numbness"
+  },
+  {
+    "objectID": "prompt-engineering-basics/index.html#ask-an-llm",
+    "href": "prompt-engineering-basics/index.html#ask-an-llm",
+    "title": "Prompt Engineering: Basics",
+    "section": "Ask an LLM",
+    "text": "Ask an LLM\nLLMs have been trained on a lot of data, including prompting techniques1.\n\n\n\n\n\n\nExample Prompt\n\n\nAs a language model, how would you proceed when given the following prompt: ““” You are an ER nurse with 15+ years of triage experience.\nYour tasks: 1. Assess patients quickly based on symptoms and medical history 2. Categorize conditions by severity 3. Recommend next steps for treatment 4. You are calm under pressure and efficient in prioritizing cases. ““”\n\n\n\n\n\n\n\n\n\nExample Prompt\n\n\nHow would you improve this prompt?\n\n\n\nIt is debated whether LLMs are particularly suited to writing prompting techniques."
+  },
+  {
+    "objectID": "prompt-engineering-basics/index.html#generate-python-code",
+    "href": "prompt-engineering-basics/index.html#generate-python-code",
+    "title": "Prompt Engineering: Basics",
+    "section": "Generate Python code",
+    "text": "Generate Python code\nTechnique: ask an LLM to generate Python code, or in the case of ChatGPT to “use Python”\n\n\n\n\n\n\nExample Prompt\n\n\n[Insert query here…]\nUse Python."
+  },
+  {
+    "objectID": "prompt-engineering-basics/index.html#questions-discussion",
+    "href": "prompt-engineering-basics/index.html#questions-discussion",
+    "title": "Prompt Engineering: Basics",
+    "section": "Questions / Discussion ",
+    "text": "Questions / Discussion"
+  },
+  {
+    "objectID": "prompt-engineering-basics/index.html#references",
+    "href": "prompt-engineering-basics/index.html#references",
+    "title": "Prompt Engineering: Basics",
+    "section": "References",
+    "text": "References\n\n\nSchulhoff, Sander, Michael Ilie, Nishant Balepur, Konstantine Kahadze, Amanda Liu, Chenglei Si, Yinheng Li, et al. 2024. “The Prompt Report: A Systematic Survey of Prompting Techniques.” June 6, 2024. http://arxiv.org/abs/2406.06608.\n\n\n\n\n\n\nBerner Fachhochschule | Bern University of Applied Sciences"
+  },
+  {
+    "objectID": "prompt-engineering-intermediate/index.html#chain-of-thought-cot-prompting",
+    "href": "prompt-engineering-intermediate/index.html#chain-of-thought-cot-prompting",
+    "title": "Prompt Engineering: Intermediate Techniques",
+    "section": "Chain of Thought (CoT) prompting",
+    "text": "Chain of Thought (CoT) prompting\nTechniques: Encourage the model to proceed in a step-by-step manner. This has the effect of making the desired output more probable. The output looks like the LLM is showing its reasoning process1.\n\n\n\nExample Prompt\n\n\nThink through this step-by-step: 1) List the symptoms 2) Consider possible causes 3) Evaluate urgency 4) Recommend action\n\n\n\nOften it can be sufficient to just ask the model to think step-by-step.\n\n\n\nExample Prompt\n\n\nThink step-by-step.\n\n\n\nThis behaviour has been trained into recent models."
+  },
+  {
+    "objectID": "prompt-engineering-intermediate/index.html#why-chain-of-thought",
+    "href": "prompt-engineering-intermediate/index.html#why-chain-of-thought",
+    "title": "Prompt Engineering: Intermediate Techniques",
+    "section": "Why Chain of Thought?",
+    "text": "Why Chain of Thought?\n\nAmount of computation is constant per token.\nBy forcing the LLM to generate more (useful) tokens, it will therefore generate more (useful) content.\nThis in turn narrows the space of possible outputs, and steers the model towards regions of the output space that are more desirable."
+  },
+  {
+    "objectID": "prompt-engineering-intermediate/index.html#drawbacks-of-chain-of-thought",
+    "href": "prompt-engineering-intermediate/index.html#drawbacks-of-chain-of-thought",
+    "title": "Prompt Engineering: Intermediate Techniques",
+    "section": "Drawbacks of Chain of Thought",
+    "text": "Drawbacks of Chain of Thought\n\nLLM performance on reasoning problems does not generalize well\nChain of thought prompting aims to mitigate this by demonstrating solution procedures\nStechly, Valmeekam, and Kambhampati (2024) found meaningful performance improvements only with highly problem-specific prompts."
+  },
+  {
+    "objectID": "prompt-engineering-intermediate/index.html#few-shot-learning",
+    "href": "prompt-engineering-intermediate/index.html#few-shot-learning",
+    "title": "Prompt Engineering: Intermediate Techniques",
+    "section": "Few-Shot Learning",
+    "text": "Few-Shot Learning\nTechnique: Provide multiple examples before asking for a new output.\nThe way that we structure Few-Shot Prompts is very important. By this, we mean do we separate the inputs and outputs with a colon (:) or the words INPUT/OUTPUT. We have seen examples of both earlier in this article. How can you decide? We generally use the input: output format and occasionally use the QA format, which is commonly used in research papers.\nUse 2-5 examples for simple tasks. Use often ~10 examples for harder tasks\n\n\n\nExample Prompt\n\n\nInput: “Great product, 10/10”\nOuput: “Great product, 10/10”: {“label”: “positive”}\n Input: “Didn’t work very well”\nOutput: “Didn’t work very well”: {“label”: “negative”}\n Input: “Super helpful, worth it”\nOutput: “Super helpful, worth it”: {“label”: “positive”}\n Input: “I’m not sure I would buy this again”\nOutput:"
+  },
+  {
+    "objectID": "prompt-engineering-intermediate/index.html#structured-output",
+    "href": "prompt-engineering-intermediate/index.html#structured-output",
+    "title": "Prompt Engineering: Intermediate Techniques",
+    "section": "Structured Output",
+    "text": "Structured Output\nTechnique: Specify a structure for the model’s response.\n\n\n\nExample Prompt\n\n\nProvide your assessment in JSON format:\n{\n  \"severity\": \"[Emergency/Urgent/Non-urgent]\",\n  \"potential_causes\": \"[List top 3]\",\n  \"recommended_action\": \"[Specific next steps]\"\n}"
+  },
+  {
+    "objectID": "prompt-engineering-intermediate/index.html#self-consistency",
+    "href": "prompt-engineering-intermediate/index.html#self-consistency",
+    "title": "Prompt Engineering: Intermediate Techniques",
+    "section": "Self-Consistency",
+    "text": "Self-Consistency\nLLMs are prone to variability in their responses.\nTechnique: Generate multiple answers, aggregate the responses and select the majority result.\n\n\nDo this several times:\n\n\n\nExample Prompt\n\n\nProvide three independent assessments for these symptoms.\nThink step-by-step.\nSymptoms: [insert symptoms here]\n\n\n\n\nProvide the responses to an LLM in a new session:\n\n\n\nExample Prompt\n\n\nAnalyze whether the following assessments agree with each other. Give me your expert assessment based on the assessments you received."
+  },
+  {
+    "objectID": "prompt-engineering-intermediate/index.html#bonus-tip-keep-up-with-prompt-engineering-research",
+    "href": "prompt-engineering-intermediate/index.html#bonus-tip-keep-up-with-prompt-engineering-research",
+    "title": "Prompt Engineering: Intermediate Techniques",
+    "section": "Bonus tip: keep up with prompt engineering research",
+    "text": "Bonus tip: keep up with prompt engineering research\nTechnique: Use LLMs to “read” new research papers.\n\n\n\nExample Prompt\n\n\nBased on the attached research paper on [prompt engineering technique], write a prompt that would cause an LLM to behave according to the techniques described in this paper. Use [topic] as an example."
+  },
+  {
+    "objectID": "prompt-engineering-intermediate/index.html#problems-with-prompt-engineering",
+    "href": "prompt-engineering-intermediate/index.html#problems-with-prompt-engineering",
+    "title": "Prompt Engineering: Intermediate Techniques",
+    "section": "Problems with prompt engineering",
+    "text": "Problems with prompt engineering\n\n“Positive thinking” prompts have inconsistent effects across models.\nChain of Thought (CoT) prompting generally improves performance, but prompts are task-specific.\nNo universal “best prompt” — effectiveness varies by model and task.\nAutomatically optimized prompts often outperform manually crafted ones.\nOptimized prompts can be surprisingly unconventional or eccentric."
+  },
+  {
+    "objectID": "prompt-engineering-intermediate/index.html#prompt-optimization",
+    "href": "prompt-engineering-intermediate/index.html#prompt-optimization",
+    "title": "Prompt Engineering: Intermediate Techniques",
+    "section": "Prompt optimization",
+    "text": "Prompt optimization\n\n\n\nPositive thinking\n\n\nYou are an experienced emergency room nurse. Take a deep breath and carefully assess the following patient’s symptoms.\n\n\n\n\n\n\nChain of Thought\n\n\nThink through this patient’s case step-by-step: 1) List the symptoms, 2) Consider possible causes, 3) Evaluate urgency, 4) Recommend action.\n\n\n\n\n\n\nOptimized prompt\n\n\nThe ER is in chaos, Doctor. We need your expertise to navigate this storm of patients and identify the most critical cases.\n\n\n\nsee Battle and Gollapudi (2024)"
+  },
+  {
+    "objectID": "prompt-engineering-intermediate/index.html#questions-discussion",
+    "href": "prompt-engineering-intermediate/index.html#questions-discussion",
+    "title": "Prompt Engineering: Intermediate Techniques",
+    "section": "Questions / Discussion ",
+    "text": "Questions / Discussion"
+  },
+  {
+    "objectID": "prompt-engineering-intermediate/index.html#references",
+    "href": "prompt-engineering-intermediate/index.html#references",
+    "title": "Prompt Engineering: Intermediate Techniques",
+    "section": "References",
+    "text": "References\n\n\nBattle, Rick, and Teja Gollapudi. 2024. “The Unreasonable Effectiveness of Eccentric Automatic Prompts.” February 20, 2024. https://doi.org/10.48550/arXiv.2402.10949.\n\n\nSchulhoff, Sander, Michael Ilie, Nishant Balepur, Konstantine Kahadze, Amanda Liu, Chenglei Si, Yinheng Li, et al. 2024. “The Prompt Report: A Systematic Survey of Prompting Techniques.” June 6, 2024. http://arxiv.org/abs/2406.06608.\n\n\nStechly, Kaya, Karthik Valmeekam, and Subbarao Kambhampati. 2024. “Chain of Thoughtlessness? An Analysis of CoT in Planning.” arXiv.org. May 8, 2024. https://arxiv.org/abs/2405.04776v2.\n\n\n\n\n\n\nBerner Fachhochschule | Bern University of Applied Sciences"
+  },
+  {
+    "objectID": "prompting-llms/index.html#useful-tools",
+    "href": "prompting-llms/index.html#useful-tools",
+    "title": "Prompting recommendations",
+    "section": "",
+    "text": "ChatGPT data analysis\nClaude interactive visualizations\nElicit\nNotebook LLM"
+  },
+  {
+    "objectID": "prompting-llms/index.html#basic-prompting-strategies",
+    "href": "prompting-llms/index.html#basic-prompting-strategies",
+    "title": "Prompting recommendations",
+    "section": "",
+    "text": "View slides in full screen"
+  },
+  {
+    "objectID": "prompting-llms/index.html#intermediate-prompting-strategies",
+    "href": "prompting-llms/index.html#intermediate-prompting-strategies",
+    "title": "Prompting recommendations",
+    "section": "",
+    "text": "View slides in full screen"
+  },
+  {
+    "objectID": "prompting-llms/index.html#explore-these-prompt-guides",
+    "href": "prompting-llms/index.html#explore-these-prompt-guides",
+    "title": "Prompting recommendations",
+    "section": "",
+    "text": "Learn prompting: An comprehensive guide to prompt engineering.\n\n\n\n\n\n Learn prompting\n\n\n\n\n\n\n\n\n\n\nPrompting guide: A more technical guide to prompting\n\n\n\n\n\n Prompting guide: DAIR.AI (Democratizing Artificial Intelligence Research, Education, and Technologies). The guide is licensed under an MIT license."
+  },
+  {
+    "objectID": "prompting-llms/index.html#explore-these-prompting-guides",
+    "href": "prompting-llms/index.html#explore-these-prompting-guides",
+    "title": "Prompting recommendations",
+    "section": "",
+    "text": "Learn prompting: An comprehensive guide to prompt engineering.\n\n\n\n\n\n Learn prompting\n\n\n\n\n\n\n\n\n\n\nPrompting guide: A more technical guide to prompting\n\n\n\n\n\n Prompting guide: DAIR.AI (Democratizing Artificial Intelligence Research, Education, and Technologies). The guide is licensed under an MIT license."
+  },
+  {
+    "objectID": "prompting-llms/index.html#pre-reading-phase",
+    "href": "prompting-llms/index.html#pre-reading-phase",
+    "title": "Prompting recommendations",
+    "section": "Pre-Reading Phase",
+    "text": "Pre-Reading Phase\n\n1. Setup and Preparation\n\nHave the paper open in a format where you can easily copy text\nKeep a structured note-taking system ready\nConsider using multiple LLM providers (e.g., Claude, GPT-4) for cross-validation\nPrepare a basic template document for organizing findings\n\n\n\n2. Initial Paper Assessment\n\nTitle and Abstract Analysis\nPrompt Template:\n\"Please analyze this title and abstract focusing on:\n1. The main research question\n2. The key methodological approach\n3. The primary claimed findings\n4. Any potential red flags or limitations that should guide my reading\nPlease maintain a critical perspective and highlight any assumptions or claims that require careful verification.\"\nBackground Context\nPrompt Template:\n\"What are the key papers and concepts I should be familiar with to understand this research? \nPlease format the response as:\n1. Essential prerequisite concepts:\n2. Key related papers:\n3. Potential controversies in this field:\nNote: Please indicate if you're uncertain about any of these recommendations.\""
+  },
+  {
+    "objectID": "prompting-llms/index.html#deep-reading-phase",
+    "href": "prompting-llms/index.html#deep-reading-phase",
+    "title": "Prompting recommendations",
+    "section": "Deep Reading Phase",
+    "text": "Deep Reading Phase\n\n3. Methodological Analysis\n\nInitial Method Review\nPrompt Template:\n\"Please analyze this methods section, focusing on:\n1. Key methodological choices and their justification\n2. Potential alternative approaches not discussed\n3. Assumptions made by the authors\n4. Possible limitations or confounds\nPlease maintain a skeptical perspective and highlight any methodological choices that require extra scrutiny.\"\nStatistical Analysis Verification\nPrompt Template:\n\"For these statistical methods:\n1. Are they appropriate for the research questions?\n2. What assumptions do these methods make?\n3. What alternative analyses might have been more appropriate?\n4. What potential confounds might affect these analyses?\nPlease be specific about any concerns or limitations.\"\n\n\n\n4. Results Interpretation\n\nData Presentation Analysis\nPrompt Template:\n\"Please analyze these results focusing on:\n1. Whether the data supports the stated conclusions\n2. Alternative interpretations not discussed\n3. Potential confounding variables\n4. Missing analyses that would strengthen the findings\nBe explicitly critical and highlight any gaps between data and conclusions.\"\nVerification Queries\n\nAlways ask the same question in multiple ways\nUse contrary framings to test for sycophancy\nCross-reference critical points with other LLMs\n\n\n\n\n5. Discussion Analysis\n\nClaims Verification\nPrompt Template:\n\"For each major claim in the discussion:\n1. Is it fully supported by the presented data?\n2. What alternative explanations exist?\n3. What additional evidence would strengthen this claim?\n4. What limitations might affect this interpretation?\nPlease be specific about any gaps between evidence and claims.\""
+  },
+  {
+    "objectID": "prompting-llms/index.html#critical-analysis-phase",
+    "href": "prompting-llms/index.html#critical-analysis-phase",
+    "title": "Prompting recommendations",
+    "section": "Critical Analysis Phase",
+    "text": "Critical Analysis Phase\n\n6. Structured Critique\n\nStrength Assessment\nPrompt Template:\n\"Please analyze the paper's strengths:\n1. Most robust findings\n2. Strongest methodological elements\n3. Most convincing arguments\n4. Most significant contributions\nProvide specific evidence for each point.\"\nWeakness Assessment\nPrompt Template:\n\"Please analyze the paper's weaknesses:\n1. Methodological limitations\n2. Unsupported assumptions\n3. Alternative interpretations\n4. Missing controls or analyses\nBe specific and explain why each is important.\"\n\n\n\n7. Cross-Validation Strategies\n\nA. Multiple Model Approach\n\nAsk the same questions to different LLMs\nCompare responses for consistency\nInvestigate discrepancies\nDocument variations in interpretation\n\n\n\nB. Reverse Questioning\n\nAsk for critiques of both positive and negative interpretations\nChallenge both supportive and critical responses\nCompare how the model handles opposing viewpoints\nDocument any tendency to agree with the questioner"
+  },
+  {
+    "objectID": "prompting-llms/index.html#documentation-and-synthesis",
+    "href": "prompting-llms/index.html#documentation-and-synthesis",
+    "title": "Prompting recommendations",
+    "section": "Documentation and Synthesis",
+    "text": "Documentation and Synthesis\n\n8. Creating a Structured Analysis\n\nMain Findings Summary\n\nDocument key claims and evidence\nNote areas of uncertainty\nList verified vs. questionable conclusions\nInclude cross-validation results\n\nLimitations Documentation\n\nRecord methodological concerns\nNote potential biases\nDocument areas needing verification\nList missing analyses\n\nFuture Directions\n\nIdentify logical next steps\nNote gaps in current evidence\nSuggest methodological improvements\nList potential applications"
+  },
+  {
+    "objectID": "prompting-llms/index.html#best-practices-and-safeguards",
+    "href": "prompting-llms/index.html#best-practices-and-safeguards",
+    "title": "Prompting recommendations",
+    "section": "Best Practices and Safeguards",
+    "text": "Best Practices and Safeguards\n\n9. Quality Control Measures\n\nA. Bias Prevention\n\nRotate question framing\nUse multiple prompting strategies\nCross-validate critical findings\nDocument model uncertainties\n\n\n\nB. Documentation Requirements\n\nRecord all significant prompts\nNote areas of model disagreement\nTrack changes in model responses\nDocument verification steps\n\n\n\nC. Red Flags to Watch For\n\nModel significantly changes stance when questioned\nResponses align too readily with suggestions\nInconsistent technical explanations\nOverly confident answers about uncertain topics\n\n\n\n\n10. Common Pitfalls to Avoid\n\nOver-reliance Traps\n\nAccepting model interpretations without verification\nUsing single prompts for complex issues\nFailing to cross-validate critical points\nNeglecting human expertise\n\nBias Introduction\n\nLeading questions that suggest preferred answers\nFailing to challenge confirmatory responses\nAccepting responses that align with expectations\nNeglecting alternative viewpoints"
+  },
+  {
+    "objectID": "prompting-llms/index.html#implementation-tips",
+    "href": "prompting-llms/index.html#implementation-tips",
+    "title": "Prompting recommendations",
+    "section": "Implementation Tips",
+    "text": "Implementation Tips\n\n11. Practical Workflow Integration\n\nSetup Phase\n\nPrepare standard prompts\nCreate documentation templates\nSet up cross-validation system\nEstablish verification protocols\n\nExecution Phase\n\nFollow structured analysis process\nDocument all significant interactions\nCross-validate critical findings\nMaintain skeptical perspective\n\nReview Phase\n\nVerify key conclusions\nCheck for bias patterns\nReview documentation completeness\nValidate critical interpretations"
+  },
+  {
+    "objectID": "prompting-llms/index.html#conclusion",
+    "href": "prompting-llms/index.html#conclusion",
+    "title": "Prompting recommendations",
+    "section": "Conclusion",
+    "text": "Conclusion\nSuccess in using LLMs for paper analysis requires:\n\nStructured approach to manage biases\nRobust verification processes\nClear documentation practices\nRegular validation of findings\n\nRemember: LLMs are tools to assist analysis, not replace critical thinking. Always maintain skepticism and verify important conclusions through multiple methods."
   }
 ]

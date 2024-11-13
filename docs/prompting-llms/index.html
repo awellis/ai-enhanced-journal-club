@@ -21,7 +21,61 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -42,6 +96,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script src="../site_libs/quarto-contrib/quarto-timer-1.0.0/timer.js"></script>
 <link href="../site_libs/quarto-contrib/quarto-timer-1.0.0/timer.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/bootstrap-icons-1.11.1/all.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -82,94 +137,6 @@ ul.task-list li input[type="checkbox"] {
   });
 </script>
 <style>
-div.callout-timing.callout {
-  border-left-color: red;
-}
-div.callout-timing.callout-style-default > .callout-header {
-  background-color: rgb(from red r g b / 13%);
-}
-div.callout-timing .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-timing.callout-style-default .callout-icon::before, div.callout-timing.callout-titled .callout-icon::before {
-  content: '⏱️';
-  background-image: none;
-}
-div.callout-prompt-example.callout {
-  border-left-color: darkblue;
-}
-div.callout-prompt-example.callout-style-default > .callout-header {
-  background-color: rgb(from darkblue r g b / 13%);
-}
-div.callout-prompt-example .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-prompt-example.callout-style-default .callout-icon::before, div.callout-prompt-example.callout-titled .callout-icon::before {
-  content: '👩🏼‍🔧';
-  background-image: none;
-}
-div.callout-try.callout {
-  border-left-color: blue;
-}
-div.callout-try.callout-style-default > .callout-header {
-  background-color: rgb(from blue r g b / 13%);
-}
-div.callout-try .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-try.callout-style-default .callout-icon::before, div.callout-try.callout-titled .callout-icon::before {
-  content: '🔄';
-  background-image: none;
-}
-div.callout-testing.callout {
-  border-left-color: green;
-}
-div.callout-testing.callout-style-default > .callout-header {
-  background-color: rgb(from green r g b / 13%);
-}
-div.callout-testing .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-testing.callout-style-default .callout-icon::before, div.callout-testing.callout-titled .callout-icon::before {
-  content: '🧪';
-  background-image: none;
-}
-div.callout-prompt-template.callout {
-  border-left-color: indigo;
-}
-div.callout-prompt-template.callout-style-default > .callout-header {
-  background-color: rgb(from indigo r g b / 13%);
-}
-div.callout-prompt-template .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-prompt-template.callout-style-default .callout-icon::before, div.callout-prompt-template.callout-titled .callout-icon::before {
-  content: '📋';
-  background-image: none;
-}
-div.callout-checkpoint.callout {
-  border-left-color: purple;
-}
-div.callout-checkpoint.callout-style-default > .callout-header {
-  background-color: rgb(from purple r g b / 13%);
-}
-div.callout-checkpoint .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-checkpoint.callout-style-default .callout-icon::before, div.callout-checkpoint.callout-titled .callout-icon::before {
-  content: '🎯';
-  background-image: none;
-}
-div.callout-feedback.callout {
-  border-left-color: teal;
-}
-div.callout-feedback.callout-style-default > .callout-header {
-  background-color: rgb(from teal r g b / 13%);
-}
-div.callout-feedback .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-feedback.callout-style-default .callout-icon::before, div.callout-feedback.callout-titled .callout-icon::before {
-  content: '📝';
-  background-image: none;
-}
-div.callout-export.callout {
-  border-left-color: brown;
-}
-div.callout-export.callout-style-default > .callout-header {
-  background-color: rgb(from brown r g b / 13%);
-}
-div.callout-export .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-export.callout-style-default .callout-icon::before, div.callout-export.callout-titled .callout-icon::before {
-  content: '📤';
-  background-image: none;
-}
 div.callout-output-example.callout {
   border-left-color: darkgreen;
 }
@@ -179,50 +146,6 @@ div.callout-output-example.callout-style-default > .callout-header {
 div.callout-output-example .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
 div.callout-output-example.callout-style-default .callout-icon::before, div.callout-output-example.callout-titled .callout-icon::before {
   content: '📄';
-  background-image: none;
-}
-div.callout-tip.callout {
-  border-left-color: gold;
-}
-div.callout-tip.callout-style-default > .callout-header {
-  background-color: rgb(from gold r g b / 13%);
-}
-div.callout-tip .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-tip.callout-style-default .callout-icon::before, div.callout-tip.callout-titled .callout-icon::before {
-  content: '💡';
-  background-image: none;
-}
-div.callout-individual.callout {
-  border-left-color: steelblue;
-}
-div.callout-individual.callout-style-default > .callout-header {
-  background-color: rgb(from steelblue r g b / 13%);
-}
-div.callout-individual .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-individual.callout-style-default .callout-icon::before, div.callout-individual.callout-titled .callout-icon::before {
-  content: '💻';
-  background-image: none;
-}
-div.callout-screens-down.callout {
-  border-left-color: orange;
-}
-div.callout-screens-down.callout-style-default > .callout-header {
-  background-color: rgb(from orange r g b / 13%);
-}
-div.callout-screens-down .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-screens-down.callout-style-default .callout-icon::before, div.callout-screens-down.callout-titled .callout-icon::before {
-  content: '🔽';
-  background-image: none;
-}
-div.callout-reflect.callout {
-  border-left-color: purple;
-}
-div.callout-reflect.callout-style-default > .callout-header {
-  background-color: rgb(from purple r g b / 13%);
-}
-div.callout-reflect .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-reflect.callout-style-default .callout-icon::before, div.callout-reflect.callout-titled .callout-icon::before {
-  content: '💭';
   background-image: none;
 }
 div.callout-screens-up.callout {
@@ -236,17 +159,6 @@ div.callout-screens-up.callout-style-default .callout-icon::before, div.callout-
   content: '🔼';
   background-image: none;
 }
-div.callout-group.callout {
-  border-left-color: purple;
-}
-div.callout-group.callout-style-default > .callout-header {
-  background-color: rgb(from purple r g b / 13%);
-}
-div.callout-group .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-group.callout-style-default .callout-icon::before, div.callout-group.callout-titled .callout-icon::before {
-  content: '👥';
-  background-image: none;
-}
 div.callout-pair.callout {
   border-left-color: forestgreen;
 }
@@ -258,15 +170,48 @@ div.callout-pair.callout-style-default .callout-icon::before, div.callout-pair.c
   content: '👥';
   background-image: none;
 }
-div.callout-break.callout {
-  border-left-color: brown;
+div.callout-screens-down.callout {
+  border-left-color: orange;
 }
-div.callout-break.callout-style-default > .callout-header {
-  background-color: rgb(from brown r g b / 13%);
+div.callout-screens-down.callout-style-default > .callout-header {
+  background-color: rgb(from orange r g b / 13%);
 }
-div.callout-break .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-break.callout-style-default .callout-icon::before, div.callout-break.callout-titled .callout-icon::before {
-  content: '☕';
+div.callout-screens-down .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-screens-down.callout-style-default .callout-icon::before, div.callout-screens-down.callout-titled .callout-icon::before {
+  content: '🔽';
+  background-image: none;
+}
+div.callout-tip.callout {
+  border-left-color: gold;
+}
+div.callout-tip.callout-style-default > .callout-header {
+  background-color: rgb(from gold r g b / 13%);
+}
+div.callout-tip .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-tip.callout-style-default .callout-icon::before, div.callout-tip.callout-titled .callout-icon::before {
+  content: '💡';
+  background-image: none;
+}
+div.callout-group.callout {
+  border-left-color: purple;
+}
+div.callout-group.callout-style-default > .callout-header {
+  background-color: rgb(from purple r g b / 13%);
+}
+div.callout-group .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-group.callout-style-default .callout-icon::before, div.callout-group.callout-titled .callout-icon::before {
+  content: '👥';
+  background-image: none;
+}
+div.callout-reflect.callout {
+  border-left-color: purple;
+}
+div.callout-reflect.callout-style-default > .callout-header {
+  background-color: rgb(from purple r g b / 13%);
+}
+div.callout-reflect .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-reflect.callout-style-default .callout-icon::before, div.callout-reflect.callout-titled .callout-icon::before {
+  content: '💭';
   background-image: none;
 }
 div.callout-caution.callout {
@@ -280,6 +225,94 @@ div.callout-caution.callout-style-default .callout-icon::before, div.callout-cau
   content: '⚠️';
   background-image: none;
 }
+div.callout-prompt-example.callout {
+  border-left-color: darkblue;
+}
+div.callout-prompt-example.callout-style-default > .callout-header {
+  background-color: rgb(from darkblue r g b / 13%);
+}
+div.callout-prompt-example .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-prompt-example.callout-style-default .callout-icon::before, div.callout-prompt-example.callout-titled .callout-icon::before {
+  content: '👩🏼‍🔧';
+  background-image: none;
+}
+div.callout-timing.callout {
+  border-left-color: red;
+}
+div.callout-timing.callout-style-default > .callout-header {
+  background-color: rgb(from red r g b / 13%);
+}
+div.callout-timing .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-timing.callout-style-default .callout-icon::before, div.callout-timing.callout-titled .callout-icon::before {
+  content: '⏱️';
+  background-image: none;
+}
+div.callout-individual.callout {
+  border-left-color: steelblue;
+}
+div.callout-individual.callout-style-default > .callout-header {
+  background-color: rgb(from steelblue r g b / 13%);
+}
+div.callout-individual .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-individual.callout-style-default .callout-icon::before, div.callout-individual.callout-titled .callout-icon::before {
+  content: '💻';
+  background-image: none;
+}
+div.callout-feedback.callout {
+  border-left-color: teal;
+}
+div.callout-feedback.callout-style-default > .callout-header {
+  background-color: rgb(from teal r g b / 13%);
+}
+div.callout-feedback .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-feedback.callout-style-default .callout-icon::before, div.callout-feedback.callout-titled .callout-icon::before {
+  content: '📝';
+  background-image: none;
+}
+div.callout-checkpoint.callout {
+  border-left-color: purple;
+}
+div.callout-checkpoint.callout-style-default > .callout-header {
+  background-color: rgb(from purple r g b / 13%);
+}
+div.callout-checkpoint .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-checkpoint.callout-style-default .callout-icon::before, div.callout-checkpoint.callout-titled .callout-icon::before {
+  content: '🎯';
+  background-image: none;
+}
+div.callout-try.callout {
+  border-left-color: blue;
+}
+div.callout-try.callout-style-default > .callout-header {
+  background-color: rgb(from blue r g b / 13%);
+}
+div.callout-try .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-try.callout-style-default .callout-icon::before, div.callout-try.callout-titled .callout-icon::before {
+  content: '🔄';
+  background-image: none;
+}
+div.callout-prompt-template.callout {
+  border-left-color: indigo;
+}
+div.callout-prompt-template.callout-style-default > .callout-header {
+  background-color: rgb(from indigo r g b / 13%);
+}
+div.callout-prompt-template .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-prompt-template.callout-style-default .callout-icon::before, div.callout-prompt-template.callout-titled .callout-icon::before {
+  content: '📋';
+  background-image: none;
+}
+div.callout-export.callout {
+  border-left-color: brown;
+}
+div.callout-export.callout-style-default > .callout-header {
+  background-color: rgb(from brown r g b / 13%);
+}
+div.callout-export .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-export.callout-style-default .callout-icon::before, div.callout-export.callout-titled .callout-icon::before {
+  content: '📤';
+  background-image: none;
+}
 div.callout-setup.callout {
   border-left-color: gray;
 }
@@ -291,7 +324,37 @@ div.callout-setup.callout-style-default .callout-icon::before, div.callout-setup
   content: '⚙️';
   background-image: none;
 }
+div.callout-break.callout {
+  border-left-color: brown;
+}
+div.callout-break.callout-style-default > .callout-header {
+  background-color: rgb(from brown r g b / 13%);
+}
+div.callout-break .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-break.callout-style-default .callout-icon::before, div.callout-break.callout-titled .callout-icon::before {
+  content: '☕';
+  background-image: none;
+}
+div.callout-testing.callout {
+  border-left-color: green;
+}
+div.callout-testing.callout-style-default > .callout-header {
+  background-color: rgb(from green r g b / 13%);
+}
+div.callout-testing .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-testing.callout-style-default .callout-icon::before, div.callout-testing.callout-titled .callout-icon::before {
+  content: '🧪';
+  background-image: none;
+}
 </style>
+ 
+  <style>
+  .slide-deck {
+      border: 3px solid #dee2e6;
+      width: 100%;
+  }
+  </style>
+  
 
 
 </head>
@@ -338,6 +401,14 @@ div.callout-setup.callout-style-default .callout-icon::before, div.callout-setup
     <a class="dropdown-item" href="../understanding-llms/index.html">
  <span class="dropdown-text">Understanding LLMs</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../prompt-engineering-basics/index.html">
+ <span class="dropdown-text">Basic prompt engineering</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../prompt-engineering-intermediate/index.html">
+ <span class="dropdown-text">Intermediate prompt engineering</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
@@ -373,13 +444,15 @@ div.callout-setup.callout-style-default .callout-icon::before, div.callout-setup
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#how-to-read-a-research-paper" id="toc-how-to-read-a-research-paper" class="nav-link active" data-scroll-target="#how-to-read-a-research-paper">How to read a research paper</a>
+  <li><a href="#prompting-strategies" id="toc-prompting-strategies" class="nav-link active" data-scroll-target="#prompting-strategies">Prompting strategies</a>
   <ul class="collapse">
-  <li><a href="#the-three-pass-method" id="toc-the-three-pass-method" class="nav-link" data-scroll-target="#the-three-pass-method">The Three-Pass Method</a></li>
-  </ul></li>
-  <li><a href="#limitations" id="toc-limitations" class="nav-link" data-scroll-target="#limitations">Limitations</a></li>
-  <li><a href="#prompting-strategies" id="toc-prompting-strategies" class="nav-link" data-scroll-target="#prompting-strategies">Prompting strategies</a></li>
   <li><a href="#useful-tools" id="toc-useful-tools" class="nav-link" data-scroll-target="#useful-tools">Useful tools</a></li>
+  <li><a href="#basic-prompting-strategies" id="toc-basic-prompting-strategies" class="nav-link" data-scroll-target="#basic-prompting-strategies">Basic prompting strategies</a></li>
+  <li><a href="#intermediate-prompting-strategies" id="toc-intermediate-prompting-strategies" class="nav-link" data-scroll-target="#intermediate-prompting-strategies">Intermediate prompting strategies</a></li>
+  </ul></li>
+  <li><a href="#explore-these-prompting-guides" id="toc-explore-these-prompting-guides" class="nav-link" data-scroll-target="#explore-these-prompting-guides">Explore these prompting guides</a></li>
+  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading">Further reading</a></li>
+  <li><a href="#recommendations-for-paper-analysis" id="toc-recommendations-for-paper-analysis" class="nav-link" data-scroll-target="#recommendations-for-paper-analysis">Recommendations for paper analysis</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
@@ -427,74 +500,10 @@ div.callout-setup.callout-style-default .callout-icon::before, div.callout-setup
 </header>
 
 
-<section id="how-to-read-a-research-paper" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-read-a-research-paper">How to read a research paper</h2>
-<p>When reading a research paper, it is recommended to follow the three-pass strategy:</p>
-<section id="the-three-pass-method" class="level3">
-<h3 class="anchored" data-anchor-id="the-three-pass-method">The Three-Pass Method</h3>
-<section id="first-pass-the-birds-eye-view" class="level4">
-<h4 class="anchored" data-anchor-id="first-pass-the-birds-eye-view">First Pass: The Bird’s Eye View</h4>
-<p><strong>Time Investment:</strong></p>
-<p><strong>Purpose:</strong> Quick scan to grasp the paper’s structure and main points</p>
-<p><strong>Steps:</strong></p>
-<ul>
-<li>Read title, abstract, and introduction</li>
-<li>Read section and subsection headings</li>
-<li>Read conclusion</li>
-<li>Glance at references</li>
-</ul>
-<p><strong>Outcome:</strong> Answer the “five Cs”:</p>
-<ul>
-<li>Category (type of paper)</li>
-<li>Context (relation to other work)</li>
-<li>Correctness (validity of assumptions)</li>
-<li>Contributions (main findings)</li>
-<li>Clarity (writing quality)</li>
-</ul>
-</section>
-<section id="second-pass-the-content-grasp" class="level4">
-<h4 class="anchored" data-anchor-id="second-pass-the-content-grasp">Second Pass: The Content Grasp</h4>
-<p><strong>Time Investment:</strong></p>
-<p><strong>Purpose:</strong> Understand the paper’s content without technical details</p>
-<p><strong>Steps:</strong></p>
-<ul>
-<li>Read with greater attention, ignoring proofs</li>
-<li>Study figures, diagrams, and graphs carefully</li>
-<li>Mark important references for follow-up</li>
-</ul>
-<p><strong>Outcome:</strong> Ability to summarize the paper’s main thrust with supporting evidence</p>
-<p><strong>Note:</strong> Suitable for papers relevant but not central to your research</p>
-</section>
-<section id="third-pass-deep-understanding" class="level4">
-<h4 class="anchored" data-anchor-id="third-pass-deep-understanding">Third Pass: Deep Understanding</h4>
-<p><strong>Time Investment:</strong></p>
-<p><strong>Purpose:</strong> Complete comprehension and virtual replication</p>
-<p><strong>Steps:</strong></p>
-<ul>
-<li>Attempt to virtually “re-implement” the paper</li>
-<li>Identify and challenge every assumption</li>
-<li>Think about alternative presentations</li>
-<li>Note ideas for future work</li>
-</ul>
-<p><strong>Outcome:</strong> - Ability to reconstruct paper from memory - Understanding of strengths and weaknesses - Recognition of implicit assumptions - Identification of missing citations - Awareness of potential technical issues</p>
-<div class="attribution">
-<p>Adapted from <a href="https://web.stanford.edu/class/ee384m/Handouts/HowtoReadPaper.pdf">How to read a research paper</a></p>
-</div>
-</section>
-</section>
-</section>
-<section id="limitations" class="level1">
-<h1>Limitations</h1>
-<ul>
-<li>sycophancy</li>
-<li>reasoning capabilities</li>
-</ul>
-</section>
 <section id="prompting-strategies" class="level1">
 <h1>Prompting strategies</h1>
-</section>
-<section id="useful-tools" class="level1">
-<h1>Useful tools</h1>
+<section id="useful-tools" class="level2">
+<h2 class="anchored" data-anchor-id="useful-tools">Useful tools</h2>
 <ul>
 <li>ChatGPT data analysis</li>
 <li>Claude interactive visualizations</li>
@@ -502,13 +511,353 @@ div.callout-setup.callout-style-default .callout-icon::before, div.callout-setup
 <li>Notebook LLM</li>
 </ul>
 </section>
+<section id="basic-prompting-strategies" class="level2">
+<h2 class="anchored" data-anchor-id="basic-prompting-strategies">Basic prompting strategies</h2>
+    <p><a href="../prompt-engineering-basics/index.html" target="_blank">View slides in full screen</a></p>
+       <div class="ratio ratio-16x9">
+      <iframe class="slide-deck" src="../prompt-engineering-basics/index.html" height="500px"></iframe>
+    </div>
+  
+</section>
+<section id="intermediate-prompting-strategies" class="level2">
+<h2 class="anchored" data-anchor-id="intermediate-prompting-strategies">Intermediate prompting strategies</h2>
+    <p><a href="../prompt-engineering-intermediate/index.html" target="_blank">View slides in full screen</a></p>
+       <div class="ratio ratio-16x9">
+      <iframe class="slide-deck" src="../prompt-engineering-intermediate/index.html" height="500px"></iframe>
+    </div>
+  
+</section>
+</section>
+<section id="explore-these-prompting-guides" class="level1">
+<h1>Explore these prompting guides</h1>
+<div class="callout callout-style-simple callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Learn prompting: An comprehensive guide to prompt engineering.
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><i class="bi-link " style="" role="img" aria-hidden="true"></i> <a href="https://learnprompting.org/docs/introduction">Learn prompting</a></p>
+<iframe src="https://learnprompting.org/docs/introduction" width="100%" height="500px"></iframe>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Prompting guide: A more technical guide to prompting
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><i class="bi-link " style="" role="img" aria-hidden="true"></i> <a href="https://www.promptingguide.ai/">Prompting guide</a>: <strong>DAIR.AI</strong> (Democratizing Artificial Intelligence Research, Education, and Technologies). The guide is licensed under an MIT license.</p>
+<iframe src="https://www.promptingguide.ai/" width="100%" height="500px"></iframe>
+</div>
+</div>
+</div>
+</section>
+<section id="further-reading" class="level1">
+<h1>Further reading</h1>
+<p><span class="citation" data-cites="schulhoffPromptReportSystematic2024">Schulhoff et al. (<a href="#ref-schulhoffPromptReportSystematic2024" role="doc-biblioref">2024</a>)</span> provides a comprehensive overview of the current state of prompting research.</p>
+<p><span class="citation" data-cites="zamfirescu-pereiraWhyJohnnyCant2023">Zamfirescu-Pereira et al. (<a href="#ref-zamfirescu-pereiraWhyJohnnyCant2023" role="doc-biblioref">2023</a>)</span> discusses the capabilities of non-experts at designing prompts for LLMs.</p>
+</section>
+<section id="recommendations-for-paper-analysis" class="level1">
+<h1>Recommendations for paper analysis</h1>
+<div class="callout callout-style-simple callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+LLM-Assisted Scientific Paper Analysis: A Comprehensive Guide
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<section id="pre-reading-phase" class="level2">
+<h2 class="anchored" data-anchor-id="pre-reading-phase">Pre-Reading Phase</h2>
+<section id="setup-and-preparation" class="level3">
+<h3 class="anchored" data-anchor-id="setup-and-preparation">1. Setup and Preparation</h3>
+<ul>
+<li>Have the paper open in a format where you can easily copy text</li>
+<li>Keep a structured note-taking system ready</li>
+<li>Consider using multiple LLM providers (e.g., Claude, GPT-4) for cross-validation</li>
+<li>Prepare a basic template document for organizing findings</li>
+</ul>
+</section>
+<section id="initial-paper-assessment" class="level3">
+<h3 class="anchored" data-anchor-id="initial-paper-assessment">2. Initial Paper Assessment</h3>
+<ol type="1">
+<li><p><strong>Title and Abstract Analysis</strong></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="an">Prompt Template:</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>"Please analyze this title and abstract focusing on:</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>The main research question</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>The key methodological approach</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>The primary claimed findings</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Any potential red flags or limitations that should guide my reading</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>Please maintain a critical perspective and highlight any assumptions or claims that require careful verification."</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p><strong>Background Context</strong></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="an">Prompt Template:</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>"What are the key papers and concepts I should be familiar with to understand this research? </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>Please format the response as:</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Essential prerequisite concepts:</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Key related papers:</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Potential controversies in this field:</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>Note: Please indicate if you're uncertain about any of these recommendations."</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ol>
+</section>
+</section>
+<section id="deep-reading-phase" class="level2">
+<h2 class="anchored" data-anchor-id="deep-reading-phase">Deep Reading Phase</h2>
+<section id="methodological-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="methodological-analysis">3. Methodological Analysis</h3>
+<ol type="1">
+<li><p><strong>Initial Method Review</strong></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="an">Prompt Template:</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>"Please analyze this methods section, focusing on:</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Key methodological choices and their justification</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Potential alternative approaches not discussed</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Assumptions made by the authors</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Possible limitations or confounds</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>Please maintain a skeptical perspective and highlight any methodological choices that require extra scrutiny."</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p><strong>Statistical Analysis Verification</strong></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="an">Prompt Template:</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>"For these statistical methods:</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Are they appropriate for the research questions?</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>What assumptions do these methods make?</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>What alternative analyses might have been more appropriate?</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>What potential confounds might affect these analyses?</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>Please be specific about any concerns or limitations."</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ol>
+</section>
+<section id="results-interpretation" class="level3">
+<h3 class="anchored" data-anchor-id="results-interpretation">4. Results Interpretation</h3>
+<ol type="1">
+<li><p><strong>Data Presentation Analysis</strong></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="an">Prompt Template:</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>"Please analyze these results focusing on:</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Whether the data supports the stated conclusions</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Alternative interpretations not discussed</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Potential confounding variables</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Missing analyses that would strengthen the findings</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>Be explicitly critical and highlight any gaps between data and conclusions."</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p><strong>Verification Queries</strong></p>
+<ul>
+<li>Always ask the same question in multiple ways</li>
+<li>Use contrary framings to test for sycophancy</li>
+<li>Cross-reference critical points with other LLMs</li>
+</ul></li>
+</ol>
+</section>
+<section id="discussion-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="discussion-analysis">5. Discussion Analysis</h3>
+<ol type="1">
+<li><p><strong>Claims Verification</strong></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="an">Prompt Template:</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>"For each major claim in the discussion:</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Is it fully supported by the presented data?</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>What alternative explanations exist?</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>What additional evidence would strengthen this claim?</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>What limitations might affect this interpretation?</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>Please be specific about any gaps between evidence and claims."</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ol>
+</section>
+</section>
+<section id="critical-analysis-phase" class="level2">
+<h2 class="anchored" data-anchor-id="critical-analysis-phase">Critical Analysis Phase</h2>
+<section id="structured-critique" class="level3">
+<h3 class="anchored" data-anchor-id="structured-critique">6. Structured Critique</h3>
+<ol type="1">
+<li><p><strong>Strength Assessment</strong></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="an">Prompt Template:</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>"Please analyze the paper's strengths:</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Most robust findings</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Strongest methodological elements</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Most convincing arguments</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Most significant contributions</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>Provide specific evidence for each point."</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p><strong>Weakness Assessment</strong></p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="an">Prompt Template:</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>"Please analyze the paper's weaknesses:</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Methodological limitations</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Unsupported assumptions</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Alternative interpretations</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Missing controls or analyses</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>Be specific and explain why each is important."</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ol>
+</section>
+<section id="cross-validation-strategies" class="level3">
+<h3 class="anchored" data-anchor-id="cross-validation-strategies">7. Cross-Validation Strategies</h3>
+<section id="a.-multiple-model-approach" class="level4">
+<h4 class="anchored" data-anchor-id="a.-multiple-model-approach">A. Multiple Model Approach</h4>
+<ol type="1">
+<li>Ask the same questions to different LLMs</li>
+<li>Compare responses for consistency</li>
+<li>Investigate discrepancies</li>
+<li>Document variations in interpretation</li>
+</ol>
+</section>
+<section id="b.-reverse-questioning" class="level4">
+<h4 class="anchored" data-anchor-id="b.-reverse-questioning">B. Reverse Questioning</h4>
+<ol type="1">
+<li>Ask for critiques of both positive and negative interpretations</li>
+<li>Challenge both supportive and critical responses</li>
+<li>Compare how the model handles opposing viewpoints</li>
+<li>Document any tendency to agree with the questioner</li>
+</ol>
+</section>
+</section>
+</section>
+<section id="documentation-and-synthesis" class="level2">
+<h2 class="anchored" data-anchor-id="documentation-and-synthesis">Documentation and Synthesis</h2>
+<section id="creating-a-structured-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="creating-a-structured-analysis">8. Creating a Structured Analysis</h3>
+<ol type="1">
+<li><strong>Main Findings Summary</strong>
+<ul>
+<li>Document key claims and evidence</li>
+<li>Note areas of uncertainty</li>
+<li>List verified vs.&nbsp;questionable conclusions</li>
+<li>Include cross-validation results</li>
+</ul></li>
+<li><strong>Limitations Documentation</strong>
+<ul>
+<li>Record methodological concerns</li>
+<li>Note potential biases</li>
+<li>Document areas needing verification</li>
+<li>List missing analyses</li>
+</ul></li>
+<li><strong>Future Directions</strong>
+<ul>
+<li>Identify logical next steps</li>
+<li>Note gaps in current evidence</li>
+<li>Suggest methodological improvements</li>
+<li>List potential applications</li>
+</ul></li>
+</ol>
+</section>
+</section>
+<section id="best-practices-and-safeguards" class="level2">
+<h2 class="anchored" data-anchor-id="best-practices-and-safeguards">Best Practices and Safeguards</h2>
+<section id="quality-control-measures" class="level3">
+<h3 class="anchored" data-anchor-id="quality-control-measures">9. Quality Control Measures</h3>
+<section id="a.-bias-prevention" class="level4">
+<h4 class="anchored" data-anchor-id="a.-bias-prevention">A. Bias Prevention</h4>
+<ul>
+<li>Rotate question framing</li>
+<li>Use multiple prompting strategies</li>
+<li>Cross-validate critical findings</li>
+<li>Document model uncertainties</li>
+</ul>
+</section>
+<section id="b.-documentation-requirements" class="level4">
+<h4 class="anchored" data-anchor-id="b.-documentation-requirements">B. Documentation Requirements</h4>
+<ul>
+<li>Record all significant prompts</li>
+<li>Note areas of model disagreement</li>
+<li>Track changes in model responses</li>
+<li>Document verification steps</li>
+</ul>
+</section>
+<section id="c.-red-flags-to-watch-for" class="level4">
+<h4 class="anchored" data-anchor-id="c.-red-flags-to-watch-for">C. Red Flags to Watch For</h4>
+<ol type="1">
+<li>Model significantly changes stance when questioned</li>
+<li>Responses align too readily with suggestions</li>
+<li>Inconsistent technical explanations</li>
+<li>Overly confident answers about uncertain topics</li>
+</ol>
+</section>
+</section>
+<section id="common-pitfalls-to-avoid" class="level3">
+<h3 class="anchored" data-anchor-id="common-pitfalls-to-avoid">10. Common Pitfalls to Avoid</h3>
+<ol type="1">
+<li><strong>Over-reliance Traps</strong>
+<ul>
+<li>Accepting model interpretations without verification</li>
+<li>Using single prompts for complex issues</li>
+<li>Failing to cross-validate critical points</li>
+<li>Neglecting human expertise</li>
+</ul></li>
+<li><strong>Bias Introduction</strong>
+<ul>
+<li>Leading questions that suggest preferred answers</li>
+<li>Failing to challenge confirmatory responses</li>
+<li>Accepting responses that align with expectations</li>
+<li>Neglecting alternative viewpoints</li>
+</ul></li>
+</ol>
+</section>
+</section>
+<section id="implementation-tips" class="level2">
+<h2 class="anchored" data-anchor-id="implementation-tips">Implementation Tips</h2>
+<section id="practical-workflow-integration" class="level3">
+<h3 class="anchored" data-anchor-id="practical-workflow-integration">11. Practical Workflow Integration</h3>
+<ol type="1">
+<li><strong>Setup Phase</strong>
+<ul>
+<li>Prepare standard prompts</li>
+<li>Create documentation templates</li>
+<li>Set up cross-validation system</li>
+<li>Establish verification protocols</li>
+</ul></li>
+<li><strong>Execution Phase</strong>
+<ul>
+<li>Follow structured analysis process</li>
+<li>Document all significant interactions</li>
+<li>Cross-validate critical findings</li>
+<li>Maintain skeptical perspective</li>
+</ul></li>
+<li><strong>Review Phase</strong>
+<ul>
+<li>Verify key conclusions</li>
+<li>Check for bias patterns</li>
+<li>Review documentation completeness</li>
+<li>Validate critical interpretations</li>
+</ul></li>
+</ol>
+</section>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>Success in using LLMs for paper analysis requires:</p>
+<ol type="1">
+<li>Structured approach to manage biases</li>
+<li>Robust verification processes</li>
+<li>Clear documentation practices</li>
+<li>Regular validation of findings</li>
+</ol>
+<p><strong>Remember: LLMs are tools to assist analysis, not replace critical thinking. Always maintain skepticism and verify important conclusions through multiple methods.</strong></p>
+</section>
+</div>
+</div>
+</div>
+</section>
 <section id="references" class="level1">
-<h1>References</h1>
+
+
 
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{ellis2024,
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-schulhoffPromptReportSystematic2024" class="csl-entry" role="listitem">
+Schulhoff, Sander, Michael Ilie, Nishant Balepur, Konstantine Kahadze, Amanda Liu, Chenglei Si, Yinheng Li, et al. 2024. <span>“The <span>Prompt Report</span>: <span>A Systematic Survey</span> of <span>Prompting Techniques</span>.”</span> June 6, 2024. <a href="http://arxiv.org/abs/2406.06608">http://arxiv.org/abs/2406.06608</a>.
+</div>
+<div id="ref-zamfirescu-pereiraWhyJohnnyCant2023" class="csl-entry" role="listitem">
+Zamfirescu-Pereira, J. D., Richmond Y. Wong, Bjoern Hartmann, and Qian Yang. 2023. <span>“Why <span>Johnny Can</span>’t <span>Prompt</span>: <span>How Non-AI Experts Try</span> (and <span>Fail</span>) to <span>Design LLM Prompts</span>.”</span> In <em>Proceedings of the 2023 <span>CHI Conference</span> on <span>Human Factors</span> in <span>Computing Systems</span></em>, 1–21. Hamburg Germany: ACM. <a href="https://doi.org/10.1145/3544548.3581388">https://doi.org/10.1145/3544548.3581388</a>.
+</div>
+</div></section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{ellis2024,
   author = {Ellis, Andrew},
   title = {Prompting Recommendations},
   date = {2024-11-13},
