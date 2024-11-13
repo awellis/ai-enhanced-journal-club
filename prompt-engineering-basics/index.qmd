@@ -1,0 +1,289 @@
+---
+title: "Prompt Engineering: Basics"
+author: "Andrew Ellis"
+date: "13 November, 2024"
+date-format: "DD MMMM, YYYY"
+bibliography: ../bibliography.bib
+nocite: |
+  @bowenTeachingAI2024, @langCheatingLessons2013a, @schulhoffPromptReportSystematic2024
+format: 
+    revealjs:
+        theme: [simple, ../styles/custom-reveal.scss]
+      #   theme: default
+        title-slide-attributes:
+          # data-background-image: ../assets/background-purple.png
+          # data-background-size: contain
+          data-background-opacity: "1"
+        
+        # headetmr-logo: ../assets/bfh-logo.png
+        # header: Berner Fachhochschule | Bern University of Applied Sciences
+        # footer: <a href="../index.html">back to website {{< bi box-arrow-up-left >}} </a>
+        footer: Berner Fachhochschule | Bern University of Applied Sciences
+        logo: ../assets/bfh-logo.png
+        navigation-mode: linear
+        progress: true
+        scrollable: false
+        slide-number: true
+        slide-level: 2
+        show-slide-number: all
+        hash: true
+        controls: auto
+        # controls-layout: bottom-right
+        controls-tutorial: true
+        preview-links: auto
+        chalkboard: true
+        from: markdown+emoji
+        code-fold: true
+        code-summary: "Show code"
+        code-tools: true
+        menu: 
+          sticky: true
+          keyboard: true
+          autoOpen: true
+          width: normal
+          numbers: true
+          markers: true
+        callout-appearance: default
+        # callout-icon: false
+        smaller: true
+revealjs-plugins:
+  - attribution
+# filters:
+#   - reveal-header
+---
+
+
+## Understand LLMs through Hands-On Experience
+
+- Dedicate time to actively using large language models (LLMs).
+- Utilize LLMs for tasks related to your work or personal interests.
+- Explore their abilities by posing diverse and unique prompts.
+- Observe where LLMs work well and where they don't.
+
+
+## A useful metaphor
+
+Imagine you are giving instructions to a junior intern or assistant.
+
+
+## Zero-Shot Prompting
+
+**Definition**: Asking the model to perform a task without providing examples.
+
+:::{.prompt-example}
+Translate the following English text to French: 'Hello, how are you?
+:::
+
+
+## Role assignment
+
+**Technique**: Define a specific role for the AI to adopt.
+
+:::{.prompt-example}
+You are an expert historian. Explain the causes of World War I.
+:::
+
+<br>
+
+:::{.prompt-example}
+You are an 8-year-old child. Explain the causes of World War I.
+:::
+
+<br>
+
+:::{.prompt-example}
+You are an experienced emergency room nurse with over 15
+years of experience in patient triage. Your role is to
+perform initial assessments of patients based on their
+reported symptoms and medical history. You have a calm
+demeanor and the ability to quickly prioritize cases based
+on severity. In this role, you will categorize patients'
+conditions and recommend appropriate next steps.
+:::
+
+
+## Clear communication
+**Technique:** Use precise language and specific instructions
+
+:::{.prompt-example}
+You are an ER nurse with 15+ years of triage experience.
+
+Your tasks:
+- Assess patients quickly based on symptoms and medical
+- Categorize conditions by severity
+- Recommend next steps for treatment
+
+You are calm under pressure and efficient in prioritizing
+cases.
+:::
+
+<br>
+
+:::{.prompt-example}
+List five benefits of regular exercise, each in a separate bullet point.
+:::
+
+
+## Emotion prompting
+
+**Technique**: Incorporate emotional language to potentially improve accuracy and response quality[^emotion-prompting].
+
+:::{.prompt-example}
+I'm really excited to learn about this! Can you enthusiastically explain how photosynthesis works?
+:::
+
+<br>
+
+:::{.prompt-example}
+Rate this essay according to [these criteria]. You will receive a bonus if you do a good job.
+:::
+
+
+[^emotion-prompting]: Emotion prompting's effectiveness in improving language model responses is debated. Some argue it could enhance naturalness, while others suggest minimal or inconsistent impact across tasks and models. More research is needed.
+
+
+
+## Provide context
+
+**Technique**: Give relevant background information
+
+:::{.prompt-example}
+Context: You are working in a busy urban hospital emergency room during
+flu season. It's currently 2 AM on a Saturday, and the waiting room is
+full. The hospital has been dealing with a recent outbreak of a new
+strain of influenza in the community.
+
+
+Patient Information:
+
+- 45-year-old male
+- No known pre-existing conditions
+- Not on any regular medications
+- Last flu shot was 2 years ago
+- 
+Given this context and patient information, assess the following
+reported symptoms: [Insert symptoms here]
+:::
+
+
+
+## Use examples
+This is known as **few-shot prompting**.
+<br> <br>
+**Technique**: Illustrate desired output with examples.
+
+:::{.prompt-example}
+Perform a triage assessment based on the patient's symptoms. Format your response
+similar to the following examples:
+
+**Example 1:**
+Symptoms: Chest pain, shortness of breath, left arm numbness
+Assessment: Emergency
+Reason: Symptoms strongly indicate a possible heart attack
+Action: Immediate medical attention required. Call for a cardiac team.
+
+**Example 2:**
+Symptoms: Mild fever, sore throat, fatigue
+Assessment: Non-urgent
+Reason: Symptoms suggest a common cold or mild flu
+Action: Rest at home, monitor symptoms, seek medical attention if condition worsens.
+
+
+Assess the following patient:
+
+Symptoms: [Insert patient's symptoms here]
+:::
+
+## Specify Output Format
+
+For example:
+
+- a Markdown table
+- Word or Excel document
+- CSV file
+- Structured list
+
+:::{.prompt-example}
+Based on the patient's symptoms, create a triage
+assessment. Present your findings in a Markdown table with
+the following columns: 
+
+- Severity
+- Primary Concern
+- Symptoms
+- Recommended Action 
+
+Use one of three severity levels: Emergency, Urgent, or Non-urgent.
+
+The patient has the following symptoms: [Insert symptoms
+here]
+:::
+
+
+## Structure Input Using Markdown
+
+Technique: Organize input information in a structured format using [Markdown](https://www.markdownguide.org/).
+
+:::{.prompt-example}
+```
+Based on the patient's symptoms, create a triage assessment.
+
+# Patient Triage Information
+
+## Patient Details
+
+- **Name**: John Doe
+- **Age**: 45
+- **Gender**: Male
+- **Medical History**: No known pre-existing conditions
+- 
+## Current Symptoms
+1. Chest pain (severity: 8/10)
+2. Shortness of breath
+3. Left arm numbness
+```
+:::
+
+
+## Ask an LLM
+LLMs have been trained on a lot of data, including prompting techniques[^prompting-techniques].
+
+:::{.prompt-example}
+As a language model, how would you proceed when given the following prompt:
+"""
+You are an ER nurse with 15+ years of triage experience.
+
+Your tasks:
+1. Assess patients quickly based on symptoms and medical
+history
+2. Categorize conditions by severity
+3. Recommend next steps for treatment
+4. 
+You are calm under pressure and efficient in prioritizing
+cases.
+"""
+:::
+
+:::{.prompt-example}
+How would you improve this prompt?
+:::
+
+[^prompting-techniques]: It is debated whether LLMs are particularly suited to writing prompting techniques.
+
+## Generate Python code
+
+**Technique**: ask an LLM to generate Python code, or in the case of
+ChatGPT to "use Python"
+
+:::{.prompt-example}
+[Insert query here…]
+
+Use Python.
+:::
+
+<!-- ## Questions / Discussion {{< bi chat-dots >}} -->
+
+## References {background-color="#D8DEE9"}
+
+::: {#refs}
+:::
