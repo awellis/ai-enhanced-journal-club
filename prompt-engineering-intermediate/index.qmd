@@ -1,0 +1,201 @@
+---
+title: "Prompt Engineering: Intermediate Techniques"
+author: "Andrew Ellis"
+date: "13 November, 2024"
+date-format: "DD MMMM, YYYY"
+bibliography: ../bibliography.bib
+nocite: |
+  @bowenTeachingAI2024, @langCheatingLessons2013a, @schulhoffPromptReportSystematic2024
+format: 
+    revealjs:
+        theme: [simple, ../styles/custom-reveal.scss]
+      #   theme: default
+        title-slide-attributes:
+          # data-background-image: ../assets/background-purple.png
+          # data-background-size: contain
+          data-background-opacity: "1"
+        
+        # headetmr-logo: ../assets/bfh-logo.png
+        # header: Berner Fachhochschule | Bern University of Applied Sciences
+        # footer: <a href="../index.html">back to website {{< bi box-arrow-up-left >}} </a>
+        footer: Berner Fachhochschule | Bern University of Applied Sciences
+        logo: ../assets/bfh-logo.png
+        navigation-mode: linear
+        progress: true
+        scrollable: false
+        slide-number: true
+        slide-level: 2
+        show-slide-number: all
+        hash: true
+        controls: auto
+        # controls-layout: bottom-right
+        controls-tutorial: true
+        preview-links: auto
+        chalkboard: true
+        from: markdown+emoji
+        code-fold: true
+        code-summary: "Show code"
+        code-tools: true
+        menu: 
+          sticky: true
+          keyboard: true
+          autoOpen: true
+          width: normal
+          numbers: true
+          markers: true
+        callout-appearance: default
+        callout-icon: false
+        smaller: true
+revealjs-plugins:
+  - attribution
+# filters:
+#   - reveal-header
+---
+
+
+## Chain of Thought (CoT) prompting
+**Techniques:** Encourage the model to proceed in a step-by-step manner. This has the effect of making the desired output more probable. The output looks like the LLM is showing its reasoning process[^1].
+
+[^1]: This behaviour has been trained into recent models.
+
+
+:::{.prompt-example}
+Think through this step-by-step:
+1) List the symptoms
+2) Consider possible causes
+3) Evaluate urgency
+4) Recommend action
+:::
+
+Often it can be sufficient to just ask the model to think step-by-step.
+
+:::{.prompt-example}
+Think step-by-step.
+:::
+
+## Why Chain of Thought?
+
+- Amount of computation is constant per token.
+- By forcing the LLM to generate more (useful) tokens, it will therefore generate more (useful) content.
+- This in turn narrows the space of possible outputs, and steers the model towards regions of the output space that are more desirable.
+
+## Drawbacks of Chain of Thought
+
+- LLM performance on reasoning problems does not generalize well
+- Chain of thought prompting aims to mitigate this by *demonstrating solution procedures*
+- @stechlyChainThoughtlessnessAnalysis2024 found meaningful performance improvements only with *highly problem-specific prompts*.
+
+
+
+## Few-Shot Learning
+**Technique:** Provide multiple examples before asking for a new output.
+
+The way that we structure Few-Shot Prompts is very important. By this, we mean do we separate the inputs and outputs with a colon (:) or the words INPUT/OUTPUT. We have seen examples of both earlier in this article. How can you decide? We generally use the input: output format and occasionally use the QA format, which is commonly used in research papers.
+
+ Use 2-5 examples for simple tasks. Use often ~10 examples for harder tasks
+
+:::{.prompt-example}
+Input: "Great product, 10/10" 
+
+Ouput: "Great product, 10/10": {"label": "positive"}
+
+<br>
+Input: "Didn't work very well"
+
+Output: "Didn't work very well": {"label": "negative"}
+
+<br>
+Input: "Super helpful, worth it"
+
+Output: "Super helpful, worth it": {"label": "positive"}
+
+<br>
+Input: "I'm not sure I would buy this again" 
+
+Output: 
+:::
+
+## Structured Output
+**Technique:** Specify a structure for the model's response.
+
+:::{.prompt-example}
+Provide your assessment in JSON format:
+
+```json
+{
+  "severity": "[Emergency/Urgent/Non-urgent]",
+  "potential_causes": "[List top 3]",
+  "recommended_action": "[Specific next steps]"
+}
+```
+:::
+
+## Self-Consistency
+LLMs are prone to variability in their responses.
+
+**Technique:** Generate multiple answers, aggregate the responses and select the majority result.
+
+:::: {.columns}
+::: {.column width="50%"}
+Do this several times:
+
+:::{.prompt-example}
+Provide three independent assessments for these symptoms.
+
+Think step-by-step.
+
+Symptoms:
+[insert symptoms here]
+:::
+:::
+::: {.column width="50%"}
+
+Provide the responses to an LLM in a new session:
+
+:::{.prompt-example}
+Analyze whether the following assessments agree with each other. Give me your expert assessment based on the assessments you received. 
+:::
+
+:::
+::::
+
+
+## Bonus tip: keep up with prompt engineering research
+**Technique:** Use LLMs to "read" new research papers.
+
+:::{.prompt-example}
+Based on the attached research paper on [prompt engineering technique], write a prompt that would cause an LLM to behave according to the techniques described in this paper. Use [topic] as an example.
+:::
+
+## Problems with prompt engineering
+
+- "Positive thinking" prompts have inconsistent effects across models.
+- Chain of Thought (CoT) prompting generally improves performance, but prompts are task-specific.
+- No universal "best prompt" --- effectiveness varies by model and task.
+- Automatically optimized prompts often outperform manually crafted ones.
+- Optimized prompts can be surprisingly unconventional or eccentric.
+
+## Prompt optimization
+
+:::{.prompt-example title="Positive thinking"}
+You are an experienced emergency room nurse. Take a deep breath and carefully assess the following patient's symptoms.
+:::
+
+:::{.prompt-example title="Chain of Thought"}
+Think through this patient's case step-by-step: 1) List the symptoms, 2)
+Consider possible causes, 3) Evaluate urgency, 4) Recommend action.
+:::
+
+:::{.prompt-example title="Optimized prompt"}
+The ER is in chaos, Doctor. We need your expertise to navigate this storm of
+patients and identify the most critical cases.
+:::
+
+see @battleUnreasonableEffectivenessEccentric2024a
+
+<!-- ## Questions / Discussion {{< bi chat-dots >}} -->
+
+## References {background-color="#D8DEE9"}
+
+::: {#refs}
+:::
