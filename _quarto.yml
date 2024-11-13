@@ -1,5 +1,7 @@
 project:
   type: website
+  resources:
+   - assets/*
   preview:
     port: 8800
     browser: false
