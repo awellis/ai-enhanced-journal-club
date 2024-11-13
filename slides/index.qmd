@@ -93,4 +93,4 @@ LLMs can
 - **complement** human collaboration by providing a safe space for initial idea development
 
 
-## References
+## References {background-color="#D8DEE9"}
