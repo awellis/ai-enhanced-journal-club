@@ -21,6 +21,70 @@ format:
 ---
 
 
+## How to read a research paper
+
+When reading a research paper, it is recommended to follow the three-pass strategy:
+
+### The Three-Pass Method
+
+#### First Pass: The Bird's Eye View
+**Time Investment:**
+
+**Purpose:** Quick scan to grasp the paper's structure and main points
+
+**Steps:**
+
+- Read title, abstract, and introduction
+- Read section and subsection headings
+- Read conclusion
+- Glance at references
+
+**Outcome:** Answer the "five Cs":
+
+- Category (type of paper)
+- Context (relation to other work)
+- Correctness (validity of assumptions)
+- Contributions (main findings)
+- Clarity (writing quality)
+
+#### Second Pass: The Content Grasp
+**Time Investment:** 
+
+**Purpose:** Understand the paper's content without technical details
+
+**Steps:**
+
+- Read with greater attention, ignoring proofs
+- Study figures, diagrams, and graphs carefully
+- Mark important references for follow-up
+
+**Outcome:** Ability to summarize the paper's main thrust with supporting evidence
+
+**Note:** Suitable for papers relevant but not central to your research
+
+#### Third Pass: Deep Understanding
+**Time Investment:** 
+
+**Purpose:** Complete comprehension and virtual replication
+
+**Steps:**
+
+- Attempt to virtually "re-implement" the paper
+- Identify and challenge every assumption
+- Think about alternative presentations
+- Note ideas for future work
+
+**Outcome:**
+- Ability to reconstruct paper from memory
+- Understanding of strengths and weaknesses
+- Recognition of implicit assumptions
+- Identification of missing citations
+- Awareness of potential technical issues
+
+:::{.attribution}
+Adapted from [How to read a research paper](https://web.stanford.edu/class/ee384m/Handouts/HowtoReadPaper.pdf)
+:::
+
 # Limitations
 
 - sycophancy
